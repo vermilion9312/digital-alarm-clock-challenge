@@ -1,0 +1,25 @@
+/*
+ * led.c
+ *
+ *  Created on: Nov 30, 2024
+ *      Author: vermi
+ */
+
+#ifndef SRC_LED_C_
+#define SRC_LED_C_
+
+#include "led.h"
+
+static void toggle(Led* this)
+{
+	this->state = LED_STATE;
+
+}
+
+
+Led* get_led(void)
+{
+	return &led;
+}
+
+#endif /* SRC_LED_C_ */

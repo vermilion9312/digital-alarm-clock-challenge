@@ -1,0 +1,33 @@
+/*
+ * button.c
+ *
+ *  Created on: Nov 30, 2024
+ *      Author: vermi
+ */
+
+
+#include "button.h"
+
+static bool is_pressed(Button* this)
+{
+	return this->_is_pressed;
+}
+
+static Button button_1 = { false, is_pressed };
+static Button button_2 = { false, is_pressed };
+static Button button_3 = { false, is_pressed };
+
+Button* get_button1(void)
+{
+	return &button1;
+}
+
+Button* get_button2(void)
+{
+	return &button2;
+}
+
+Button* get_button3(void)
+{
+	return &button3;
+}

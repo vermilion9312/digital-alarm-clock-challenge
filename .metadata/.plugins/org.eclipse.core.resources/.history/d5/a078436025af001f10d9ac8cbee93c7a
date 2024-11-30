@@ -1,0 +1,18 @@
+/*
+ * led.h
+ *
+ *  Created on: Nov 30, 2024
+ *      Author: vermi
+ */
+
+#ifndef INC_LED_H_
+#define INC_LED_H_
+
+typedef struct _Led Led;
+
+struct _Led {
+	void (* const on)(void);
+	void (* const off)(void);
+};
+
+#endif /* INC_LED_H_ */

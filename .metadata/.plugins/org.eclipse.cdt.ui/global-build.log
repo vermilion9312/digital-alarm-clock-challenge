@@ -1,0 +1,1173 @@
+23:34:59 **** Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+../User/Src/led.c: In function 'toggle':
+../User/Src/led.c:15:23: error: 'LED_STATE' undeclared (first use in this function)
+   15 |         this->state = LED_STATE;
+      |                       ^~~~~~~~~
+../User/Src/led.c:15:23: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/led.c: At top level:
+../User/Src/led.c:18:13: error: 'on' undeclared here (not in a function)
+   18 | Led led = { on, off };
+      |             ^~
+../User/Src/led.c:18:17: error: 'off' undeclared here (not in a function)
+   18 | Led led = { on, off };
+      |                 ^~~
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+../User/Src/button.c: In function 'get_button1':
+../User/Src/button.c:27:17: error: 'button1' undeclared (first use in this function); did you mean 'button_1'?
+   27 |         return &button1;
+      |                 ^~~~~~~
+      |                 button_1
+../User/Src/button.c:27:17: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/button.c: In function 'get_button2':
+../User/Src/button.c:32:17: error: 'button2' undeclared (first use in this function); did you mean 'button_2'?
+   32 |         return &button2;
+      |                 ^~~~~~~
+      |                 button_2
+../User/Src/button.c: In function 'get_button3':
+../User/Src/button.c:37:17: error: 'button3' undeclared (first use in this function); did you mean 'button_3'?
+   37 |         return &button3;
+      |                 ^~~~~~~
+      |                 button_3
+../User/Src/button.c: In function 'get_button1':
+../User/Src/button.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+   28 | }
+      | ^
+../User/Src/button.c: In function 'get_button2':
+../User/Src/button.c:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+   33 | }
+      | ^
+../User/Src/button.c: In function 'get_button3':
+../User/Src/button.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+   38 | }
+      | ^
+../User/Src/button.c: At top level:
+../User/Src/button.c:23:15: warning: 'button_3' defined but not used [-Wunused-variable]
+   23 | static Button button_3 = { BUTTON_3_GPIO_Port, BUTTON_3_Pin, false, update, is_pressed };
+      |               ^~~~~~~~
+../User/Src/button.c:22:15: warning: 'button_2' defined but not used [-Wunused-variable]
+   22 | static Button button_2 = { BUTTON_2_GPIO_Port, BUTTON_2_Pin, false, update, is_pressed };
+      |               ^~~~~~~~
+../User/Src/button.c:21:15: warning: 'button_1' defined but not used [-Wunused-variable]
+   21 | static Button button_1 = { BUTTON_1_GPIO_Port, BUTTON_1_Pin, false, update, is_pressed };
+      |               ^~~~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/button.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:35:49 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+../User/Src/led.c: In function 'toggle':
+../User/Src/led.c:15:23: error: 'LED_STATE' undeclared (first use in this function)
+   15 |         this->state = LED_STATE;
+      |                       ^~~~~~~~~
+../User/Src/led.c:15:23: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/led.c: At top level:
+../User/Src/led.c:18:13: error: 'on' undeclared here (not in a function)
+   18 | Led led = { on, off };
+      |             ^~
+../User/Src/led.c:18:17: error: 'off' undeclared here (not in a function)
+   18 | Led led = { on, off };
+      |                 ^~~
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:36:04 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+../User/Src/led.c: In function 'toggle':
+../User/Src/led.c:15:23: error: 'LED_STATE' undeclared (first use in this function)
+   15 |         this->state = LED_STATE;
+      |                       ^~~~~~~~~
+../User/Src/led.c:15:23: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/led.c: In function 'get_led':
+../User/Src/led.c:22:17: error: 'led' undeclared (first use in this function); did you mean 'Led'?
+   22 |         return &led;
+      |                 ^~~
+      |                 Led
+../User/Src/led.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
+   23 | }
+      | ^
+../User/Src/led.c: At top level:
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:39:36 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+In file included from ../User/Src/led.c:11:
+../User/Inc/led.h:16:9: error: unknown type name 'GPIO_TypeDef'
+   16 |         GPIO_TypeDef* GPIOx;
+      |         ^~~~~~~~~~~~
+../User/Inc/led.h:17:9: error: unknown type name 'uint16_t'
+   17 |         uint16_t GPIO_Pin;
+      |         ^~~~~~~~
+../User/Src/led.c: In function 'toggle':
+../User/Src/led.c:15:23: warning: implicit declaration of function 'HAL_GPIO_ReadPin' [-Wimplicit-function-declaration]
+   15 |         this->state = HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin);
+      |                       ^~~~~~~~~~~~~~~~
+../User/Src/led.c:17:9: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   17 |         HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, this->state);
+      |         ^~~~~~~~~~~~~~~~~
+../User/Src/led.c: At top level:
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:40:16 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:31,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:28,
+                 from ../User/Inc/led.h:12,
+                 from ../User/Src/led.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6806:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6806 | HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6818:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6818 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLI2S(RCC_PLLI2SInitTypeDef  *PLLI2SInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6819:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6819 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLI2S(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1244:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1244 | HAL_StatusTypeDef HAL_RCC_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1245:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1245 | HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef *RCC_OscInitStruct);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1246:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1246 | HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef *RCC_ClkInitStruct, uint32_t FLatency);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:283:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:326:1: error: unknown type name 'HAL_StatusTypeDef'
+  326 | HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:327:1: error: unknown type name 'HAL_StatusTypeDef'
+  327 | HAL_StatusTypeDef HAL_EXTI_GetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:328:1: error: unknown type name 'HAL_StatusTypeDef'
+  328 | HAL_StatusTypeDef HAL_EXTI_ClearConfigLine(EXTI_HandleTypeDef *hexti);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:329:1: error: unknown type name 'HAL_StatusTypeDef'
+  329 | HAL_StatusTypeDef HAL_EXTI_RegisterCallback(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void (*pPendingCbfn)(void));
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:330:1: error: unknown type name 'HAL_StatusTypeDef'
+  330 | HAL_StatusTypeDef HAL_EXTI_GetHandle(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:144:3: error: unknown type name 'HAL_LockTypeDef'
+  144 |   HAL_LockTypeDef            Lock;                                                             /*!< DMA locking object                     */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:69:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   69 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:70:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   70 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:71:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   71 | HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryTypeDef memory);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:652:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  652 | HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:653:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  653 | HAL_StatusTypeDef HAL_DMA_DeInit(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:662:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  662 | HAL_StatusTypeDef HAL_DMA_Start (DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:663:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  663 | HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:664:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  664 | HAL_StatusTypeDef HAL_DMA_Abort(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:665:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  665 | HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:666:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  666 | HAL_StatusTypeDef HAL_DMA_PollForTransfer(DMA_HandleTypeDef *hdma, HAL_DMA_LevelCompleteTypeDef CompleteLevel, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:668:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  668 | HAL_StatusTypeDef HAL_DMA_CleanCallbacks(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:669:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  669 | HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma));
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:670:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  670 | HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:70:3: error: unknown type name 'HAL_LockTypeDef'
+   70 |   HAL_LockTypeDef             Lock;               /* FLASH locking object                */
+      |   ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f407vetx.d" -MT"Core/Startup/startup_stm32f407vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f407vetx.o" "../Core/Startup/startup_stm32f407vetx.s"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:295:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:725:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  725 | HAL_StatusTypeDef HAL_FLASHEx_Erase(FLASH_EraseInitTypeDef *pEraseInit, uint32_t *SectorError);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:726:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  726 | HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:727:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  727 | HAL_StatusTypeDef HAL_FLASHEx_OBProgram(FLASH_OBProgramInitTypeDef *pOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:306:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  306 | HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:307:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  307 | HAL_StatusTypeDef HAL_FLASH_Program_IT(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:321:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  321 | HAL_StatusTypeDef HAL_FLASH_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:322:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  322 | HAL_StatusTypeDef HAL_FLASH_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:323:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  323 | HAL_StatusTypeDef HAL_FLASH_OB_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:324:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  324 | HAL_StatusTypeDef HAL_FLASH_OB_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:326:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  326 | HAL_StatusTypeDef HAL_FLASH_OB_Launch(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:336:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  336 | HAL_StatusTypeDef FLASH_WaitForLastOperation(uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:275,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:383:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:205:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  205 | HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:206:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  206 | HAL_StatusTypeDef HAL_PWREx_DisableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:208:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  208 | HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:219:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  219 | HAL_StatusTypeDef HAL_Init(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:220:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  220 | HAL_StatusTypeDef HAL_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:236:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  236 | HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:40:52 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:31,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:28,
+                 from ../User/Inc/led.h:12,
+                 from ../User/Src/led.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6806:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6806 | HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:31,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:28,
+                 from ../User/Inc/button.h:12,
+                 from ../User/Src/button.c:9:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6806:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6806 | HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6818:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6818 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLI2S(RCC_PLLI2SInitTypeDef  *PLLI2SInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6818:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6818 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLI2S(RCC_PLLI2SInitTypeDef  *PLLI2SInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6819:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6819 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLI2S(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6819:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6819 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLI2S(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1244:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1244 | HAL_StatusTypeDef HAL_RCC_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1244:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1244 | HAL_StatusTypeDef HAL_RCC_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1245:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1245 | HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef *RCC_OscInitStruct);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1245:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1245 | HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef *RCC_OscInitStruct);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1246:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1246 | HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef *RCC_ClkInitStruct, uint32_t FLatency);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1246:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1246 | HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef *RCC_ClkInitStruct, uint32_t FLatency);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:283:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:326:1: error: unknown type name 'HAL_StatusTypeDef'
+  326 | HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:283:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:326:1: error: unknown type name 'HAL_StatusTypeDef'
+  326 | HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:327:1: error: unknown type name 'HAL_StatusTypeDef'
+  327 | HAL_StatusTypeDef HAL_EXTI_GetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:327:1: error: unknown type name 'HAL_StatusTypeDef'
+  327 | HAL_StatusTypeDef HAL_EXTI_GetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:328:1: error: unknown type name 'HAL_StatusTypeDef'
+  328 | HAL_StatusTypeDef HAL_EXTI_ClearConfigLine(EXTI_HandleTypeDef *hexti);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:328:1: error: unknown type name 'HAL_StatusTypeDef'
+  328 | HAL_StatusTypeDef HAL_EXTI_ClearConfigLine(EXTI_HandleTypeDef *hexti);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:329:1: error: unknown type name 'HAL_StatusTypeDef'
+  329 | HAL_StatusTypeDef HAL_EXTI_RegisterCallback(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void (*pPendingCbfn)(void));
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:329:1: error: unknown type name 'HAL_StatusTypeDef'
+  329 | HAL_StatusTypeDef HAL_EXTI_RegisterCallback(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void (*pPendingCbfn)(void));
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:330:1: error: unknown type name 'HAL_StatusTypeDef'
+  330 | HAL_StatusTypeDef HAL_EXTI_GetHandle(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:144:3: error: unknown type name 'HAL_LockTypeDef'
+  144 |   HAL_LockTypeDef            Lock;                                                             /*!< DMA locking object                     */
+      |   ^~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:330:1: error: unknown type name 'HAL_StatusTypeDef'
+  330 | HAL_StatusTypeDef HAL_EXTI_GetHandle(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:144:3: error: unknown type name 'HAL_LockTypeDef'
+  144 |   HAL_LockTypeDef            Lock;                                                             /*!< DMA locking object                     */
+      |   ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:69:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   69 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:69:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   69 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:70:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   70 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:70:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   70 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:71:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   71 | HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryTypeDef memory);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:71:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   71 | HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryTypeDef memory);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:652:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  652 | HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:652:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  652 | HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:653:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  653 | HAL_StatusTypeDef HAL_DMA_DeInit(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:653:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  653 | HAL_StatusTypeDef HAL_DMA_DeInit(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:662:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  662 | HAL_StatusTypeDef HAL_DMA_Start (DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:662:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  662 | HAL_StatusTypeDef HAL_DMA_Start (DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:663:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  663 | HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:663:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  663 | HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:664:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  664 | HAL_StatusTypeDef HAL_DMA_Abort(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:664:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  664 | HAL_StatusTypeDef HAL_DMA_Abort(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:665:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  665 | HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:665:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  665 | HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:666:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  666 | HAL_StatusTypeDef HAL_DMA_PollForTransfer(DMA_HandleTypeDef *hdma, HAL_DMA_LevelCompleteTypeDef CompleteLevel, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:666:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  666 | HAL_StatusTypeDef HAL_DMA_PollForTransfer(DMA_HandleTypeDef *hdma, HAL_DMA_LevelCompleteTypeDef CompleteLevel, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:668:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  668 | HAL_StatusTypeDef HAL_DMA_CleanCallbacks(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:668:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  668 | HAL_StatusTypeDef HAL_DMA_CleanCallbacks(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:669:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  669 | HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma));
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:669:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  669 | HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma));
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:670:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  670 | HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:70:3: error: unknown type name 'HAL_LockTypeDef'
+   70 |   HAL_LockTypeDef             Lock;               /* FLASH locking object                */
+      |   ^~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:670:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  670 | HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:70:3: error: unknown type name 'HAL_LockTypeDef'
+   70 |   HAL_LockTypeDef             Lock;               /* FLASH locking object                */
+      |   ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:295:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:725:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  725 | HAL_StatusTypeDef HAL_FLASHEx_Erase(FLASH_EraseInitTypeDef *pEraseInit, uint32_t *SectorError);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:295:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:725:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  725 | HAL_StatusTypeDef HAL_FLASHEx_Erase(FLASH_EraseInitTypeDef *pEraseInit, uint32_t *SectorError);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:726:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  726 | HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:726:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  726 | HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:727:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  727 | HAL_StatusTypeDef HAL_FLASHEx_OBProgram(FLASH_OBProgramInitTypeDef *pOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:727:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  727 | HAL_StatusTypeDef HAL_FLASHEx_OBProgram(FLASH_OBProgramInitTypeDef *pOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:306:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  306 | HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:306:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  306 | HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:307:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  307 | HAL_StatusTypeDef HAL_FLASH_Program_IT(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:307:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  307 | HAL_StatusTypeDef HAL_FLASH_Program_IT(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:321:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  321 | HAL_StatusTypeDef HAL_FLASH_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:321:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  321 | HAL_StatusTypeDef HAL_FLASH_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:322:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  322 | HAL_StatusTypeDef HAL_FLASH_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:322:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  322 | HAL_StatusTypeDef HAL_FLASH_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:323:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  323 | HAL_StatusTypeDef HAL_FLASH_OB_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:323:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  323 | HAL_StatusTypeDef HAL_FLASH_OB_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:324:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  324 | HAL_StatusTypeDef HAL_FLASH_OB_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:324:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  324 | HAL_StatusTypeDef HAL_FLASH_OB_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:326:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  326 | HAL_StatusTypeDef HAL_FLASH_OB_Launch(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:326:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  326 | HAL_StatusTypeDef HAL_FLASH_OB_Launch(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:336:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  336 | HAL_StatusTypeDef FLASH_WaitForLastOperation(uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:336:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  336 | HAL_StatusTypeDef FLASH_WaitForLastOperation(uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:275,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:383:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:205:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  205 | HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:275,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:383:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:205:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  205 | HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:206:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  206 | HAL_StatusTypeDef HAL_PWREx_DisableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:206:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  206 | HAL_StatusTypeDef HAL_PWREx_DisableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:208:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  208 | HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:208:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  208 | HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:219:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  219 | HAL_StatusTypeDef HAL_Init(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:219:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  219 | HAL_StatusTypeDef HAL_Init(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:220:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  220 | HAL_StatusTypeDef HAL_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:220:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  220 | HAL_StatusTypeDef HAL_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:236:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  236 | HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:236:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  236 | HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+../User/Src/button.c:21:28: error: 'BUTTON_1_GPIO_Port' undeclared here (not in a function)
+   21 | static Button button_1 = { BUTTON_1_GPIO_Port, BUTTON_1_Pin, false, update, is_pressed };
+      |                            ^~~~~~~~~~~~~~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+../User/Src/button.c:21:48: error: 'BUTTON_1_Pin' undeclared here (not in a function)
+   21 | static Button button_1 = { BUTTON_1_GPIO_Port, BUTTON_1_Pin, false, update, is_pressed };
+      |                                                ^~~~~~~~~~~~
+../User/Src/button.c:22:28: error: 'BUTTON_2_GPIO_Port' undeclared here (not in a function)
+   22 | static Button button_2 = { BUTTON_2_GPIO_Port, BUTTON_2_Pin, false, update, is_pressed };
+      |                            ^~~~~~~~~~~~~~~~~~
+../User/Src/button.c:22:48: error: 'BUTTON_2_Pin' undeclared here (not in a function)
+   22 | static Button button_2 = { BUTTON_2_GPIO_Port, BUTTON_2_Pin, false, update, is_pressed };
+      |                                                ^~~~~~~~~~~~
+../User/Src/button.c:23:28: error: 'BUTTON_3_GPIO_Port' undeclared here (not in a function)
+   23 | static Button button_3 = { BUTTON_3_GPIO_Port, BUTTON_3_Pin, false, update, is_pressed };
+      |                            ^~~~~~~~~~~~~~~~~~
+../User/Src/button.c:23:48: error: 'BUTTON_3_Pin' undeclared here (not in a function)
+   23 | static Button button_3 = { BUTTON_3_GPIO_Port, BUTTON_3_Pin, false, update, is_pressed };
+      |                                                ^~~~~~~~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/button.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:40:58 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:31,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:28,
+                 from ../User/Inc/led.h:12,
+                 from ../User/Src/led.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6806:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6806 | HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6818:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6818 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLI2S(RCC_PLLI2SInitTypeDef  *PLLI2SInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6819:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6819 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLI2S(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1244:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1244 | HAL_StatusTypeDef HAL_RCC_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1245:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1245 | HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef *RCC_OscInitStruct);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1246:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1246 | HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef *RCC_ClkInitStruct, uint32_t FLatency);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:283:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:326:1: error: unknown type name 'HAL_StatusTypeDef'
+  326 | HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:327:1: error: unknown type name 'HAL_StatusTypeDef'
+  327 | HAL_StatusTypeDef HAL_EXTI_GetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:328:1: error: unknown type name 'HAL_StatusTypeDef'
+  328 | HAL_StatusTypeDef HAL_EXTI_ClearConfigLine(EXTI_HandleTypeDef *hexti);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:329:1: error: unknown type name 'HAL_StatusTypeDef'
+  329 | HAL_StatusTypeDef HAL_EXTI_RegisterCallback(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void (*pPendingCbfn)(void));
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:330:1: error: unknown type name 'HAL_StatusTypeDef'
+  330 | HAL_StatusTypeDef HAL_EXTI_GetHandle(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:144:3: error: unknown type name 'HAL_LockTypeDef'
+  144 |   HAL_LockTypeDef            Lock;                                                             /*!< DMA locking object                     */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:69:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   69 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:70:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   70 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:71:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   71 | HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryTypeDef memory);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:652:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  652 | HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:653:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  653 | HAL_StatusTypeDef HAL_DMA_DeInit(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:662:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  662 | HAL_StatusTypeDef HAL_DMA_Start (DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:663:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  663 | HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:664:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  664 | HAL_StatusTypeDef HAL_DMA_Abort(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:665:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  665 | HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:666:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  666 | HAL_StatusTypeDef HAL_DMA_PollForTransfer(DMA_HandleTypeDef *hdma, HAL_DMA_LevelCompleteTypeDef CompleteLevel, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:668:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  668 | HAL_StatusTypeDef HAL_DMA_CleanCallbacks(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:669:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  669 | HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma));
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:670:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  670 | HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:70:3: error: unknown type name 'HAL_LockTypeDef'
+   70 |   HAL_LockTypeDef             Lock;               /* FLASH locking object                */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:295:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:725:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  725 | HAL_StatusTypeDef HAL_FLASHEx_Erase(FLASH_EraseInitTypeDef *pEraseInit, uint32_t *SectorError);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:726:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  726 | HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:727:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  727 | HAL_StatusTypeDef HAL_FLASHEx_OBProgram(FLASH_OBProgramInitTypeDef *pOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:306:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  306 | HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:307:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  307 | HAL_StatusTypeDef HAL_FLASH_Program_IT(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:321:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  321 | HAL_StatusTypeDef HAL_FLASH_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:322:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  322 | HAL_StatusTypeDef HAL_FLASH_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:323:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  323 | HAL_StatusTypeDef HAL_FLASH_OB_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:324:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  324 | HAL_StatusTypeDef HAL_FLASH_OB_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:326:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  326 | HAL_StatusTypeDef HAL_FLASH_OB_Launch(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:336:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  336 | HAL_StatusTypeDef FLASH_WaitForLastOperation(uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:275,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:383:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:205:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  205 | HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:206:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  206 | HAL_StatusTypeDef HAL_PWREx_DisableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:208:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  208 | HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:219:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  219 | HAL_StatusTypeDef HAL_Init(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:220:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  220 | HAL_StatusTypeDef HAL_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:236:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  236 | HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:41:40 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:31,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:28,
+                 from ../User/Inc/led.h:12,
+                 from ../User/Src/led.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6806:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6806 | HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6818:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6818 | HAL_StatusTypeDef HAL_RCCEx_EnablePLLI2S(RCC_PLLI2SInitTypeDef  *PLLI2SInit);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:6819:1: error: unknown type name 'HAL_StatusTypeDef'
+ 6819 | HAL_StatusTypeDef HAL_RCCEx_DisablePLLI2S(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1244:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1244 | HAL_StatusTypeDef HAL_RCC_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1245:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1245 | HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef *RCC_OscInitStruct);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1246:1: error: unknown type name 'HAL_StatusTypeDef'
+ 1246 | HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef *RCC_ClkInitStruct, uint32_t FLatency);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:283:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:326:1: error: unknown type name 'HAL_StatusTypeDef'
+  326 | HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:327:1: error: unknown type name 'HAL_StatusTypeDef'
+  327 | HAL_StatusTypeDef HAL_EXTI_GetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:328:1: error: unknown type name 'HAL_StatusTypeDef'
+  328 | HAL_StatusTypeDef HAL_EXTI_ClearConfigLine(EXTI_HandleTypeDef *hexti);
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:329:1: error: unknown type name 'HAL_StatusTypeDef'
+  329 | HAL_StatusTypeDef HAL_EXTI_RegisterCallback(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void (*pPendingCbfn)(void));
+      | ^~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:330:1: error: unknown type name 'HAL_StatusTypeDef'
+  330 | HAL_StatusTypeDef HAL_EXTI_GetHandle(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine);
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:287:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:144:3: error: unknown type name 'HAL_LockTypeDef'
+  144 |   HAL_LockTypeDef            Lock;                                                             /*!< DMA locking object                     */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:639:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:69:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   69 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:70:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   70 | HAL_StatusTypeDef HAL_DMAEx_MultiBufferStart_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:71:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+   71 | HAL_StatusTypeDef HAL_DMAEx_ChangeMemory(DMA_HandleTypeDef *hdma, uint32_t Address, HAL_DMA_MemoryTypeDef memory);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:652:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  652 | HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:653:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  653 | HAL_StatusTypeDef HAL_DMA_DeInit(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:662:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  662 | HAL_StatusTypeDef HAL_DMA_Start (DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:663:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  663 | HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:664:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  664 | HAL_StatusTypeDef HAL_DMA_Abort(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:665:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  665 | HAL_StatusTypeDef HAL_DMA_Abort_IT(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:666:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  666 | HAL_StatusTypeDef HAL_DMA_PollForTransfer(DMA_HandleTypeDef *hdma, HAL_DMA_LevelCompleteTypeDef CompleteLevel, uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:668:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  668 | HAL_StatusTypeDef HAL_DMA_CleanCallbacks(DMA_HandleTypeDef *hdma);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:669:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  669 | HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma));
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:670:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  670 | HAL_StatusTypeDef HAL_DMA_UnRegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:335:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:70:3: error: unknown type name 'HAL_LockTypeDef'
+   70 |   HAL_LockTypeDef             Lock;               /* FLASH locking object                */
+      |   ^~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:295:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:725:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  725 | HAL_StatusTypeDef HAL_FLASHEx_Erase(FLASH_EraseInitTypeDef *pEraseInit, uint32_t *SectorError);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:726:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  726 | HAL_StatusTypeDef HAL_FLASHEx_Erase_IT(FLASH_EraseInitTypeDef *pEraseInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:727:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  727 | HAL_StatusTypeDef HAL_FLASHEx_OBProgram(FLASH_OBProgramInitTypeDef *pOBInit);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:306:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  306 | HAL_StatusTypeDef HAL_FLASH_Program(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:307:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  307 | HAL_StatusTypeDef HAL_FLASH_Program_IT(uint32_t TypeProgram, uint32_t Address, uint64_t Data);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:321:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  321 | HAL_StatusTypeDef HAL_FLASH_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:322:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  322 | HAL_StatusTypeDef HAL_FLASH_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:323:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  323 | HAL_StatusTypeDef HAL_FLASH_OB_Unlock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:324:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  324 | HAL_StatusTypeDef HAL_FLASH_OB_Lock(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:326:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  326 | HAL_StatusTypeDef HAL_FLASH_OB_Launch(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:336:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  336 | HAL_StatusTypeDef FLASH_WaitForLastOperation(uint32_t Timeout);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:275,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:383:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:205:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  205 | HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:206:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  206 | HAL_StatusTypeDef HAL_PWREx_DisableBkUpReg(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:208:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  208 | HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:219:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  219 | HAL_StatusTypeDef HAL_Init(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:220:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  220 | HAL_StatusTypeDef HAL_DeInit(void);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:223:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  223 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:236:1: error: unknown type name 'HAL_StatusTypeDef'; did you mean 'HAL_DMA_StateTypeDef'?
+  236 | HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
+      | HAL_DMA_StateTypeDef
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:43:02 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+arm-none-eabi-gcc -o "Challenge 1-1. Button input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-1. Button input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-1. Button input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-1. Button input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf  > "Challenge 1-1. Button input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   6160	     60	   1572	   7792	   1e70	Challenge 1-1. Button input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-1. Button input to toggle LED.list
+ 
+23:43:11 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c:13:13: warning: 'toggle' defined but not used [-Wunused-function]
+   13 | static void toggle(Led* this)
+      |             ^~~~~~
+arm-none-eabi-gcc -o "Challenge 1-1. Button input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-1. Button input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-1. Button input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-1. Button input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf  > "Challenge 1-1. Button input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   6160	     60	   1572	   7792	   1e70	Challenge 1-1. Button input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-1. Button input to toggle LED.list
+ 
+00:07:05 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c:27:80: error: 'toggle_left' undeclared here (not in a function); did you mean 'toggle_right'?
+   27 | Led led_left_red    = { LED_LEFT_RED_GPIO_Port,    LED_LEFT_RED_Pin, false,    toggle_left   };
+      |                                                                                ^~~~~~~~~~~
+      |                                                                                toggle_right
+../User/Src/led.c:13:13: warning: 'right' defined but not used [-Wunused-function]
+   13 | static void right(Led* this)
+      |             ^~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:07:25 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 1-1. Button input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-1. Button input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-1. Button input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-1. Button input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf  > "Challenge 1-1. Button input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   6596	    132	   1572	   8300	   206c	Challenge 1-1. Button input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-1. Button input to toggle LED.list
+ 
+00:09:08 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-size  Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6596	    132	   1572	   8300	   206c	Challenge 1-1. Button input to toggle LED.elf
+Finished building: default.size.stdout
+ 

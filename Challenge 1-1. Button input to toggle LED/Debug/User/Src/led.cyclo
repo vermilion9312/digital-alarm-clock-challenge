@@ -1,0 +1,8 @@
+../User/Src/led.c:13:13:toggle_left	1
+../User/Src/led.c:20:13:toggle_right	1
+../User/Src/led.c:35:6:get_led_left_red	1
+../User/Src/led.c:40:6:get_led_left_green	1
+../User/Src/led.c:45:6:get_led_left_blue	1
+../User/Src/led.c:50:6:get_led_right_red	1
+../User/Src/led.c:55:6:get_led_right_green	1
+../User/Src/led.c:60:6:get_led_right_blue	1

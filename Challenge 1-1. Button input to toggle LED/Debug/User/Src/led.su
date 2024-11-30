@@ -1,0 +1,8 @@
+../User/Src/led.c:13:13:toggle_left	16	static
+../User/Src/led.c:20:13:toggle_right	16	static
+../User/Src/led.c:35:6:get_led_left_red	4	static
+../User/Src/led.c:40:6:get_led_left_green	4	static
+../User/Src/led.c:45:6:get_led_left_blue	4	static
+../User/Src/led.c:50:6:get_led_right_red	4	static
+../User/Src/led.c:55:6:get_led_right_green	4	static
+../User/Src/led.c:60:6:get_led_right_blue	4	static
