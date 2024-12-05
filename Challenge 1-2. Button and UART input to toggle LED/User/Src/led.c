@@ -10,97 +10,103 @@
 
 #include "led.h"
 
-static void turn_on_left(Led* this, Button* button);
-static void turn_off_left(Led* this, Button* button);
-static void turn_on_right(Led* this, Button* button);
-static void turn_off_right(Led* this, Button* button);
+static void turn_on_led(Led* this, Button* button);
+static void turn_off_led(Led* this, Button* button);
+static void set_state(Led* this, State* state);
 
-Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .last_button = false, .operate = turn_off_left,  .on = turn_on_left,  .off = turn_off_left };
-Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .last_button = false, .operate = turn_off_left,  .on = turn_on_left,  .off = turn_off_left };
-Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .last_button = false, .operate = turn_off_left,  .on = turn_on_left,  .off = turn_off_left };
+State left_red    = { LEFT,  LEFT_RED_GPIO_Port,    LEFT_RED_Pin    };
+State left_green  = { LEFT,  LEFT_GREEN_GPIO_Port,  LEFT_GREEN_Pin  };
+State left_blue   = { LEFT,  LEFT_BLUE_GPIO_Port,   LEFT_BLUE_Pin   };
 
-Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
-Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
-Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+State right_red   = { RIGHT, RIGHT_RED_GPIO_Port,   RIGHT_RED_Pin   };
+State right_green = { RIGHT, RIGHT_GREEN_GPIO_Port, RIGHT_GREEN_Pin };
+State right_blue  = { RIGHT, RIGHT_BLUE_GPIO_Port,  RIGHT_BLUE_Pin  };
 
-static void turn_on_left(Led* this, Button* button)
+Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
+Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
+Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
+
+static void turn_on_led(Led* this, Button* button)
 {
-	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_RESET);
+	TURN_ON_LED;
 
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-		this->operate = turn_off_left;
+		this->operate = turn_off_led;
 	}
 
 	this->last_button = button->is_pressed(button);
 }
 
-static void turn_off_left(Led* this, Button* button)
+static void turn_off_led(Led* this, Button* button)
 {
-	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_SET);
+	TURN_OFF_LED;
 
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-		this->operate = turn_on_left;
+		this->operate = turn_on_led;
 	}
 
 	this->last_button = button->is_pressed(button);
 }
 
-static void turn_on_right(Led* this, Button* button)
+static void set_state(Led* this, State* state)
 {
-	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_RESET);
+	 this->state = state;
+}
 
-	if (this->last_button == true && button->is_pressed(button) == false)
+void press_button_4(void)
+{
+	static bool last_button_4 = 0;
+
+	Button* button_4 = GET_INSTANCE(button_4);
+
+	if (last_button_4 == false && button_4->is_pressed(button_4) == true)
 	{
-		this->operate = turn_off_right;
+		if (red.state->direction == LEFT)
+		{
+			red.set_state(&red, &right_red);
+		}
+		else
+		{
+			red.set_state(&red, &left_red);
+		}
+
+		if (green.state->direction == LEFT)
+		{
+			green.set_state(&green, &right_green);
+		}
+		else
+		{
+			green.set_state(&green, &left_green);
+		}
+
+		if (blue.state->direction == LEFT)
+		{
+			blue.set_state(&blue, &right_blue);
+		}
+		else
+		{
+			blue.set_state(&blue, &left_blue);
+		}
 	}
 
-	this->last_button = button->is_pressed(button);
+	last_button_4 = button_4->is_pressed(button_4);
 }
 
-static void turn_off_right(Led* this, Button* button)
+Led* get_red(void)
 {
-	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_SET);
-
-	if (this->last_button== true && button->is_pressed(button) == false)
-	{
-		this->operate = turn_on_right;
-	}
-
-	this->last_button = button->is_pressed(button);
+	return &red;
 }
 
-Led* get_left_red(void)
+Led* get_green(void)
 {
-	return &left_red;
+	return &green;
 }
 
-Led* get_left_green(void)
+Led* get_blue(void)
 {
-	return &left_green;
+	return &blue;
 }
-
-Led* get_left_blue(void)
-{
-	return &left_blue;
-}
-
-Led* get_right_red (void)
-{
-	return &right_red ;
-}
-
-Led* get_right_green(void)
-{
-	return &right_green;
-}
-
-Led* get_right_blue(void)
-{
-	return &right_blue;
-}
-
-
 
 #endif /* SRC_C_ */

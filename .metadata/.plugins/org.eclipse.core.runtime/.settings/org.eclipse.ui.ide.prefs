@@ -1,4 +1,6 @@
+CLOSE_UNRELATED_PROJECTS=true
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
 eclipse.preferences.version=1
-platformState=1731508330799
+platformState=1729056910252
 quickStart=false
 tipsAndTricks=true

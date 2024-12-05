@@ -11,24 +11,33 @@
 #include <stdbool.h>
 #include "main.h"
 #include "button.h"
+#include "common.h"
 
-typedef struct _Led Led;
+#define TURN_ON_LED  HAL_GPIO_WritePin(this->state->GPIOx, this->state->GPIO_Pin, GPIO_PIN_RESET)
+#define TURN_OFF_LED HAL_GPIO_WritePin(this->state->GPIOx, this->state->GPIO_Pin, GPIO_PIN_SET)
 
-struct _Led {
+typedef enum { LEFT, RIGHT } Direction;
+
+typedef struct _State {
+	Direction direction;
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
+} State;
+
+typedef struct _Led Led;
+struct _Led {
+	State* state;
 	bool last_button;
+
 	void (* operate)(Led*, Button*);
 	void (* const on)(Led*, Button*);
 	void (* const off)(Led*, Button*);
+	void (* const set_state)(Led*, State*);
 };
 
-Led* get_left_red(void);
-Led* get_left_green(void);
-Led* get_left_blue(void);
-
-Led* get_right_red (void);
-Led* get_right_green(void);
-Led* get_right_blue(void);
+Led* get_red(void);
+Led* get_green(void);
+Led* get_blue(void);
+void press_button_4(void);
 
 #endif /* INC_H_ */
