@@ -186,3 +186,6 @@ java.io.FileNotFoundException: C:\Github\digital-alarm-clock-challenge\Challenge
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-05 18:28:34.576
+!MESSAGE Indexed 'Challenge 1-2. Button and UART input to toggle LED' (23 sources, 121 headers) in 1.8 sec: 11,018 declarations; 37,025 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.5%)

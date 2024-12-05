@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/Challenge 1-2. Button and UART input to toggle LED/Debug" element2="/Challenge 1-2. Button and UART input to toggle LED/Challenge 1-1. Button input to toggle LED Debug.launch" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1733390922526"/>
+</session>
