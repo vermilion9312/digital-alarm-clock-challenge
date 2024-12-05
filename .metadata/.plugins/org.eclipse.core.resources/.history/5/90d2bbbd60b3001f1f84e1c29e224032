@@ -38,6 +38,6 @@ struct _Led {
 Led* get_red(void);
 Led* get_green(void);
 Led* get_blue(void);
-void change_direction(void);
+void press_button_4(void);
 
 #endif /* INC_H_ */

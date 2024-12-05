@@ -6,3 +6,4 @@ eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED\ Debug/activeLaunchTarget=null\:---

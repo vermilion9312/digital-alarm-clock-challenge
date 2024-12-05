@@ -1,6 +1,7 @@
-20:52:23 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+08:29:16 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
 make -j16 all 
 arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
  
@@ -13,5 +14,5 @@ Finished building: default.size.stdout
 Finished building: Challenge 1-2. Button and UART input to toggle LED.list
  
 
-20:52:23 Build Finished. 0 errors, 0 warnings. (took 541ms)
+08:29:17 Build Finished. 0 errors, 0 warnings. (took 836ms)
 

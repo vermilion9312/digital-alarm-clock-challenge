@@ -55,7 +55,7 @@ static void set_state(Led* this, State* state)
 	 this->state = state;
 }
 
-void change_direction(void)
+void press_button_4(void)
 {
 	static bool last_button_4 = 0;
 

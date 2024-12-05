@@ -41,13 +41,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_line   00005f31  00000000  00000000  00027dbf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000bc880  00000000  00000000  0002dcf0  2**0
+ 19 .debug_str    000bc878  00000000  00000000  0002dcf0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000ea570  2**0
+ 20 .comment      00000043  00000000  00000000  000ea568  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  0000106c  00000000  00000000  000ea5b4  2**2
+ 21 .debug_frame  0000106c  00000000  00000000  000ea5ac  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000089  00000000  00000000  000eb620  2**0
+ 22 .debug_line_str 00000089  00000000  00000000  000eb618  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -449,8 +449,8 @@ int main(void)
  800052e:	6878      	ldr	r0, [r7, #4]
  8000530:	4798      	blx	r3
 
-	  press_button_4();
- 8000532:	f001 f9bb 	bl	80018ac <press_button_4>
+	  change_direction();
+ 8000532:	f001 f9bb 	bl	80018ac <change_direction>
 	  button_1->update(button_1);
  8000536:	bf00      	nop
  8000538:	e7dc      	b.n	80004f4 <main+0x3c>
@@ -3964,9 +3964,9 @@ static void set_state(Led* this, State* state)
  80018a6:	f85d 7b04 	ldr.w	r7, [sp], #4
  80018aa:	4770      	bx	lr
 
-080018ac <press_button_4>:
+080018ac <change_direction>:
 
-void press_button_4(void)
+void change_direction(void)
 {
  80018ac:	b580      	push	{r7, lr}
  80018ae:	b082      	sub	sp, #8
@@ -3978,92 +3978,92 @@ void press_button_4(void)
  80018b6:	6078      	str	r0, [r7, #4]
 
 	if (last_button_4 == false && button_4->is_pressed(button_4) == true)
- 80018b8:	4b24      	ldr	r3, [pc, #144]	@ (800194c <press_button_4+0xa0>)
+ 80018b8:	4b24      	ldr	r3, [pc, #144]	@ (800194c <change_direction+0xa0>)
  80018ba:	781b      	ldrb	r3, [r3, #0]
  80018bc:	f083 0301 	eor.w	r3, r3, #1
  80018c0:	b2db      	uxtb	r3, r3
  80018c2:	2b00      	cmp	r3, #0
- 80018c4:	d036      	beq.n	8001934 <press_button_4+0x88>
+ 80018c4:	d036      	beq.n	8001934 <change_direction+0x88>
  80018c6:	687b      	ldr	r3, [r7, #4]
  80018c8:	68db      	ldr	r3, [r3, #12]
  80018ca:	6878      	ldr	r0, [r7, #4]
  80018cc:	4798      	blx	r3
  80018ce:	4603      	mov	r3, r0
  80018d0:	2b00      	cmp	r3, #0
- 80018d2:	d02f      	beq.n	8001934 <press_button_4+0x88>
+ 80018d2:	d02f      	beq.n	8001934 <change_direction+0x88>
 	{
 		if (red.state->direction == LEFT)
- 80018d4:	4b1e      	ldr	r3, [pc, #120]	@ (8001950 <press_button_4+0xa4>)
+ 80018d4:	4b1e      	ldr	r3, [pc, #120]	@ (8001950 <change_direction+0xa4>)
  80018d6:	681b      	ldr	r3, [r3, #0]
  80018d8:	781b      	ldrb	r3, [r3, #0]
  80018da:	2b00      	cmp	r3, #0
- 80018dc:	d105      	bne.n	80018ea <press_button_4+0x3e>
+ 80018dc:	d105      	bne.n	80018ea <change_direction+0x3e>
 		{
 			red.set_state(&red, &right_red);
- 80018de:	4b1c      	ldr	r3, [pc, #112]	@ (8001950 <press_button_4+0xa4>)
+ 80018de:	4b1c      	ldr	r3, [pc, #112]	@ (8001950 <change_direction+0xa4>)
  80018e0:	695b      	ldr	r3, [r3, #20]
- 80018e2:	491c      	ldr	r1, [pc, #112]	@ (8001954 <press_button_4+0xa8>)
- 80018e4:	481a      	ldr	r0, [pc, #104]	@ (8001950 <press_button_4+0xa4>)
+ 80018e2:	491c      	ldr	r1, [pc, #112]	@ (8001954 <change_direction+0xa8>)
+ 80018e4:	481a      	ldr	r0, [pc, #104]	@ (8001950 <change_direction+0xa4>)
  80018e6:	4798      	blx	r3
- 80018e8:	e004      	b.n	80018f4 <press_button_4+0x48>
+ 80018e8:	e004      	b.n	80018f4 <change_direction+0x48>
 		}
 		else
 		{
 			red.set_state(&red, &left_red);
- 80018ea:	4b19      	ldr	r3, [pc, #100]	@ (8001950 <press_button_4+0xa4>)
+ 80018ea:	4b19      	ldr	r3, [pc, #100]	@ (8001950 <change_direction+0xa4>)
  80018ec:	695b      	ldr	r3, [r3, #20]
- 80018ee:	491a      	ldr	r1, [pc, #104]	@ (8001958 <press_button_4+0xac>)
- 80018f0:	4817      	ldr	r0, [pc, #92]	@ (8001950 <press_button_4+0xa4>)
+ 80018ee:	491a      	ldr	r1, [pc, #104]	@ (8001958 <change_direction+0xac>)
+ 80018f0:	4817      	ldr	r0, [pc, #92]	@ (8001950 <change_direction+0xa4>)
  80018f2:	4798      	blx	r3
 		}
 
 		if (green.state->direction == LEFT)
- 80018f4:	4b19      	ldr	r3, [pc, #100]	@ (800195c <press_button_4+0xb0>)
+ 80018f4:	4b19      	ldr	r3, [pc, #100]	@ (800195c <change_direction+0xb0>)
  80018f6:	681b      	ldr	r3, [r3, #0]
  80018f8:	781b      	ldrb	r3, [r3, #0]
  80018fa:	2b00      	cmp	r3, #0
- 80018fc:	d105      	bne.n	800190a <press_button_4+0x5e>
+ 80018fc:	d105      	bne.n	800190a <change_direction+0x5e>
 		{
 			green.set_state(&green, &right_green);
- 80018fe:	4b17      	ldr	r3, [pc, #92]	@ (800195c <press_button_4+0xb0>)
+ 80018fe:	4b17      	ldr	r3, [pc, #92]	@ (800195c <change_direction+0xb0>)
  8001900:	695b      	ldr	r3, [r3, #20]
- 8001902:	4917      	ldr	r1, [pc, #92]	@ (8001960 <press_button_4+0xb4>)
- 8001904:	4815      	ldr	r0, [pc, #84]	@ (800195c <press_button_4+0xb0>)
+ 8001902:	4917      	ldr	r1, [pc, #92]	@ (8001960 <change_direction+0xb4>)
+ 8001904:	4815      	ldr	r0, [pc, #84]	@ (800195c <change_direction+0xb0>)
  8001906:	4798      	blx	r3
- 8001908:	e004      	b.n	8001914 <press_button_4+0x68>
+ 8001908:	e004      	b.n	8001914 <change_direction+0x68>
 		}
 		else
 		{
 			green.set_state(&green, &left_green);
- 800190a:	4b14      	ldr	r3, [pc, #80]	@ (800195c <press_button_4+0xb0>)
+ 800190a:	4b14      	ldr	r3, [pc, #80]	@ (800195c <change_direction+0xb0>)
  800190c:	695b      	ldr	r3, [r3, #20]
- 800190e:	4915      	ldr	r1, [pc, #84]	@ (8001964 <press_button_4+0xb8>)
- 8001910:	4812      	ldr	r0, [pc, #72]	@ (800195c <press_button_4+0xb0>)
+ 800190e:	4915      	ldr	r1, [pc, #84]	@ (8001964 <change_direction+0xb8>)
+ 8001910:	4812      	ldr	r0, [pc, #72]	@ (800195c <change_direction+0xb0>)
  8001912:	4798      	blx	r3
 		}
 
 		if (blue.state->direction == LEFT)
- 8001914:	4b14      	ldr	r3, [pc, #80]	@ (8001968 <press_button_4+0xbc>)
+ 8001914:	4b14      	ldr	r3, [pc, #80]	@ (8001968 <change_direction+0xbc>)
  8001916:	681b      	ldr	r3, [r3, #0]
  8001918:	781b      	ldrb	r3, [r3, #0]
  800191a:	2b00      	cmp	r3, #0
- 800191c:	d105      	bne.n	800192a <press_button_4+0x7e>
+ 800191c:	d105      	bne.n	800192a <change_direction+0x7e>
 		{
 			blue.set_state(&blue, &right_blue);
- 800191e:	4b12      	ldr	r3, [pc, #72]	@ (8001968 <press_button_4+0xbc>)
+ 800191e:	4b12      	ldr	r3, [pc, #72]	@ (8001968 <change_direction+0xbc>)
  8001920:	695b      	ldr	r3, [r3, #20]
- 8001922:	4912      	ldr	r1, [pc, #72]	@ (800196c <press_button_4+0xc0>)
- 8001924:	4810      	ldr	r0, [pc, #64]	@ (8001968 <press_button_4+0xbc>)
+ 8001922:	4912      	ldr	r1, [pc, #72]	@ (800196c <change_direction+0xc0>)
+ 8001924:	4810      	ldr	r0, [pc, #64]	@ (8001968 <change_direction+0xbc>)
  8001926:	4798      	blx	r3
- 8001928:	e004      	b.n	8001934 <press_button_4+0x88>
+ 8001928:	e004      	b.n	8001934 <change_direction+0x88>
 		}
 		else
 		{
 			blue.set_state(&blue, &left_blue);
- 800192a:	4b0f      	ldr	r3, [pc, #60]	@ (8001968 <press_button_4+0xbc>)
+ 800192a:	4b0f      	ldr	r3, [pc, #60]	@ (8001968 <change_direction+0xbc>)
  800192c:	695b      	ldr	r3, [r3, #20]
- 800192e:	4910      	ldr	r1, [pc, #64]	@ (8001970 <press_button_4+0xc4>)
- 8001930:	480d      	ldr	r0, [pc, #52]	@ (8001968 <press_button_4+0xbc>)
+ 800192e:	4910      	ldr	r1, [pc, #64]	@ (8001970 <change_direction+0xc4>)
+ 8001930:	480d      	ldr	r0, [pc, #52]	@ (8001968 <change_direction+0xbc>)
  8001932:	4798      	blx	r3
 		}
 	}
@@ -4075,7 +4075,7 @@ void press_button_4(void)
  800193a:	4798      	blx	r3
  800193c:	4603      	mov	r3, r0
  800193e:	461a      	mov	r2, r3
- 8001940:	4b02      	ldr	r3, [pc, #8]	@ (800194c <press_button_4+0xa0>)
+ 8001940:	4b02      	ldr	r3, [pc, #8]	@ (800194c <change_direction+0xa0>)
  8001942:	701a      	strb	r2, [r3, #0]
 }
  8001944:	bf00      	nop

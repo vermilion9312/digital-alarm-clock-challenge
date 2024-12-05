@@ -113,13 +113,11 @@ int main(void)
 	  button_3->update(button_3);
 	  button_4->update(button_4);
 
-	  change_direction();
-
 	  red->operate(red, button_1);
 	  green->operate(green, button_2);
 	  blue->operate(blue, button_3);
 
-
+	  press_button_4();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
