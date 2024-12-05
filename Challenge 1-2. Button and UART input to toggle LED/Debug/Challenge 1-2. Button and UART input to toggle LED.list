@@ -5,49 +5,49 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .isr_vector   00000188  08000000  08000000  00001000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  1 .text         00001898  08000188  08000188  00001188  2**2
+  1 .text         000018c0  08000188  08000188  00001188  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000010  08001a20  08001a20  00002a20  2**2
+  2 .rodata       00000010  08001a48  08001a48  00002a48  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08001a30  08001a30  000030dc  2**0
+  3 .ARM.extab    00000000  08001a58  08001a58  000030e8  2**0
                   CONTENTS
-  4 .ARM          00000008  08001a30  08001a30  00002a30  2**2
+  4 .ARM          00000008  08001a58  08001a58  00002a58  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08001a38  08001a38  000030dc  2**0
+  5 .preinit_array 00000000  08001a60  08001a60  000030e8  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08001a38  08001a38  00002a38  2**2
+  6 .init_array   00000004  08001a60  08001a60  00002a60  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .fini_array   00000004  08001a3c  08001a3c  00002a3c  2**2
+  7 .fini_array   00000004  08001a64  08001a64  00002a64  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .data         000000dc  20000000  08001a40  00003000  2**2
+  8 .data         000000e8  20000000  08001a68  00003000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .ccmram       00000000  10000000  10000000  000030dc  2**0
+  9 .ccmram       00000000  10000000  10000000  000030e8  2**0
                   CONTENTS
- 10 .bss          00000024  200000dc  200000dc  000030dc  2**2
+ 10 .bss          00000024  200000e8  200000e8  000030e8  2**2
                   ALLOC
- 11 ._user_heap_stack 00000600  20000100  20000100  000030dc  2**0
+ 11 ._user_heap_stack 00000604  2000010c  2000010c  000030e8  2**0
                   ALLOC
- 12 .ARM.attributes 00000030  00000000  00000000  000030dc  2**0
+ 12 .ARM.attributes 00000030  00000000  00000000  000030e8  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00003ff0  00000000  00000000  0000310c  2**0
+ 13 .debug_info   00004065  00000000  00000000  00003118  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00001244  00000000  00000000  000070fc  2**0
+ 14 .debug_abbrev 0000125f  00000000  00000000  0000717d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 000004a0  00000000  00000000  00008340  2**3
+ 15 .debug_aranges 000004a8  00000000  00000000  000083e0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 0000034e  00000000  00000000  000087e0  2**0
+ 16 .debug_rnglists 00000354  00000000  00000000  00008888  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  0001f291  00000000  00000000  00008b2e  2**0
+ 17 .debug_macro  0001f291  00000000  00000000  00008bdc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00005f31  00000000  00000000  00027dbf  2**0
+ 18 .debug_line   00005f4c  00000000  00000000  00027e6d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000bc878  00000000  00000000  0002dcf0  2**0
+ 19 .debug_str    000bc886  00000000  00000000  0002ddb9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000ea568  2**0
+ 20 .comment      00000043  00000000  00000000  000ea63f  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  0000106c  00000000  00000000  000ea5ac  2**2
+ 21 .debug_frame  00001094  00000000  00000000  000ea684  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000089  00000000  00000000  000eb618  2**0
+ 22 .debug_line_str 00000089  00000000  00000000  000eb718  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -64,9 +64,9 @@ Disassembly of section .text:
  800019a:	2301      	movs	r3, #1
  800019c:	7023      	strb	r3, [r4, #0]
  800019e:	bd10      	pop	{r4, pc}
- 80001a0:	200000dc 	.word	0x200000dc
+ 80001a0:	200000e8 	.word	0x200000e8
  80001a4:	00000000 	.word	0x00000000
- 80001a8:	08001a08 	.word	0x08001a08
+ 80001a8:	08001a30 	.word	0x08001a30
 
 080001ac <frame_dummy>:
  80001ac:	b508      	push	{r3, lr}
@@ -77,8 +77,8 @@ Disassembly of section .text:
  80001b6:	f3af 8000 	nop.w
  80001ba:	bd08      	pop	{r3, pc}
  80001bc:	00000000 	.word	0x00000000
- 80001c0:	200000e0 	.word	0x200000e0
- 80001c4:	08001a08 	.word	0x08001a08
+ 80001c0:	200000ec 	.word	0x200000ec
+ 80001c4:	08001a30 	.word	0x08001a30
 
 080001c8 <__aeabi_uldivmod>:
  80001c8:	b953      	cbnz	r3, 80001e0 <__aeabi_uldivmod+0x18>
@@ -396,13 +396,13 @@ int main(void)
  80004e0:	6138      	str	r0, [r7, #16]
 
   Led* red   = GET_INSTANCE(red);
- 80004e2:	f001 fa47 	bl	8001974 <get_red>
+ 80004e2:	f001 fa5b 	bl	800199c <get_red>
  80004e6:	60f8      	str	r0, [r7, #12]
   Led* green = GET_INSTANCE(green);
- 80004e8:	f001 fa4e 	bl	8001988 <get_green>
+ 80004e8:	f001 fa62 	bl	80019b0 <get_green>
  80004ec:	60b8      	str	r0, [r7, #8]
   Led* blue  = GET_INSTANCE(blue);
- 80004ee:	f001 fa55 	bl	800199c <get_blue>
+ 80004ee:	f001 fa69 	bl	80019c4 <get_blue>
  80004f2:	6078      	str	r0, [r7, #4]
 
 
@@ -430,27 +430,27 @@ int main(void)
  8000510:	6938      	ldr	r0, [r7, #16]
  8000512:	4798      	blx	r3
 
-	  red->operate(red, button_1);
- 8000514:	68fb      	ldr	r3, [r7, #12]
- 8000516:	689b      	ldr	r3, [r3, #8]
- 8000518:	69f9      	ldr	r1, [r7, #28]
- 800051a:	68f8      	ldr	r0, [r7, #12]
- 800051c:	4798      	blx	r3
-	  green->operate(green, button_2);
- 800051e:	68bb      	ldr	r3, [r7, #8]
- 8000520:	689b      	ldr	r3, [r3, #8]
- 8000522:	69b9      	ldr	r1, [r7, #24]
- 8000524:	68b8      	ldr	r0, [r7, #8]
- 8000526:	4798      	blx	r3
-	  blue->operate(blue, button_3);
- 8000528:	687b      	ldr	r3, [r7, #4]
- 800052a:	689b      	ldr	r3, [r3, #8]
- 800052c:	6979      	ldr	r1, [r7, #20]
- 800052e:	6878      	ldr	r0, [r7, #4]
- 8000530:	4798      	blx	r3
-
 	  change_direction();
- 8000532:	f001 f9bb 	bl	80018ac <change_direction>
+ 8000514:	f001 f9d8 	bl	80018c8 <change_direction>
+
+	  red->operate(red, button_1);
+ 8000518:	68fb      	ldr	r3, [r7, #12]
+ 800051a:	689b      	ldr	r3, [r3, #8]
+ 800051c:	69f9      	ldr	r1, [r7, #28]
+ 800051e:	68f8      	ldr	r0, [r7, #12]
+ 8000520:	4798      	blx	r3
+	  green->operate(green, button_2);
+ 8000522:	68bb      	ldr	r3, [r7, #8]
+ 8000524:	689b      	ldr	r3, [r3, #8]
+ 8000526:	69b9      	ldr	r1, [r7, #24]
+ 8000528:	68b8      	ldr	r0, [r7, #8]
+ 800052a:	4798      	blx	r3
+	  blue->operate(blue, button_3);
+ 800052c:	687b      	ldr	r3, [r7, #4]
+ 800052e:	689b      	ldr	r3, [r3, #8]
+ 8000530:	6979      	ldr	r1, [r7, #20]
+ 8000532:	6878      	ldr	r0, [r7, #4]
+ 8000534:	4798      	blx	r3
 	  button_1->update(button_1);
  8000536:	bf00      	nop
  8000538:	e7dc      	b.n	80004f4 <main+0x3c>
@@ -471,7 +471,7 @@ void SystemClock_Config(void)
  8000546:	2230      	movs	r2, #48	@ 0x30
  8000548:	2100      	movs	r1, #0
  800054a:	4618      	mov	r0, r3
- 800054c:	f001 fa30 	bl	80019b0 <memset>
+ 800054c:	f001 fa44 	bl	80019d8 <memset>
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
  8000550:	f107 030c 	add.w	r3, r7, #12
  8000554:	2200      	movs	r2, #0
@@ -1150,7 +1150,7 @@ LoopFillZerobss:
 
 /* Call static constructors */
     bl __libc_init_array
- 8000886:	f001 f89b 	bl	80019c0 <__libc_init_array>
+ 8000886:	f001 f8af 	bl	80019e8 <__libc_init_array>
 /* Call the application's entry point.*/
   bl  main
  800088a:	f7ff fe15 	bl	80004b8 <main>
@@ -1161,13 +1161,13 @@ LoopFillZerobss:
   ldr r0, =_sdata
  8000894:	20000000 	.word	0x20000000
   ldr r1, =_edata
- 8000898:	200000dc 	.word	0x200000dc
+ 8000898:	200000e8 	.word	0x200000e8
   ldr r2, =_sidata
- 800089c:	08001a40 	.word	0x08001a40
+ 800089c:	08001a68 	.word	0x08001a68
   ldr r2, =_sbss
- 80008a0:	200000dc 	.word	0x200000dc
+ 80008a0:	200000e8 	.word	0x200000e8
   ldr r4, =_ebss
- 80008a4:	20000100 	.word	0x20000100
+ 80008a4:	2000010c 	.word	0x2000010c
 
 080008a8 <ADC_IRQHandler>:
  * @retval None       
@@ -1330,7 +1330,7 @@ __weak void HAL_IncTick(void)
  800096c:	4770      	bx	lr
  800096e:	bf00      	nop
  8000970:	20000008 	.word	0x20000008
- 8000974:	200000f8 	.word	0x200000f8
+ 8000974:	20000104 	.word	0x20000104
 
 08000978 <HAL_GetTick>:
   * @note This function is declared as __weak to be overwritten in case of other 
@@ -1350,7 +1350,7 @@ __weak uint32_t HAL_GetTick(void)
  8000984:	f85d 7b04 	ldr.w	r7, [sp], #4
  8000988:	4770      	bx	lr
  800098a:	bf00      	nop
- 800098c:	200000f8 	.word	0x200000f8
+ 800098c:	20000104 	.word	0x20000104
 
 08000990 <__NVIC_SetPriorityGrouping>:
            In case of a conflict between priority grouping and available
@@ -3500,7 +3500,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, ui
  800159e:	bf00      	nop
  80015a0:	40023c00 	.word	0x40023c00
  80015a4:	40023800 	.word	0x40023800
- 80015a8:	08001a20 	.word	0x08001a20
+ 80015a8:	08001a48 	.word	0x08001a48
  80015ac:	20000000 	.word	0x20000000
  80015b0:	20000004 	.word	0x20000004
 
@@ -3828,9 +3828,9 @@ Button* get_button_4(void)
  80017d4:	2000003c 	.word	0x2000003c
 
 080017d8 <turn_on_led>:
-Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
-Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
-Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
+Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
+Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
+Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
 
 static void turn_on_led(Led* this, Button* button)
 {
@@ -3964,232 +3964,258 @@ static void set_state(Led* this, State* state)
  80018a6:	f85d 7b04 	ldr.w	r7, [sp], #4
  80018aa:	4770      	bx	lr
 
-080018ac <change_direction>:
+080018ac <get_direction>:
+
+static Direction get_direction(Led* this)
+{
+ 80018ac:	b480      	push	{r7}
+ 80018ae:	b083      	sub	sp, #12
+ 80018b0:	af00      	add	r7, sp, #0
+ 80018b2:	6078      	str	r0, [r7, #4]
+	return this->state->direction;
+ 80018b4:	687b      	ldr	r3, [r7, #4]
+ 80018b6:	681b      	ldr	r3, [r3, #0]
+ 80018b8:	781b      	ldrb	r3, [r3, #0]
+}
+ 80018ba:	4618      	mov	r0, r3
+ 80018bc:	370c      	adds	r7, #12
+ 80018be:	46bd      	mov	sp, r7
+ 80018c0:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80018c4:	4770      	bx	lr
+	...
+
+080018c8 <change_direction>:
 
 void change_direction(void)
 {
- 80018ac:	b580      	push	{r7, lr}
- 80018ae:	b082      	sub	sp, #8
- 80018b0:	af00      	add	r7, sp, #0
+ 80018c8:	b580      	push	{r7, lr}
+ 80018ca:	b082      	sub	sp, #8
+ 80018cc:	af00      	add	r7, sp, #0
 	static bool last_button_4 = 0;
 
 	Button* button_4 = GET_INSTANCE(button_4);
- 80018b2:	f7ff ff87 	bl	80017c4 <get_button_4>
- 80018b6:	6078      	str	r0, [r7, #4]
+ 80018ce:	f7ff ff79 	bl	80017c4 <get_button_4>
+ 80018d2:	6078      	str	r0, [r7, #4]
 
 	if (last_button_4 == false && button_4->is_pressed(button_4) == true)
- 80018b8:	4b24      	ldr	r3, [pc, #144]	@ (800194c <change_direction+0xa0>)
- 80018ba:	781b      	ldrb	r3, [r3, #0]
- 80018bc:	f083 0301 	eor.w	r3, r3, #1
- 80018c0:	b2db      	uxtb	r3, r3
- 80018c2:	2b00      	cmp	r3, #0
- 80018c4:	d036      	beq.n	8001934 <change_direction+0x88>
- 80018c6:	687b      	ldr	r3, [r7, #4]
- 80018c8:	68db      	ldr	r3, [r3, #12]
- 80018ca:	6878      	ldr	r0, [r7, #4]
- 80018cc:	4798      	blx	r3
- 80018ce:	4603      	mov	r3, r0
- 80018d0:	2b00      	cmp	r3, #0
- 80018d2:	d02f      	beq.n	8001934 <change_direction+0x88>
+ 80018d4:	4b27      	ldr	r3, [pc, #156]	@ (8001974 <change_direction+0xac>)
+ 80018d6:	781b      	ldrb	r3, [r3, #0]
+ 80018d8:	f083 0301 	eor.w	r3, r3, #1
+ 80018dc:	b2db      	uxtb	r3, r3
+ 80018de:	2b00      	cmp	r3, #0
+ 80018e0:	d03c      	beq.n	800195c <change_direction+0x94>
+ 80018e2:	687b      	ldr	r3, [r7, #4]
+ 80018e4:	68db      	ldr	r3, [r3, #12]
+ 80018e6:	6878      	ldr	r0, [r7, #4]
+ 80018e8:	4798      	blx	r3
+ 80018ea:	4603      	mov	r3, r0
+ 80018ec:	2b00      	cmp	r3, #0
+ 80018ee:	d035      	beq.n	800195c <change_direction+0x94>
 	{
-		if (red.state->direction == LEFT)
- 80018d4:	4b1e      	ldr	r3, [pc, #120]	@ (8001950 <change_direction+0xa4>)
- 80018d6:	681b      	ldr	r3, [r3, #0]
- 80018d8:	781b      	ldrb	r3, [r3, #0]
- 80018da:	2b00      	cmp	r3, #0
- 80018dc:	d105      	bne.n	80018ea <change_direction+0x3e>
+		if (red.get_direction(&red) == LEFT)
+ 80018f0:	4b21      	ldr	r3, [pc, #132]	@ (8001978 <change_direction+0xb0>)
+ 80018f2:	699b      	ldr	r3, [r3, #24]
+ 80018f4:	4820      	ldr	r0, [pc, #128]	@ (8001978 <change_direction+0xb0>)
+ 80018f6:	4798      	blx	r3
+ 80018f8:	4603      	mov	r3, r0
+ 80018fa:	2b00      	cmp	r3, #0
+ 80018fc:	d105      	bne.n	800190a <change_direction+0x42>
 		{
 			red.set_state(&red, &right_red);
- 80018de:	4b1c      	ldr	r3, [pc, #112]	@ (8001950 <change_direction+0xa4>)
- 80018e0:	695b      	ldr	r3, [r3, #20]
- 80018e2:	491c      	ldr	r1, [pc, #112]	@ (8001954 <change_direction+0xa8>)
- 80018e4:	481a      	ldr	r0, [pc, #104]	@ (8001950 <change_direction+0xa4>)
- 80018e6:	4798      	blx	r3
- 80018e8:	e004      	b.n	80018f4 <change_direction+0x48>
+ 80018fe:	4b1e      	ldr	r3, [pc, #120]	@ (8001978 <change_direction+0xb0>)
+ 8001900:	695b      	ldr	r3, [r3, #20]
+ 8001902:	491e      	ldr	r1, [pc, #120]	@ (800197c <change_direction+0xb4>)
+ 8001904:	481c      	ldr	r0, [pc, #112]	@ (8001978 <change_direction+0xb0>)
+ 8001906:	4798      	blx	r3
+ 8001908:	e004      	b.n	8001914 <change_direction+0x4c>
 		}
 		else
 		{
 			red.set_state(&red, &left_red);
- 80018ea:	4b19      	ldr	r3, [pc, #100]	@ (8001950 <change_direction+0xa4>)
- 80018ec:	695b      	ldr	r3, [r3, #20]
- 80018ee:	491a      	ldr	r1, [pc, #104]	@ (8001958 <change_direction+0xac>)
- 80018f0:	4817      	ldr	r0, [pc, #92]	@ (8001950 <change_direction+0xa4>)
- 80018f2:	4798      	blx	r3
+ 800190a:	4b1b      	ldr	r3, [pc, #108]	@ (8001978 <change_direction+0xb0>)
+ 800190c:	695b      	ldr	r3, [r3, #20]
+ 800190e:	491c      	ldr	r1, [pc, #112]	@ (8001980 <change_direction+0xb8>)
+ 8001910:	4819      	ldr	r0, [pc, #100]	@ (8001978 <change_direction+0xb0>)
+ 8001912:	4798      	blx	r3
 		}
 
-		if (green.state->direction == LEFT)
- 80018f4:	4b19      	ldr	r3, [pc, #100]	@ (800195c <change_direction+0xb0>)
- 80018f6:	681b      	ldr	r3, [r3, #0]
- 80018f8:	781b      	ldrb	r3, [r3, #0]
- 80018fa:	2b00      	cmp	r3, #0
- 80018fc:	d105      	bne.n	800190a <change_direction+0x5e>
+		if (green.get_direction(&green) == LEFT)
+ 8001914:	4b1b      	ldr	r3, [pc, #108]	@ (8001984 <change_direction+0xbc>)
+ 8001916:	699b      	ldr	r3, [r3, #24]
+ 8001918:	481a      	ldr	r0, [pc, #104]	@ (8001984 <change_direction+0xbc>)
+ 800191a:	4798      	blx	r3
+ 800191c:	4603      	mov	r3, r0
+ 800191e:	2b00      	cmp	r3, #0
+ 8001920:	d105      	bne.n	800192e <change_direction+0x66>
 		{
 			green.set_state(&green, &right_green);
- 80018fe:	4b17      	ldr	r3, [pc, #92]	@ (800195c <change_direction+0xb0>)
- 8001900:	695b      	ldr	r3, [r3, #20]
- 8001902:	4917      	ldr	r1, [pc, #92]	@ (8001960 <change_direction+0xb4>)
- 8001904:	4815      	ldr	r0, [pc, #84]	@ (800195c <change_direction+0xb0>)
- 8001906:	4798      	blx	r3
- 8001908:	e004      	b.n	8001914 <change_direction+0x68>
+ 8001922:	4b18      	ldr	r3, [pc, #96]	@ (8001984 <change_direction+0xbc>)
+ 8001924:	695b      	ldr	r3, [r3, #20]
+ 8001926:	4918      	ldr	r1, [pc, #96]	@ (8001988 <change_direction+0xc0>)
+ 8001928:	4816      	ldr	r0, [pc, #88]	@ (8001984 <change_direction+0xbc>)
+ 800192a:	4798      	blx	r3
+ 800192c:	e004      	b.n	8001938 <change_direction+0x70>
 		}
 		else
 		{
 			green.set_state(&green, &left_green);
- 800190a:	4b14      	ldr	r3, [pc, #80]	@ (800195c <change_direction+0xb0>)
- 800190c:	695b      	ldr	r3, [r3, #20]
- 800190e:	4915      	ldr	r1, [pc, #84]	@ (8001964 <change_direction+0xb8>)
- 8001910:	4812      	ldr	r0, [pc, #72]	@ (800195c <change_direction+0xb0>)
- 8001912:	4798      	blx	r3
+ 800192e:	4b15      	ldr	r3, [pc, #84]	@ (8001984 <change_direction+0xbc>)
+ 8001930:	695b      	ldr	r3, [r3, #20]
+ 8001932:	4916      	ldr	r1, [pc, #88]	@ (800198c <change_direction+0xc4>)
+ 8001934:	4813      	ldr	r0, [pc, #76]	@ (8001984 <change_direction+0xbc>)
+ 8001936:	4798      	blx	r3
 		}
 
-		if (blue.state->direction == LEFT)
- 8001914:	4b14      	ldr	r3, [pc, #80]	@ (8001968 <change_direction+0xbc>)
- 8001916:	681b      	ldr	r3, [r3, #0]
- 8001918:	781b      	ldrb	r3, [r3, #0]
- 800191a:	2b00      	cmp	r3, #0
- 800191c:	d105      	bne.n	800192a <change_direction+0x7e>
+		if (blue.get_direction(&blue) == LEFT)
+ 8001938:	4b15      	ldr	r3, [pc, #84]	@ (8001990 <change_direction+0xc8>)
+ 800193a:	699b      	ldr	r3, [r3, #24]
+ 800193c:	4814      	ldr	r0, [pc, #80]	@ (8001990 <change_direction+0xc8>)
+ 800193e:	4798      	blx	r3
+ 8001940:	4603      	mov	r3, r0
+ 8001942:	2b00      	cmp	r3, #0
+ 8001944:	d105      	bne.n	8001952 <change_direction+0x8a>
 		{
 			blue.set_state(&blue, &right_blue);
- 800191e:	4b12      	ldr	r3, [pc, #72]	@ (8001968 <change_direction+0xbc>)
- 8001920:	695b      	ldr	r3, [r3, #20]
- 8001922:	4912      	ldr	r1, [pc, #72]	@ (800196c <change_direction+0xc0>)
- 8001924:	4810      	ldr	r0, [pc, #64]	@ (8001968 <change_direction+0xbc>)
- 8001926:	4798      	blx	r3
- 8001928:	e004      	b.n	8001934 <change_direction+0x88>
+ 8001946:	4b12      	ldr	r3, [pc, #72]	@ (8001990 <change_direction+0xc8>)
+ 8001948:	695b      	ldr	r3, [r3, #20]
+ 800194a:	4912      	ldr	r1, [pc, #72]	@ (8001994 <change_direction+0xcc>)
+ 800194c:	4810      	ldr	r0, [pc, #64]	@ (8001990 <change_direction+0xc8>)
+ 800194e:	4798      	blx	r3
+ 8001950:	e004      	b.n	800195c <change_direction+0x94>
 		}
 		else
 		{
 			blue.set_state(&blue, &left_blue);
- 800192a:	4b0f      	ldr	r3, [pc, #60]	@ (8001968 <change_direction+0xbc>)
- 800192c:	695b      	ldr	r3, [r3, #20]
- 800192e:	4910      	ldr	r1, [pc, #64]	@ (8001970 <change_direction+0xc4>)
- 8001930:	480d      	ldr	r0, [pc, #52]	@ (8001968 <change_direction+0xbc>)
- 8001932:	4798      	blx	r3
+ 8001952:	4b0f      	ldr	r3, [pc, #60]	@ (8001990 <change_direction+0xc8>)
+ 8001954:	695b      	ldr	r3, [r3, #20]
+ 8001956:	4910      	ldr	r1, [pc, #64]	@ (8001998 <change_direction+0xd0>)
+ 8001958:	480d      	ldr	r0, [pc, #52]	@ (8001990 <change_direction+0xc8>)
+ 800195a:	4798      	blx	r3
 		}
 	}
 
 	last_button_4 = button_4->is_pressed(button_4);
- 8001934:	687b      	ldr	r3, [r7, #4]
- 8001936:	68db      	ldr	r3, [r3, #12]
- 8001938:	6878      	ldr	r0, [r7, #4]
- 800193a:	4798      	blx	r3
- 800193c:	4603      	mov	r3, r0
- 800193e:	461a      	mov	r2, r3
- 8001940:	4b02      	ldr	r3, [pc, #8]	@ (800194c <change_direction+0xa0>)
- 8001942:	701a      	strb	r2, [r3, #0]
+ 800195c:	687b      	ldr	r3, [r7, #4]
+ 800195e:	68db      	ldr	r3, [r3, #12]
+ 8001960:	6878      	ldr	r0, [r7, #4]
+ 8001962:	4798      	blx	r3
+ 8001964:	4603      	mov	r3, r0
+ 8001966:	461a      	mov	r2, r3
+ 8001968:	4b02      	ldr	r3, [pc, #8]	@ (8001974 <change_direction+0xac>)
+ 800196a:	701a      	strb	r2, [r3, #0]
 }
- 8001944:	bf00      	nop
- 8001946:	3708      	adds	r7, #8
- 8001948:	46bd      	mov	sp, r7
- 800194a:	bd80      	pop	{r7, pc}
- 800194c:	200000fc 	.word	0x200000fc
- 8001950:	20000094 	.word	0x20000094
- 8001954:	20000070 	.word	0x20000070
- 8001958:	2000004c 	.word	0x2000004c
- 800195c:	200000ac 	.word	0x200000ac
- 8001960:	2000007c 	.word	0x2000007c
- 8001964:	20000058 	.word	0x20000058
- 8001968:	200000c4 	.word	0x200000c4
- 800196c:	20000088 	.word	0x20000088
- 8001970:	20000064 	.word	0x20000064
+ 800196c:	bf00      	nop
+ 800196e:	3708      	adds	r7, #8
+ 8001970:	46bd      	mov	sp, r7
+ 8001972:	bd80      	pop	{r7, pc}
+ 8001974:	20000108 	.word	0x20000108
+ 8001978:	20000094 	.word	0x20000094
+ 800197c:	20000070 	.word	0x20000070
+ 8001980:	2000004c 	.word	0x2000004c
+ 8001984:	200000b0 	.word	0x200000b0
+ 8001988:	2000007c 	.word	0x2000007c
+ 800198c:	20000058 	.word	0x20000058
+ 8001990:	200000cc 	.word	0x200000cc
+ 8001994:	20000088 	.word	0x20000088
+ 8001998:	20000064 	.word	0x20000064
 
-08001974 <get_red>:
+0800199c <get_red>:
 
 Led* get_red(void)
 {
- 8001974:	b480      	push	{r7}
- 8001976:	af00      	add	r7, sp, #0
-	return &red;
- 8001978:	4b02      	ldr	r3, [pc, #8]	@ (8001984 <get_red+0x10>)
-}
- 800197a:	4618      	mov	r0, r3
- 800197c:	46bd      	mov	sp, r7
- 800197e:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8001982:	4770      	bx	lr
- 8001984:	20000094 	.word	0x20000094
-
-08001988 <get_green>:
-
-Led* get_green(void)
-{
- 8001988:	b480      	push	{r7}
- 800198a:	af00      	add	r7, sp, #0
-	return &green;
- 800198c:	4b02      	ldr	r3, [pc, #8]	@ (8001998 <get_green+0x10>)
-}
- 800198e:	4618      	mov	r0, r3
- 8001990:	46bd      	mov	sp, r7
- 8001992:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8001996:	4770      	bx	lr
- 8001998:	200000ac 	.word	0x200000ac
-
-0800199c <get_blue>:
-
-Led* get_blue(void)
-{
  800199c:	b480      	push	{r7}
  800199e:	af00      	add	r7, sp, #0
-	return &blue;
- 80019a0:	4b02      	ldr	r3, [pc, #8]	@ (80019ac <get_blue+0x10>)
+	return &red;
+ 80019a0:	4b02      	ldr	r3, [pc, #8]	@ (80019ac <get_red+0x10>)
 }
  80019a2:	4618      	mov	r0, r3
  80019a4:	46bd      	mov	sp, r7
  80019a6:	f85d 7b04 	ldr.w	r7, [sp], #4
  80019aa:	4770      	bx	lr
- 80019ac:	200000c4 	.word	0x200000c4
+ 80019ac:	20000094 	.word	0x20000094
 
-080019b0 <memset>:
- 80019b0:	4402      	add	r2, r0
- 80019b2:	4603      	mov	r3, r0
- 80019b4:	4293      	cmp	r3, r2
- 80019b6:	d100      	bne.n	80019ba <memset+0xa>
- 80019b8:	4770      	bx	lr
- 80019ba:	f803 1b01 	strb.w	r1, [r3], #1
- 80019be:	e7f9      	b.n	80019b4 <memset+0x4>
+080019b0 <get_green>:
 
-080019c0 <__libc_init_array>:
- 80019c0:	b570      	push	{r4, r5, r6, lr}
- 80019c2:	4d0d      	ldr	r5, [pc, #52]	@ (80019f8 <__libc_init_array+0x38>)
- 80019c4:	4c0d      	ldr	r4, [pc, #52]	@ (80019fc <__libc_init_array+0x3c>)
- 80019c6:	1b64      	subs	r4, r4, r5
- 80019c8:	10a4      	asrs	r4, r4, #2
- 80019ca:	2600      	movs	r6, #0
- 80019cc:	42a6      	cmp	r6, r4
- 80019ce:	d109      	bne.n	80019e4 <__libc_init_array+0x24>
- 80019d0:	4d0b      	ldr	r5, [pc, #44]	@ (8001a00 <__libc_init_array+0x40>)
- 80019d2:	4c0c      	ldr	r4, [pc, #48]	@ (8001a04 <__libc_init_array+0x44>)
- 80019d4:	f000 f818 	bl	8001a08 <_init>
- 80019d8:	1b64      	subs	r4, r4, r5
- 80019da:	10a4      	asrs	r4, r4, #2
- 80019dc:	2600      	movs	r6, #0
- 80019de:	42a6      	cmp	r6, r4
- 80019e0:	d105      	bne.n	80019ee <__libc_init_array+0x2e>
- 80019e2:	bd70      	pop	{r4, r5, r6, pc}
- 80019e4:	f855 3b04 	ldr.w	r3, [r5], #4
- 80019e8:	4798      	blx	r3
- 80019ea:	3601      	adds	r6, #1
- 80019ec:	e7ee      	b.n	80019cc <__libc_init_array+0xc>
- 80019ee:	f855 3b04 	ldr.w	r3, [r5], #4
- 80019f2:	4798      	blx	r3
- 80019f4:	3601      	adds	r6, #1
- 80019f6:	e7f2      	b.n	80019de <__libc_init_array+0x1e>
- 80019f8:	08001a38 	.word	0x08001a38
- 80019fc:	08001a38 	.word	0x08001a38
- 8001a00:	08001a38 	.word	0x08001a38
- 8001a04:	08001a3c 	.word	0x08001a3c
+Led* get_green(void)
+{
+ 80019b0:	b480      	push	{r7}
+ 80019b2:	af00      	add	r7, sp, #0
+	return &green;
+ 80019b4:	4b02      	ldr	r3, [pc, #8]	@ (80019c0 <get_green+0x10>)
+}
+ 80019b6:	4618      	mov	r0, r3
+ 80019b8:	46bd      	mov	sp, r7
+ 80019ba:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80019be:	4770      	bx	lr
+ 80019c0:	200000b0 	.word	0x200000b0
 
-08001a08 <_init>:
- 8001a08:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8001a0a:	bf00      	nop
- 8001a0c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8001a0e:	bc08      	pop	{r3}
- 8001a10:	469e      	mov	lr, r3
- 8001a12:	4770      	bx	lr
+080019c4 <get_blue>:
 
-08001a14 <_fini>:
- 8001a14:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8001a16:	bf00      	nop
- 8001a18:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8001a1a:	bc08      	pop	{r3}
- 8001a1c:	469e      	mov	lr, r3
- 8001a1e:	4770      	bx	lr
+Led* get_blue(void)
+{
+ 80019c4:	b480      	push	{r7}
+ 80019c6:	af00      	add	r7, sp, #0
+	return &blue;
+ 80019c8:	4b02      	ldr	r3, [pc, #8]	@ (80019d4 <get_blue+0x10>)
+}
+ 80019ca:	4618      	mov	r0, r3
+ 80019cc:	46bd      	mov	sp, r7
+ 80019ce:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80019d2:	4770      	bx	lr
+ 80019d4:	200000cc 	.word	0x200000cc
+
+080019d8 <memset>:
+ 80019d8:	4402      	add	r2, r0
+ 80019da:	4603      	mov	r3, r0
+ 80019dc:	4293      	cmp	r3, r2
+ 80019de:	d100      	bne.n	80019e2 <memset+0xa>
+ 80019e0:	4770      	bx	lr
+ 80019e2:	f803 1b01 	strb.w	r1, [r3], #1
+ 80019e6:	e7f9      	b.n	80019dc <memset+0x4>
+
+080019e8 <__libc_init_array>:
+ 80019e8:	b570      	push	{r4, r5, r6, lr}
+ 80019ea:	4d0d      	ldr	r5, [pc, #52]	@ (8001a20 <__libc_init_array+0x38>)
+ 80019ec:	4c0d      	ldr	r4, [pc, #52]	@ (8001a24 <__libc_init_array+0x3c>)
+ 80019ee:	1b64      	subs	r4, r4, r5
+ 80019f0:	10a4      	asrs	r4, r4, #2
+ 80019f2:	2600      	movs	r6, #0
+ 80019f4:	42a6      	cmp	r6, r4
+ 80019f6:	d109      	bne.n	8001a0c <__libc_init_array+0x24>
+ 80019f8:	4d0b      	ldr	r5, [pc, #44]	@ (8001a28 <__libc_init_array+0x40>)
+ 80019fa:	4c0c      	ldr	r4, [pc, #48]	@ (8001a2c <__libc_init_array+0x44>)
+ 80019fc:	f000 f818 	bl	8001a30 <_init>
+ 8001a00:	1b64      	subs	r4, r4, r5
+ 8001a02:	10a4      	asrs	r4, r4, #2
+ 8001a04:	2600      	movs	r6, #0
+ 8001a06:	42a6      	cmp	r6, r4
+ 8001a08:	d105      	bne.n	8001a16 <__libc_init_array+0x2e>
+ 8001a0a:	bd70      	pop	{r4, r5, r6, pc}
+ 8001a0c:	f855 3b04 	ldr.w	r3, [r5], #4
+ 8001a10:	4798      	blx	r3
+ 8001a12:	3601      	adds	r6, #1
+ 8001a14:	e7ee      	b.n	80019f4 <__libc_init_array+0xc>
+ 8001a16:	f855 3b04 	ldr.w	r3, [r5], #4
+ 8001a1a:	4798      	blx	r3
+ 8001a1c:	3601      	adds	r6, #1
+ 8001a1e:	e7f2      	b.n	8001a06 <__libc_init_array+0x1e>
+ 8001a20:	08001a60 	.word	0x08001a60
+ 8001a24:	08001a60 	.word	0x08001a60
+ 8001a28:	08001a60 	.word	0x08001a60
+ 8001a2c:	08001a64 	.word	0x08001a64
+
+08001a30 <_init>:
+ 8001a30:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8001a32:	bf00      	nop
+ 8001a34:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8001a36:	bc08      	pop	{r3}
+ 8001a38:	469e      	mov	lr, r3
+ 8001a3a:	4770      	bx	lr
+
+08001a3c <_fini>:
+ 8001a3c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8001a3e:	bf00      	nop
+ 8001a40:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8001a42:	bc08      	pop	{r3}
+ 8001a44:	469e      	mov	lr, r3
+ 8001a46:	4770      	bx	lr

@@ -13,7 +13,6 @@
 static void turn_on_led(Led* this, Button* button);
 static void turn_off_led(Led* this, Button* button);
 static void set_state(Led* this, State* state);
-static Direction get_direction(Led* this);
 
 State left_red    = { LEFT,  LEFT_RED_GPIO_Port,    LEFT_RED_Pin    };
 State left_green  = { LEFT,  LEFT_GREEN_GPIO_Port,  LEFT_GREEN_Pin  };
@@ -23,9 +22,9 @@ State right_red   = { RIGHT, RIGHT_RED_GPIO_Port,   RIGHT_RED_Pin   };
 State right_green = { RIGHT, RIGHT_GREEN_GPIO_Port, RIGHT_GREEN_Pin };
 State right_blue  = { RIGHT, RIGHT_BLUE_GPIO_Port,  RIGHT_BLUE_Pin  };
 
-Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
-Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
-Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
+Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
+Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
+Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state };
 
 static void turn_on_led(Led* this, Button* button)
 {
@@ -69,7 +68,7 @@ void change_direction(void)
 
 	if (last_button_4 == false && button_4->is_pressed(button_4) == true)
 	{
-		if (red.get_direction(&red) == LEFT)
+		if (red. == LEFT)
 		{
 			red.set_state(&red, &right_red);
 		}
@@ -78,7 +77,7 @@ void change_direction(void)
 			red.set_state(&red, &left_red);
 		}
 
-		if (green.get_direction(&green) == LEFT)
+		if (green.state->direction == LEFT)
 		{
 			green.set_state(&green, &right_green);
 		}
@@ -87,7 +86,7 @@ void change_direction(void)
 			green.set_state(&green, &left_green);
 		}
 
-		if (blue.get_direction(&blue) == LEFT)
+		if (blue.state->direction == LEFT)
 		{
 			blue.set_state(&blue, &right_blue);
 		}

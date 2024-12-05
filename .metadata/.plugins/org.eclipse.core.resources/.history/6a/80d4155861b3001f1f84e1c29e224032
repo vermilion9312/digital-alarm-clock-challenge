@@ -69,7 +69,7 @@ void change_direction(void)
 
 	if (last_button_4 == false && button_4->is_pressed(button_4) == true)
 	{
-		if (red.get_direction(&red) == LEFT)
+		if (red.get_direction(red) == LEFT)
 		{
 			red.set_state(&red, &right_red);
 		}
@@ -78,7 +78,7 @@ void change_direction(void)
 			red.set_state(&red, &left_red);
 		}
 
-		if (green.get_direction(&green) == LEFT)
+		if (green.get_direction(green) == LEFT)
 		{
 			green.set_state(&green, &right_green);
 		}
@@ -87,7 +87,7 @@ void change_direction(void)
 			green.set_state(&green, &left_green);
 		}
 
-		if (blue.get_direction(&blue) == LEFT)
+		if (blue.get_direction(blue) == LEFT)
 		{
 			blue.set_state(&blue, &right_blue);
 		}

@@ -33,7 +33,6 @@ struct _Led {
 	void (* const on)(Led*, Button*);
 	void (* const off)(Led*, Button*);
 	void (* const set_state)(Led*, State*);
-	Direction (* const get_direction)(Led*);
 };
 
 Led* get_red(void);
