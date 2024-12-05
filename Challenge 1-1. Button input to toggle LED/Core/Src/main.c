@@ -98,46 +98,28 @@ int main(void)
   Button* button_2 = GET_INSTANCE(button_2);
   Button* button_3 = GET_INSTANCE(button_3);
 
-  Led* led_left_red   = GET_INSTANCE(led_left_red);
-  Led* led_left_green = GET_INSTANCE(led_left_green);
-  Led* led_left_blue  = GET_INSTANCE(led_left_blue);
+  Led* left_red   = GET_INSTANCE(left_red);
+  Led* left_green = GET_INSTANCE(left_green);
+  Led* left_blue  = GET_INSTANCE(left_blue);
 
-  Led* led_right_red   = GET_INSTANCE(led_right_red);
-  Led* led_right_green = GET_INSTANCE(led_right_green);
-  Led* led_right_blue  = GET_INSTANCE(led_right_blue);
+  Led* right_red   = GET_INSTANCE(right_red);
+  Led* right_green = GET_INSTANCE(right_green);
+  Led* right_blue  = GET_INSTANCE(right_blue);
 
   while (1)
   {
+
 	  button_1->update(button_1);
 	  button_2->update(button_2);
 	  button_3->update(button_3);
 
-	  if (button_1->is_pressed(button_1) == true)
-	  {
-		  led_left_red->toggle(led_left_red);
-	  }
-	  else
-	  {
-		  led_right_red->toggle(led_right_red);
-	  }
+	  left_red->operate(left_red, button_1);
+	  left_green->operate(left_green, button_2);
+	  left_blue->operate(left_blue, button_3);
 
-	  if (button_2->is_pressed(button_2) == true)
-	  {
-		  led_left_green->toggle(led_left_green);
-	  }
-	  else
-	  {
-		  led_right_green->toggle(led_right_green);
-	  }
-
-	  if (button_3->is_pressed(button_3) == true)
-	  {
-		  led_left_blue->toggle(led_left_blue);
-	  }
-	  else
-	  {
-		  led_right_blue->toggle(led_right_blue);
-	  }
+	  right_red->operate(right_red, button_1);
+	  right_green->operate(right_green, button_2);
+	  right_blue->operate(right_blue, button_3);
 
     /* USER CODE END WHILE */
 
@@ -206,13 +188,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_RIGHT_BLUE_Pin|LED_RIGHT_GREEN_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, RIGHT_BLUE_Pin|RIGHT_GREEN_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED_LEFT_RED_Pin|LED_LEFT_GREEN_Pin|LED_LEFT_BLUE_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOD, LEFT_RED_Pin|LEFT_GREEN_Pin|LEFT_BLUE_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_RIGHT_RED_GPIO_Port, LED_RIGHT_RED_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(RIGHT_RED_GPIO_Port, RIGHT_RED_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : BUTTON_1_Pin */
   GPIO_InitStruct.Pin = BUTTON_1_Pin;
@@ -226,8 +208,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(BUTTON_2_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_RIGHT_BLUE_Pin LED_RIGHT_GREEN_Pin */
-  GPIO_InitStruct.Pin = LED_RIGHT_BLUE_Pin|LED_RIGHT_GREEN_Pin;
+  /*Configure GPIO pins : RIGHT_BLUE_Pin RIGHT_GREEN_Pin */
+  GPIO_InitStruct.Pin = RIGHT_BLUE_Pin|RIGHT_GREEN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
@@ -239,19 +221,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_LEFT_RED_Pin LED_LEFT_GREEN_Pin LED_LEFT_BLUE_Pin */
-  GPIO_InitStruct.Pin = LED_LEFT_RED_Pin|LED_LEFT_GREEN_Pin|LED_LEFT_BLUE_Pin;
+  /*Configure GPIO pins : LEFT_RED_Pin LEFT_GREEN_Pin LEFT_BLUE_Pin */
+  GPIO_InitStruct.Pin = LEFT_RED_Pin|LEFT_GREEN_Pin|LEFT_BLUE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LED_RIGHT_RED_Pin */
-  GPIO_InitStruct.Pin = LED_RIGHT_RED_Pin;
+  /*Configure GPIO pin : RIGHT_RED_Pin */
+  GPIO_InitStruct.Pin = RIGHT_RED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(LED_RIGHT_RED_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(RIGHT_RED_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

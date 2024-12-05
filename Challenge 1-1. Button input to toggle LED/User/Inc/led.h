@@ -5,26 +5,30 @@
  *      Author: vermi
  */
 
-#ifndef INC_LED_H_
-#define INC_LED_H_
+#ifndef INC_H_
+#define INC_H_
 
 #include <stdbool.h>
 #include "main.h"
+#include "button.h"
 
 typedef struct _Led Led;
 
 struct _Led {
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
-	bool state;
-	void (* const toggle)(Led*);
+	bool last_button;
+	void (* operate)(Led*, Button*);
+	void (* const on)(Led*, Button*);
+	void (* const off)(Led*, Button*);
 };
 
-Led* get_led_left_red(void);
-Led* get_led_left_green(void);
-Led* get_led_left_blue(void);
-Led* get_led_right_red (void);
-Led* get_led_right_green(void);
-Led* get_led_right_blue(void);
+Led* get_left_red(void);
+Led* get_left_green(void);
+Led* get_left_blue(void);
 
-#endif /* INC_LED_H_ */
+Led* get_right_red (void);
+Led* get_right_green(void);
+Led* get_right_blue(void);
+
+#endif /* INC_H_ */

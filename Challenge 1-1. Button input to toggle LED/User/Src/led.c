@@ -5,61 +5,102 @@
  *      Author: vermi
  */
 
-#ifndef SRC_LED_C_
-#define SRC_LED_C_
+#ifndef SRC_C_
+#define SRC_C_
 
 #include "led.h"
 
-static void toggle_left(Led* this)
+static void turn_on_left(Led* this, Button* button);
+static void turn_off_left(Led* this, Button* button);
+static void turn_on_right(Led* this, Button* button);
+static void turn_off_right(Led* this, Button* button);
+
+Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .last_button = false, .operate = turn_off_left,  .on = turn_on_left,  .off = turn_off_left };
+Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .last_button = false, .operate = turn_off_left,  .on = turn_on_left,  .off = turn_off_left };
+Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .last_button = false, .operate = turn_off_left,  .on = turn_on_left,  .off = turn_off_left };
+
+Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+
+static void turn_on_left(Led* this, Button* button)
 {
-	this->state = HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin);
-	this->state ^= 1;
-	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, this->state);
+	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_RESET);
+
+	if (this->last_button == false && button->is_pressed(button) == true)
+	{
+		this->operate = turn_off_left;
+	}
+
+	this->last_button = button->is_pressed(button);
 }
 
-static void toggle_right(Led* this)
+static void turn_off_left(Led* this, Button* button)
 {
-	this->state = ~HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin);
-	this->state ^= 1;
-	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, this->state);
+	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_SET);
+
+	if (this->last_button == false && button->is_pressed(button) == true)
+	{
+		this->operate = turn_on_left;
+	}
+
+	this->last_button = button->is_pressed(button);
 }
 
-Led led_left_red   = { LED_LEFT_RED_GPIO_Port,   LED_LEFT_RED_Pin,   false, toggle_left };
-Led led_left_green = { LED_LEFT_GREEN_GPIO_Port, LED_LEFT_GREEN_Pin, false, toggle_left };
-Led led_left_blue  = { LED_LEFT_BLUE_GPIO_Port,  LED_LEFT_BLUE_Pin,  false, toggle_left };
-
-Led led_right_red   = { LED_RIGHT_RED_GPIO_Port,   LED_RIGHT_RED_Pin,   false, toggle_right };
-Led led_right_green = { LED_RIGHT_GREEN_GPIO_Port, LED_RIGHT_GREEN_Pin, false, toggle_right };
-Led led_right_blue  = { LED_RIGHT_BLUE_GPIO_Port,  LED_RIGHT_BLUE_Pin,  false, toggle_right };
-
-Led* get_led_left_red(void)
+static void turn_on_right(Led* this, Button* button)
 {
-	return &led_left_red;
+	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_RESET);
+
+	if (this->last_button == true && button->is_pressed(button) == false)
+	{
+		this->operate = turn_off_right;
+	}
+
+	this->last_button = button->is_pressed(button);
 }
 
-Led* get_led_left_green(void)
+static void turn_off_right(Led* this, Button* button)
 {
-	return &led_left_green;
+	HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_SET);
+
+	if (this->last_button== true && button->is_pressed(button) == false)
+	{
+		this->operate = turn_on_right;
+	}
+
+	this->last_button = button->is_pressed(button);
 }
 
-Led* get_led_left_blue(void)
+Led* get_left_red(void)
 {
-	return &led_left_blue;
+	return &left_red;
 }
 
-Led* get_led_right_red (void)
+Led* get_left_green(void)
 {
-	return &led_right_red ;
+	return &left_green;
 }
 
-Led* get_led_right_green(void)
+Led* get_left_blue(void)
 {
-	return &led_right_green;
+	return &left_blue;
 }
 
-Led* get_led_right_blue(void)
+Led* get_right_red (void)
 {
-	return &led_right_blue;
+	return &right_red ;
 }
 
-#endif /* SRC_LED_C_ */
+Led* get_right_green(void)
+{
+	return &right_green;
+}
+
+Led* get_right_blue(void)
+{
+	return &right_blue;
+}
+
+
+
+#endif /* SRC_C_ */
