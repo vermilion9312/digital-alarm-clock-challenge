@@ -17,11 +17,9 @@
 #define TURN_OFF_LED HAL_GPIO_WritePin(this->state->GPIOx, this->state->GPIO_Pin, GPIO_PIN_SET)
 
 typedef enum { LEFT, RIGHT } Direction;
-typedef enum { ON, OFF } OutputState;
 
 typedef struct _State {
 	Direction direction;
-	OutputState output;
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
 } State;

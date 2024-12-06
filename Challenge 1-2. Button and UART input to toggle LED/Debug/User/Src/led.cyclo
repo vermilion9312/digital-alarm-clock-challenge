@@ -1,0 +1,8 @@
+../User/Src/led.c:30:13:turn_on_led	3
+../User/Src/led.c:43:13:turn_off_led	3
+../User/Src/led.c:56:13:set_state	3
+../User/Src/led.c:71:18:get_direction	1
+../User/Src/led.c:76:6:change_direction	6
+../User/Src/led.c:114:6:get_red	1
+../User/Src/led.c:119:6:get_green	1
+../User/Src/led.c:124:6:get_blue	1

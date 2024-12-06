@@ -1,10 +1,10 @@
-08:33:51 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+09:35:02 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
 make -j16 all 
 arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
    text	   data	    bss	    dec	    hex	filename
-   6760	    232	   1576	   8568	   2178	Challenge 1-2. Button and UART input to toggle LED.elf
+   6816	    232	   1576	   8624	   21b0	Challenge 1-2. Button and UART input to toggle LED.elf
 Finished building: default.size.stdout
  
 
-08:33:51 Build Finished. 0 errors, 0 warnings. (took 181ms)
+09:35:03 Build Finished. 0 errors, 0 warnings. (took 183ms)
 

@@ -3829,9 +3829,9 @@ Button* get_button_3(void)
  80017dc:	2000002c 	.word	0x2000002c
 
 080017e0 <turn_on_left>:
-Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin, .last_button = false,  .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
-Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin,.last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
-Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin, .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
+Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_right, .on = turn_on_right, .off = turn_off_right };
 
 static void turn_on_left(Led* this, Button* button)
 {
