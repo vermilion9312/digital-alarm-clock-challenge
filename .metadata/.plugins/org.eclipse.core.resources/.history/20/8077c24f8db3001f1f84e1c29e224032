@@ -1,0 +1,22 @@
+/*
+ * uart.c
+ *
+ *  Created on: Dec 6, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "uart.h"
+
+static void receive(Uart* this)
+{
+	HAL_UART_Receive_IT(this->huart, this->pData, this->Size);
+}
+
+static uint8_t get_data(Uart* this)
+{
+	return *this->pData;
+}
+
+static uint8_t* data;
+Uart uart = { huart3, data, sizeof(data) };

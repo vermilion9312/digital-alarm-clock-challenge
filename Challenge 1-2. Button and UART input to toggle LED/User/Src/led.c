@@ -15,20 +15,22 @@ static void turn_off_led(Led* this, Button* button);
 static void set_state(Led* this, State* state);
 static Direction get_direction(Led* this);
 
-State left_red    = { LEFT,  OFF, LEFT_RED_GPIO_Port,    LEFT_RED_Pin    };
-State left_green  = { LEFT,  OFF, LEFT_GREEN_GPIO_Port,  LEFT_GREEN_Pin  };
-State left_blue   = { LEFT,  OFF, LEFT_BLUE_GPIO_Port,   LEFT_BLUE_Pin   };
+static State left_red    = { LEFT,  OFF, LEFT_RED_GPIO_Port,    LEFT_RED_Pin    };
+static State left_green  = { LEFT,  OFF, LEFT_GREEN_GPIO_Port,  LEFT_GREEN_Pin  };
+static State left_blue   = { LEFT,  OFF, LEFT_BLUE_GPIO_Port,   LEFT_BLUE_Pin   };
 
-State right_red   = { RIGHT, OFF, RIGHT_RED_GPIO_Port,   RIGHT_RED_Pin   };
-State right_green = { RIGHT, OFF, RIGHT_GREEN_GPIO_Port, RIGHT_GREEN_Pin };
-State right_blue  = { RIGHT, OFF, RIGHT_BLUE_GPIO_Port,  RIGHT_BLUE_Pin  };
+static State right_red   = { RIGHT, OFF, RIGHT_RED_GPIO_Port,   RIGHT_RED_Pin   };
+static State right_green = { RIGHT, OFF, RIGHT_GREEN_GPIO_Port, RIGHT_GREEN_Pin };
+static State right_blue  = { RIGHT, OFF, RIGHT_BLUE_GPIO_Port,  RIGHT_BLUE_Pin  };
 
-Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
-Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
-Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
+static Led red   = { .state = &left_red,   .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
+static Led green = { .state = &left_green, .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
+static Led blue  = { .state = &left_blue,  .last_button = false, .operate = turn_off_led, turn_on_led, turn_off_led, set_state, get_direction };
 
 static void turn_on_led(Led* this, Button* button)
 {
+	Uart* uart = GET_INSTANCE(uart);
+
 	TURN_ON_LED;
 
 	if (this->last_button == false && button->is_pressed(button) == true)
@@ -38,10 +40,16 @@ static void turn_on_led(Led* this, Button* button)
 	}
 
 	this->last_button = button->is_pressed(button);
+
+
+
 }
 
 static void turn_off_led(Led* this, Button* button)
 {
+
+	Uart* uart = GET_INSTANCE(uart);
+
 	TURN_OFF_LED;
 
 	if (this->last_button == false && button->is_pressed(button) == true)
@@ -51,6 +59,12 @@ static void turn_off_led(Led* this, Button* button)
 	}
 
 	this->last_button = button->is_pressed(button);
+
+	if (uart->get_data(uart))
+	{
+		this->operate = turn_on_led;
+		this->state->output = ON;
+	}
 }
 
 static void set_state(Led* this, State* state)

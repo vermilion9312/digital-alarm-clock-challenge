@@ -12,6 +12,7 @@
 #include "main.h"
 #include "button.h"
 #include "common.h"
+#include "uart.h"
 
 #define TURN_ON_LED  HAL_GPIO_WritePin(this->state->GPIOx, this->state->GPIO_Pin, GPIO_PIN_RESET)
 #define TURN_OFF_LED HAL_GPIO_WritePin(this->state->GPIOx, this->state->GPIO_Pin, GPIO_PIN_SET)

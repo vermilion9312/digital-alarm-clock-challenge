@@ -1,0 +1,15 @@
+/*
+ * data.c
+ *
+ *  Created on: Dec 6, 2024
+ *      Author: LeeJooHo
+ */
+
+
+static void receive(void* _this)
+{
+	Data* this = (Data*) _this;
+	HAL_UART_Receive_IT(this->huart, this->pData, this->Size);
+}
+
+static uint8_t get_data()

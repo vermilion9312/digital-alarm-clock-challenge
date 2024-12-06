@@ -6353,3 +6353,342 @@ arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.e
    6816	    232	   1576	   8624	   21b0	Challenge 1-2. Button and UART input to toggle LED.elf
 Finished building: default.size.stdout
  
+10:45:58 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6816	    232	   1576	   8624	   21b0	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+10:47:09 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6816	    232	   1576	   8624	   21b0	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+13:49:04 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+In file included from ../User/Src/uart.c:9:
+../User/Inc/uart.h:14:9: error: unknown type name 'UART_HandleTypeDef'
+   14 |         UART_HandleTypeDef* huart;
+      |         ^~~~~~~~~~~~~~~~~~
+../User/Inc/uart.h:15:9: error: unknown type name 'uint8_t'
+   15 |         uint8_t* pData;
+      |         ^~~~~~~
+../User/Inc/uart.h:16:9: error: unknown type name 'uint16_t'
+   16 |         uint16_t Size;
+      |         ^~~~~~~~
+../User/Inc/uart.h:20:9: error: expected specifier-qualifier-list before 'uint8_t'
+   20 |         uint8_t (* const get_data)(Uart*);
+      |         ^~~~~~~
+../User/Src/uart.c: In function 'get_uart':
+../User/Src/uart.c:12:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   12 | {
+      | ^
+../User/Src/uart.c:16:8: error: unknown type name 'uint8_t'
+   16 | static uint8_t get_data(Uart* this)
+      |        ^~~~~~~
+../User/Src/uart.c:17:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   17 | {
+      | ^
+../User/Src/uart.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t* data;
+      |        ^~~~~~~
+../User/Src/uart.c:21:17: error: storage class specified for parameter 'data'
+   21 | static uint8_t* data;
+      |                 ^~~~
+../User/Src/uart.c:22:1: error: parameter 'uart' is initialized
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      | ^~~~
+../User/Src/uart.c:22:15: error: 'huart3' undeclared (first use in this function); did you mean 'uart'?
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |               ^~~~~~
+      |               uart
+../User/Src/uart.c:22:15: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/uart.c:22:43: error: 'NULL' undeclared (first use in this function)
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                                           ^~~~
+../User/Src/uart.c:10:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    9 | #include "uart.h"
+  +++ |+#include <stddef.h>
+   10 | 
+../User/Src/uart.c:22:49: error: 'receive' undeclared (first use in this function)
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                                                 ^~~~~~~
+../User/Src/uart.c:22:58: error: 'get_data' undeclared (first use in this function)
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                                                          ^~~~~~~~
+../User/Src/uart.c:22:58: warning: excess elements in struct initializer
+../User/Src/uart.c:22:58: note: (near initialization for 'uart')
+../User/Src/uart.c:25:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   25 | {
+      | ^
+../User/Inc/uart.h:23:7: error: old-style parameter declarations in prototyped function definition
+   23 | Uart* get_uart(void)
+      |       ^~~~~~~~
+../User/Src/uart.c:29: error: expected '{' at end of input
+../User/Src/uart.c:29: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:49:06 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+In file included from ../User/Src/uart.c:9:
+../User/Inc/uart.h:14:9: error: unknown type name 'UART_HandleTypeDef'
+   14 |         UART_HandleTypeDef* huart;
+      |         ^~~~~~~~~~~~~~~~~~
+../User/Inc/uart.h:15:9: error: unknown type name 'uint8_t'
+   15 |         uint8_t* pData;
+      |         ^~~~~~~
+../User/Inc/uart.h:16:9: error: unknown type name 'uint16_t'
+   16 |         uint16_t Size;
+      |         ^~~~~~~~
+../User/Inc/uart.h:20:9: error: expected specifier-qualifier-list before 'uint8_t'
+   20 |         uint8_t (* const get_data)(Uart*);
+      |         ^~~~~~~
+../User/Src/uart.c: In function 'receive':
+../User/Src/uart.c:13:9: warning: implicit declaration of function 'HAL_UART_Receive_IT' [-Wimplicit-function-declaration]
+   13 |         HAL_UART_Receive_IT(this->huart, this->pData, this->Size);
+      |         ^~~~~~~~~~~~~~~~~~~
+../User/Src/uart.c: At top level:
+../User/Src/uart.c:16:8: error: unknown type name 'uint8_t'
+   16 | static uint8_t get_data(Uart* this)
+      |        ^~~~~~~
+../User/Src/uart.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t* data;
+      |        ^~~~~~~
+../User/Src/uart.c:22:15: error: 'huart3' undeclared here (not in a function); did you mean 'uart'?
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |               ^~~~~~
+      |               uart
+../User/Src/uart.c:22:23: error: initializer element is not constant
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                       ^~~~
+../User/Src/uart.c:22:23: note: (near initialization for 'uart.pData')
+../User/Src/uart.c:22:43: error: 'NULL' undeclared here (not in a function)
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                                           ^~~~
+../User/Src/uart.c:10:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    9 | #include "uart.h"
+  +++ |+#include <stddef.h>
+   10 | 
+../User/Src/uart.c:22:58: warning: excess elements in struct initializer
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                                                          ^~~~~~~~
+../User/Src/uart.c:22:58: note: (near initialization for 'uart')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:49:23 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:22:15: error: 'huart3' undeclared here (not in a function); did you mean 'uart'?
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |               ^~~~~~
+      |               uart
+../User/Src/uart.c:22:23: error: initializer element is not constant
+   22 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                       ^~~~
+../User/Src/uart.c:22:23: note: (near initialization for 'uart.pData')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:50:07 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:24:15: error: incompatible types when initializing type 'UART_HandleTypeDef *' {aka 'struct __UART_HandleTypeDef *'} using type 'UART_HandleTypeDef' {aka 'struct __UART_HandleTypeDef'}
+   24 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |               ^~~~~~
+../User/Src/uart.c:24:23: error: initializer element is not constant
+   24 | Uart uart = { huart3, data, sizeof(data), NULL, receive, get_data };
+      |                       ^~~~
+../User/Src/uart.c:24:23: note: (near initialization for 'uart.pData')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:50:56 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:24:24: error: initializer element is not constant
+   24 | Uart uart = { &huart3, data, sizeof(data), NULL, receive, get_data };
+      |                        ^~~~
+../User/Src/uart.c:24:24: note: (near initialization for 'uart.pData')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:51:30 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:24:24: error: initializer element is not constant
+   24 | Uart uart = { &huart3, data, 1, NULL, receive, get_data };
+      |                        ^~~~
+../User/Src/uart.c:24:24: note: (near initialization for 'uart.pData')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:54:09 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11412	    232	   1648	  13292	   33ec	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+13:54:18 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:24:24: error: 'data' undeclared here (not in a function)
+   24 | Uart uart = { &huart3, data, 1, NULL, receive, get_data };
+      |                        ^~~~
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:54:22 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:24:24: error: initializer element is not constant
+   24 | Uart uart = { &huart3, data, 1, NULL, receive, get_data };
+      |                        ^~~~
+../User/Src/uart.c:24:24: note: (near initialization for 'uart.pData')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:54:33 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/uart.c:23:24: error: initializer element is not constant
+   23 | Uart uart = { &huart3, data, 1, NULL, receive, get_data };
+      |                        ^~~~
+../User/Src/uart.c:23:24: note: (near initialization for 'uart.pData')
+make: *** [User/Src/subdir.mk:25: User/Src/uart.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:54:48 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11412	    232	   1648	  13292	   33ec	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:18:51 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11736	    256	   1648	  13640	   3548	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:19:36 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+../User/Src/led.c: In function 'turn_on_led':
+../User/Src/led.c:32:15: warning: unused variable 'uart' [-Wunused-variable]
+   32 |         Uart* uart = GET_INSTANCE(uart);
+      |               ^~~~
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11764	    256	   1648	  13668	   3564	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:20:11 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+../User/Src/led.c: In function 'turn_on_led':
+../User/Src/led.c:32:15: warning: unused variable 'uart' [-Wunused-variable]
+   32 |         Uart* uart = GET_INSTANCE(uart);
+      |               ^~~~
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11764	    256	   1648	  13668	   3564	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:46:39 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11764	    256	   1648	  13668	   3564	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:46:43 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11764	    256	   1648	  13668	   3564	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+16:52:34 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+../User/Src/led.c: In function 'turn_on_led':
+../User/Src/led.c:32:15: warning: unused variable 'uart' [-Wunused-variable]
+   32 |         Uart* uart = GET_INSTANCE(uart);
+      |               ^~~~
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11764	    256	   1648	  13668	   3564	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 

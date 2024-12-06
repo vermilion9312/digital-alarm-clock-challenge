@@ -1,0 +1,20 @@
+/*
+ * data.h
+ *
+ *  Created on: Dec 6, 2024
+ *      Author: LeeJooHo
+ */
+
+#ifndef INC_DATA_H_
+#define INC_DATA_H_
+
+#include "uart.h"
+
+typedef struct _Data Data;
+
+struct _Data {
+	Uart* uart;
+	char data;
+};
+
+#endif /* INC_DATA_H_ */

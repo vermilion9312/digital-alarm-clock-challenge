@@ -1,0 +1,13 @@
+/*
+ * data.c
+ *
+ *  Created on: Dec 6, 2024
+ *      Author: LeeJooHo
+ */
+
+
+void receive(void* _this, UART_HandleTypeDef* huart)
+{
+	Data* this = (Data*) _this;
+	HAL_UART_Receive_IT(huart, pData, Size);
+}
