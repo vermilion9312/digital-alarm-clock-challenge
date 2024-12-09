@@ -34,7 +34,6 @@ static void turn_on_led(Led* this, Button* button)
 
 	TURN_ON_LED;
 
-	// 버튼으로 눌렀을 때
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
 		this->operate = turn_off_led;
@@ -43,7 +42,6 @@ static void turn_on_led(Led* this, Button* button)
 
 	this->last_button = button->is_pressed(button);
 
-	// UART 통신 받았을 때
 	if (this->id == uart->get_data(uart))
 	{
 		this->operate = turn_off_led;
@@ -58,7 +56,6 @@ static void turn_off_led(Led* this, Button* button)
 
 	TURN_OFF_LED;
 
-	// 버튼으로 눌렀을 때
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
 		this->operate = turn_on_led;
@@ -67,7 +64,6 @@ static void turn_off_led(Led* this, Button* button)
 
 	this->last_button = button->is_pressed(button);
 
-	// UART 통신 받았을 때
 	if (this->id == uart->get_data(uart))
 	{
 		this->operate = turn_on_led;
