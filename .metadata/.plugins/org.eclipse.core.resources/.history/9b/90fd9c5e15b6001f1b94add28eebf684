@@ -1,0 +1,9 @@
+../User/Src/led.c:31:13:turn_on_led	32	static
+../User/Src/led.c:55:13:turn_off_led	32	static
+../User/Src/led.c:79:13:set_state	16	static
+../User/Src/led.c:94:18:get_direction	16	static
+../User/Src/led.c:99:13:get_ouput_state	16	static
+../User/Src/led.c:104:6:change_direction	16	static
+../User/Src/led.c:177:6:get_red	4	static
+../User/Src/led.c:182:6:get_green	4	static
+../User/Src/led.c:187:6:get_blue	4	static
