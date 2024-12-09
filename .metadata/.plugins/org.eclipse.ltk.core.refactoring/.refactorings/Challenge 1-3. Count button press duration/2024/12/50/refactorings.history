@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Challenge 1-3. Count button press duration/Challenge 1-2. Button and UART input to toggle LED.ioc&apos; to &apos;Challenge 1-3. Count button press duration.ioc&apos;" description="Rename resource &apos;Challenge 1-2. Button and UART input to toggle LED.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Challenge 1-2. Button and UART input to toggle LED.ioc" name="Challenge 1-3. Count button press duration.ioc" stamp="1733736196269" updateReferences="true"/>
+</session>

@@ -6725,6 +6725,7 @@ static void turn_on_led(Led* this, Button* button)
  8002ac6:	4619      	mov	r1, r3
  8002ac8:	f7fe fb7c 	bl	80011c4 <HAL_GPIO_WritePin>
 
+	// 버튼으로 눌렀을 때
 	if (this->last_button == false && button->is_pressed(button) == true)
  8002acc:	687b      	ldr	r3, [r7, #4]
  8002ace:	791b      	ldrb	r3, [r3, #4]
@@ -6761,6 +6762,7 @@ static void turn_on_led(Led* this, Button* button)
  8002b02:	687b      	ldr	r3, [r7, #4]
  8002b04:	711a      	strb	r2, [r3, #4]
 
+	// UART 통신 받았을 때
 	if (this->id == uart->get_data(uart))
  8002b06:	687b      	ldr	r3, [r7, #4]
  8002b08:	795c      	ldrb	r4, [r3, #5]
@@ -6819,6 +6821,7 @@ static void turn_off_led(Led* this, Button* button)
  8002b5a:	4619      	mov	r1, r3
  8002b5c:	f7fe fb32 	bl	80011c4 <HAL_GPIO_WritePin>
 
+	// 버튼으로 눌렀을 때
 	if (this->last_button == false && button->is_pressed(button) == true)
  8002b60:	687b      	ldr	r3, [r7, #4]
  8002b62:	791b      	ldrb	r3, [r3, #4]
@@ -6855,6 +6858,7 @@ static void turn_off_led(Led* this, Button* button)
  8002b96:	687b      	ldr	r3, [r7, #4]
  8002b98:	711a      	strb	r2, [r3, #4]
 
+	// UART 통신 받았을 때
 	if (this->id == uart->get_data(uart))
  8002b9a:	687b      	ldr	r3, [r7, #4]
  8002b9c:	795c      	ldrb	r4, [r3, #5]
