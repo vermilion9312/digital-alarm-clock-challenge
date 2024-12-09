@@ -46,7 +46,7 @@ static void turn_on_led(Led* this, Button* button)
 	{
 		this->operate = turn_off_led;
 		this->state->output = OFF;
-		uart->reset_data(uart);
+		*(uart->pData) = 0;
 	}
 }
 
@@ -68,7 +68,7 @@ static void turn_off_led(Led* this, Button* button)
 	{
 		this->operate = turn_on_led;
 		this->state->output = ON;
-		uart->reset_data(uart);
+		*(uart->pData) = 0;
 	}
 }
 

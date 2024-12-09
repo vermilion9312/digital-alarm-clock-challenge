@@ -1,8 +1,9 @@
-../User/Src/led.c:30:13:turn_on_led	3
-../User/Src/led.c:48:13:turn_off_led	4
-../User/Src/led.c:70:13:set_state	3
-../User/Src/led.c:85:18:get_direction	1
-../User/Src/led.c:90:6:change_direction	6
-../User/Src/led.c:128:6:get_red	1
-../User/Src/led.c:133:6:get_green	1
-../User/Src/led.c:138:6:get_blue	1
+../User/Src/led.c:31:13:turn_on_led	4
+../User/Src/led.c:53:13:turn_off_led	4
+../User/Src/led.c:75:13:set_state	3
+../User/Src/led.c:90:18:get_direction	1
+../User/Src/led.c:95:13:get_ouput_state	1
+../User/Src/led.c:100:6:change_direction	10
+../User/Src/led.c:173:6:get_red	1
+../User/Src/led.c:178:6:get_green	1
+../User/Src/led.c:183:6:get_blue	1

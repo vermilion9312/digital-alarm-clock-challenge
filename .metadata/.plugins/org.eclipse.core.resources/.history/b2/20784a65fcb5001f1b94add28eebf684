@@ -46,7 +46,7 @@ static void turn_on_led(Led* this, Button* button)
 	{
 		this->operate = turn_off_led;
 		this->state->output = OFF;
-		uart->reset_data(uart);
+		*(uart->pData) = 0;
 	}
 }
 
@@ -68,7 +68,7 @@ static void turn_off_led(Led* this, Button* button)
 	{
 		this->operate = turn_on_led;
 		this->state->output = ON;
-		uart->reset_data(uart);
+		*(uart->pData) = 0;
 	}
 }
 
@@ -101,9 +101,7 @@ void change_direction(void)
 {
 	Button* button_4 = GET_INSTANCE(button_4);
 	static bool last_button_4 = 0;
-	Uart* uart = GET_INSTANCE(uart);
 
-	// 버튼으로 방향 전환
 	if (last_button_4 == false && button_4->is_pressed(button_4) == true)
 	{
 		if (red.get_direction(&red) == LEFT)
@@ -135,39 +133,6 @@ void change_direction(void)
 	}
 
 	last_button_4 = button_4->is_pressed(button_4);
-
-	// UART 통신으로 방향 전환
-	if (uart->get_data(uart) == '4')
-	{
-		if (red.get_direction(&red) == LEFT)
-		{
-			red.set_state(&red, &right_red);
-		}
-		else
-		{
-			red.set_state(&red, &left_red);
-		}
-
-		if (green.get_direction(&green) == LEFT)
-		{
-			green.set_state(&green, &right_green);
-		}
-		else
-		{
-			green.set_state(&green, &left_green);
-		}
-
-		if (blue.get_direction(&blue) == LEFT)
-		{
-			blue.set_state(&blue, &right_blue);
-		}
-		else
-		{
-			blue.set_state(&blue, &left_blue);
-		}
-
-		uart->reset_data(uart);
-	}
 }
 
 Led* get_red(void)

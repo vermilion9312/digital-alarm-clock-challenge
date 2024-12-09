@@ -31,7 +31,6 @@ typedef struct _Led Led;
 struct _Led {
 	State* state;
 	bool last_button;
-	char id;
 
 	void (* operate)(Led*, Button*);
 	void (* const on)(Led*, Button*);

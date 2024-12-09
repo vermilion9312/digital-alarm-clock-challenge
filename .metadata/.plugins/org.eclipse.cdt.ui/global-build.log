@@ -6692,3 +6692,270 @@ Finished building: default.size.stdout
  
 Finished building: Challenge 1-2. Button and UART input to toggle LED.list
  
+14:47:16 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11720	    256	   1648	  13624	   3538	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+14:47:24 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11720	    256	   1648	  13624	   3538	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+14:51:10 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11744	    268	   1644	  13656	   3558	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+14:51:36 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11748	    268	   1644	  13660	   355c	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+14:51:44 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11748	    268	   1644	  13660	   355c	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+15:52:15 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11776	    268	   1644	  13688	   3578	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:52:38 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11776	    268	   1644	  13688	   3578	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+15:52:42 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11776	    268	   1644	  13688	   3578	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+15:53:06 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11792	    268	   1644	  13704	   3588	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:53:09 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11792	    268	   1644	  13704	   3588	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+15:55:04 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11776	    268	   1644	  13688	   3578	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:56:33 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11776	    268	   1644	  13688	   3578	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+15:56:54 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11792	    268	   1644	  13704	   3588	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:05:00 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11888	    268	   1644	  13800	   35e8	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:05:06 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11888	    268	   1644	  13800	   35e8	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:05:20 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11844	    268	   1644	  13756	   35bc	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:08:31 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  11980	    268	   1644	  13892	   3644	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:08:39 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11980	    268	   1644	  13892	   3644	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+16:14:54 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/uart.c: In function 'reset_data':
+../User/Src/uart.c:26:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   26 | }
+      | ^
+../User/Src/uart.c: At top level:
+../User/Src/uart.c:30:66: warning: initialization of 'void (*)(Uart *)' {aka 'void (*)(struct _Uart *)'} from incompatible pointer type 'uint8_t (*)(Uart *)' {aka 'unsigned char (*)(struct _Uart *)'} [-Wincompatible-pointer-types]
+   30 | static Uart uart = { &huart3, &data, 1, NULL, receive, get_data, reset_data };
+      |                                                                  ^~~~~~~~~~
+../User/Src/uart.c:30:66: note: (near initialization for 'uart.reset_data')
+arm-none-eabi-gcc -o "Challenge 1-2. Button and UART input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-2. Button and UART input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-2. Button and UART input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-2. Button and UART input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf  > "Challenge 1-2. Button and UART input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  12012	    272	   1648	  13932	   366c	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-2. Button and UART input to toggle LED.list
+ 
+16:15:03 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12012	    272	   1648	  13932	   366c	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+16:15:07 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12012	    272	   1648	  13932	   366c	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+16:15:11 **** Incremental Build of configuration Debug for project Challenge 1-2. Button and UART input to toggle LED ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-2.\ Button\ and\ UART\ input\ to\ toggle\ LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12012	    272	   1648	  13932	   366c	Challenge 1-2. Button and UART input to toggle LED.elf
+Finished building: default.size.stdout
+ 

@@ -20,7 +20,7 @@ struct _Uart {
 	void (* const transmit)(Uart*);
 	void (* const receive)(Uart*);
 	uint8_t (* const get_data)(Uart*);
-	void (* const reset_data)(Uart*);
+	void (* const reset_date)(Uart*);
 };
 
 Uart* get_uart(void);
