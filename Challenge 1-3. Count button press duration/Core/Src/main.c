@@ -43,6 +43,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim6;
+
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
@@ -53,6 +55,7 @@ UART_HandleTypeDef huart3;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART3_UART_Init(void);
+static void MX_TIM6_Init(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -93,6 +96,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
+  MX_TIM6_Init();
 
   /* Initialize interrupts */
   MX_NVIC_Init();
@@ -104,31 +108,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   Button* button_1 = GET_INSTANCE(button_1);
-  Button* button_2 = GET_INSTANCE(button_2);
-  Button* button_3 = GET_INSTANCE(button_3);
-  Button* button_4 = GET_INSTANCE(button_4);
-
   Led* red   = GET_INSTANCE(red);
-  Led* green = GET_INSTANCE(green);
-  Led* blue  = GET_INSTANCE(blue);
-
-  Uart* uart = GET_INSTANCE(uart);
-
-  uart->receive(uart);
 
   while (1)
   {
 
 	  button_1->update(button_1);
-	  button_2->update(button_2);
-	  button_3->update(button_3);
-	  button_4->update(button_4);
-
-	  change_direction();
-
 	  red->operate(red, button_1);
-	  green->operate(green, button_2);
-	  blue->operate(blue, button_3);
 
     /* USER CODE END WHILE */
 
@@ -188,9 +174,50 @@ void SystemClock_Config(void)
   */
 static void MX_NVIC_Init(void)
 {
+  /* TIM6_DAC_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
   /* USART3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(USART3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(USART3_IRQn);
+}
+
+/**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 10000 - 1;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 840 - 1;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+
+  /* USER CODE END TIM6_Init 2 */
+
 }
 
 /**
@@ -307,6 +334,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		uart->receive(uart);
 	}
 }
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim->Instance == TIM6)
+	{
+		HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
+	}
+}
+
 /* USER CODE END 4 */
 
 /**

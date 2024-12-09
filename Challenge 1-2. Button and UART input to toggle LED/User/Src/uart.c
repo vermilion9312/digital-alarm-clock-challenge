@@ -20,7 +20,7 @@ static uint8_t get_data(Uart* this)
 	return *this->pData;
 }
 
-static uint8_t reset_data(Uart* this)
+static void reset_data(Uart* this)
 {
 	*(this->pData) = 0;
 }
