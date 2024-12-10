@@ -1,0 +1,19 @@
+/*
+ * timer.h
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+#ifndef INC_TIMER_H_
+#define INC_TIMER_H_
+
+typedef struct _Timer Timer;
+
+struct _Timer {
+	uint32_t count;
+	void (* const count_up)(Timer*);
+	void (* const get_count)(Timer*);
+};
+
+#endif /* INC_TIMER_H_ */

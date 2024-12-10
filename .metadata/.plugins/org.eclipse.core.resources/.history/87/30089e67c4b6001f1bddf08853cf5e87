@@ -1,0 +1,82 @@
+/*
+ * seven_segment.c
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "seven_segment.h"
+
+static void stopped(SevenSegment* this);
+static void paused(SevenSegment* this);
+static void running(SevenSegment* this);
+
+SevenSegment segment = { .timer = NULL, .display = stopped };
+
+static void stopped(SevenSegment* this)
+{
+	Button* button_2 = GET_INSTANCE(button_2);
+	static bool temp3 = 0;
+
+	DGT1_DP_ON;
+	DGT2_DP_OFF;
+
+	_7SEG_SetNumber(DGT1, this->timer->get_seconds(this->timer), ON);
+	_7SEG_SetNumber(DGT2, this->timer->get_milliseconds(this->timer), OFF);
+
+	if (temp3 == false && button_2->is_pressed(button_2) == true)
+	{
+		this->display = running;
+	}
+
+	temp3 = button_2->is_pressed(button_2);
+}
+
+static void paused(SevenSegment* this)
+{
+	Button* button_2 = GET_INSTANCE(button_2);
+	Button* button_3 = GET_INSTANCE(button_3);
+	static bool temp = 0;
+	static bool temp4 = 0;
+
+	DGT1_DP_ON;
+
+	if (temp == false && button_2->is_pressed(button_2) == true)
+	{
+		this->timer->set_count(this->timer, this->timer->last_count);
+		this->display = running;
+	}
+
+	if (temp4 == false && button_3->is_pressed(button_3) == true)
+	{
+		this->timer->set_count(this->timer, 0);
+		this->display = stopped;
+	}
+
+	temp = button_2->is_pressed(button_2);
+	temp4 = button_3->is_pressed(button_3);
+}
+
+static void running(SevenSegment* this)
+{
+	Button* button_2 = GET_INSTANCE(button_2);
+	static bool temp2 = 0;
+
+	_7SEG_SetNumber(DGT1, this->timer->get_seconds(this->timer), this->timer->get_milliseconds(this->timer) < 5 ? ON : OFF);
+	_7SEG_SetNumber(DGT2, this->timer->get_milliseconds(this->timer), OFF);
+
+	if (temp2 == false && button_2->is_pressed(button_2) == true)
+	{
+		this->timer->record_count(this->timer);
+		this->display = paused;
+	}
+
+	temp2 = button_2->is_pressed(button_2);
+}
+
+SevenSegment* get_segment(void)
+{
+	segment.timer = GET_INSTANCE(timer);
+	return &segment;
+}

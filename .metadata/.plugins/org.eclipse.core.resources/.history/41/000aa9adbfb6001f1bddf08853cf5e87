@@ -1,0 +1,55 @@
+/*
+ * seven_segment.c
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "seven_segment.h"
+static void count_seconds(SevenSegment* this, Button* button);
+static void stopped(SevenSegment* this, Button* button);
+static void paused(SevenSegment* this, Button* button);
+static void running(SevenSegment* this, Button* button);
+
+SevenSegment segment = { .timer = NULL, .display = stopped };
+
+static void stopped(SevenSegment* this, Button* button)
+{
+	DGT1_DP_ON;
+	DGT2_DP_OFF;
+
+	if (button->is_pressed(button) == true)
+	{
+		this->display = running;
+	}
+}
+
+static void paused(SevenSegment* this, Button* button)
+{
+	DGT1_DP_ON;
+
+	if (button->is_pressed(button) == true)
+	{
+		this->timer->set_count(this->timer, this->timer->last_count);
+		this->display = running;
+	}
+}
+
+static void running(SevenSegment* this, Button* button)
+{
+	_7SEG_SetNumber(DGT1, this->timer->get_seconds(this->timer), this->timer->get_milliseconds(this->timer) < 5 ? ON : OFF);
+	_7SEG_SetNumber(DGT2, this->timer->get_milliseconds(this->timer), OFF);
+
+	if (button->is_pressed(button) == true)
+	{
+		this->timer->record_count(this->timer);
+		this->display = paused;
+	}
+}
+
+SevenSegment* get_segment(void)
+{
+	segment.timer = GET_INSTANCE(timer);
+	return &segment;
+}

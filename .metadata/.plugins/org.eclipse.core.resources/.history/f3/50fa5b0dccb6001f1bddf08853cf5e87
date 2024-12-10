@@ -1,0 +1,40 @@
+/*
+ * digital_clock.c
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "digital_clock.h"
+
+static void stopped(DigitalClock* this);
+static void paused(DigitalClock* this);
+static void running(DigitalClock* this);
+static void set_mode(DigitalClock* this, Mode* mode);
+
+Mode stop_watch = { stopped, paused, running };
+DigitalClock clock = { .mode = &stop_watch, .operate = stopped, set_mode };
+
+static void set_mode(DigitalClock* this, Mode* mode)
+{
+	this->mode = mode;
+}
+
+static void stopped(DigitalClock* this)
+{
+
+
+}
+
+static void paused(DigitalClock* this)
+{
+
+}
+
+static void running(DigitalClock* this)
+{
+
+}
+
+

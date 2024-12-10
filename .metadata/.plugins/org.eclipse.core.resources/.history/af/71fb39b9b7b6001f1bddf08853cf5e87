@@ -1,0 +1,4 @@
+../User/Src/digital_clock.c:19:13:set_mode	1
+../User/Src/digital_clock.c:24:13:stopped	1
+../User/Src/digital_clock.c:32:13:paused	1
+../User/Src/digital_clock.c:37:13:running	1

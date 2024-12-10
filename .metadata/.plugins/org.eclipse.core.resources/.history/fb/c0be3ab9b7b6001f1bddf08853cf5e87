@@ -1,0 +1,4 @@
+../User/Src/timer.c:11:13:count_up	1
+../User/Src/timer.c:16:17:get_milliseconds	1
+../User/Src/timer.c:21:17:get_senconds	1
+../User/Src/timer.c:28:8:get_timer	1

@@ -7,6 +7,7 @@
 
 
 #include "seven_segment.h"
+
 static void count_up(SevenSegment* this);
 static void set_count_zero(SevenSegment* this);
 static uint8_t get_seconds(SevenSegment* this);
