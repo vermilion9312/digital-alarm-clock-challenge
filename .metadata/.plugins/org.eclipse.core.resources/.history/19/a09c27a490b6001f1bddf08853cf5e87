@@ -1,0 +1,87 @@
+/*
+ * seven_segment.c
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "seven_segment.h"
+static void count_up(SevenSegment* this);
+static void set_count_zero(SevenSegment* this);
+static uint8_t get_seconds(SevenSegment* this);
+static uint8_t get_milliseconds(SevenSegment* this);
+static void count_seconds(SevenSegment* this);
+static void count_stop(SevenSegment* this);
+static void count_init(SevenSegment* this);
+
+SevenSegment segment = { .count = 0, count_up, set_count_zero, get_seconds, get_milliseconds, .display = count_init };
+
+static void count_up(SevenSegment* this)
+{
+	this->count++;
+}
+
+static void set_count_zero(SevenSegment* this)
+{
+	this->count = 0;
+}
+
+static uint8_t get_seconds(SevenSegment* this)
+{
+	return this->count / 10;
+}
+
+static uint8_t get_milliseconds(SevenSegment* this)
+{
+	return this->count % 10;
+}
+
+static void count_init(SevenSegment* this)
+{
+	// 첫 번째 버튼만 사용하기 때문에 굳이 매개변수로 버튼 구조체를 받지 않음
+	Button* button_1 = GET_INSTANCE(button_1);
+
+	// 처음 시작 시 count를 계속 0으로 세팅
+	this->set_count_zero(this);
+
+	//
+//	_7SEG_SetNumber(DGT1, this->get_seconds(this), ON);
+//	_7SEG_SetNumber(DGT2, this->get_milliseconds(this), ON);
+
+	if (button_1->is_pressed(button_1) == true)
+	{
+		this->display = count_seconds;
+	}
+}
+
+static void count_seconds(SevenSegment* this)
+{
+	Button* button_1 = GET_INSTANCE(button_1);
+
+	_7SEG_SetNumber(DGT1, this->get_seconds(this), this->get_milliseconds(this) < 5 ? ON : OFF);
+	_7SEG_SetNumber(DGT2, this->get_milliseconds(this), OFF);
+
+	if (button_1->is_pressed(button_1) == false)
+	{
+		this->display = count_stop;
+	}
+}
+
+static void count_stop(SevenSegment* this)
+{
+	Button* button_1 = GET_INSTANCE(button_1);
+
+	DGT1_DP_ON;
+
+	if (button_1->is_pressed(button_1) == true)
+	{
+		this->set_count_zero(this);
+		this->display = count_seconds;
+	}
+}
+
+SevenSegment* get_segment(void)
+{
+	return &segment;
+}

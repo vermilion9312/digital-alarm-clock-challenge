@@ -24,4 +24,5 @@
 "./User/Src/7SEG.o"
 "./User/Src/button.o"
 "./User/Src/led.o"
+"./User/Src/seven_segment.o"
 "./User/Src/uart.o"

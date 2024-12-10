@@ -8,18 +8,21 @@ C_SRCS += \
 ../User/Src/7SEG.c \
 ../User/Src/button.c \
 ../User/Src/led.c \
+../User/Src/seven_segment.c \
 ../User/Src/uart.c 
 
 OBJS += \
 ./User/Src/7SEG.o \
 ./User/Src/button.o \
 ./User/Src/led.o \
+./User/Src/seven_segment.o \
 ./User/Src/uart.o 
 
 C_DEPS += \
 ./User/Src/7SEG.d \
 ./User/Src/button.d \
 ./User/Src/led.d \
+./User/Src/seven_segment.d \
 ./User/Src/uart.d 
 
 
@@ -30,7 +33,7 @@ User/Src/%.o User/Src/%.su User/Src/%.cyclo: ../User/Src/%.c User/Src/subdir.mk
 clean: clean-User-2f-Src
 
 clean-User-2f-Src:
-	-$(RM) ./User/Src/7SEG.cyclo ./User/Src/7SEG.d ./User/Src/7SEG.o ./User/Src/7SEG.su ./User/Src/button.cyclo ./User/Src/button.d ./User/Src/button.o ./User/Src/button.su ./User/Src/led.cyclo ./User/Src/led.d ./User/Src/led.o ./User/Src/led.su ./User/Src/uart.cyclo ./User/Src/uart.d ./User/Src/uart.o ./User/Src/uart.su
+	-$(RM) ./User/Src/7SEG.cyclo ./User/Src/7SEG.d ./User/Src/7SEG.o ./User/Src/7SEG.su ./User/Src/button.cyclo ./User/Src/button.d ./User/Src/button.o ./User/Src/button.su ./User/Src/led.cyclo ./User/Src/led.d ./User/Src/led.o ./User/Src/led.su ./User/Src/seven_segment.cyclo ./User/Src/seven_segment.d ./User/Src/seven_segment.o ./User/Src/seven_segment.su ./User/Src/uart.cyclo ./User/Src/uart.d ./User/Src/uart.o ./User/Src/uart.su
 
 .PHONY: clean-User-2f-Src
 

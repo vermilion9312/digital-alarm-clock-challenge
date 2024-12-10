@@ -1,0 +1,19 @@
+/*
+ * seven_segment.h
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+#ifndef INC_SEVEN_SEGMENT_H_
+#define INC_SEVEN_SEGMENT_H_
+
+typedef struct _SevenSegment SevenSegment;
+
+struct _SevenSegment {
+	uint8_t count;
+	void (* const count_up)(SevenSegment*);
+	void (* const get_count)(SevenSegment*);
+};
+
+#endif /* INC_SEVEN_SEGMENT_H_ */

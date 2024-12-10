@@ -1,0 +1,26 @@
+/*
+ * seven_segment.c
+ *
+ *  Created on: Dec 10, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "seven_segment.h"
+
+static void count_up(SevenSegment* this)
+{
+	this->count++;
+}
+
+static uint8_t get_seconds(SevenSegment* this)
+{
+	return this->count / 10;
+}
+
+static uint8_t get_milliseconds(SevenSegment* this)
+{
+	this->count % 10;
+}
+
+SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };

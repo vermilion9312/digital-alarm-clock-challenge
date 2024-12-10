@@ -7618,3 +7618,1101 @@ Finished building: default.size.stdout
  
 Finished building: Challenge 1-3. Count button press duration.list
  
+08:23:11 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15288	     40	   1720	  17048	   4298	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+08:31:11 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/7SEG.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/7SEG.d" -MT"User/Src/7SEG.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/7SEG.o"
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+In file included from ../User/Src/seven_segment.c:9:
+../User/Inc/seven_segment.h:14:9: error: unknown type name 'uint8_t'
+   14 |         uint8_t count;
+      |         ^~~~~~~
+../User/Inc/seven_segment.h:16:9: error: expected specifier-qualifier-list before 'uint8_t'
+   16 |         uint8_t (* const get_seconds)(SevenSegment*);
+      |         ^~~~~~~
+../User/Src/seven_segment.c:16:8: error: unknown type name 'uint8_t'
+   16 | static uint8_t get_seconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t get_milliseconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c: In function 'get_milliseconds':
+../User/Src/seven_segment.c:23:21: warning: statement with no effect [-Wunused-value]
+   23 |         this->count % 10;
+      |         ~~~~~~~~~~~~^~~~
+../User/Src/seven_segment.c:24:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   24 | }
+      | ^
+../User/Src/seven_segment.c: At top level:
+../User/Src/seven_segment.c:26:48: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds }
+      |                                                ^~~~~~~~~~~
+../User/Src/seven_segment.c:26:48: note: (near initialization for 'segment')
+../User/Src/seven_segment.c:26:61: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds }
+      |                                                             ^~~~~~~~~~~~~~~~
+../User/Src/seven_segment.c:26:61: note: (near initialization for 'segment')
+../User/Src/seven_segment.c:26:1: error: expected ',' or ';' at end of input
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds }
+      | ^~~~~~~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+08:31:14 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/7SEG.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/7SEG.d" -MT"User/Src/7SEG.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/7SEG.o"
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../User/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/uart.d" -MT"User/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/uart.o"
+In file included from ../User/Src/seven_segment.c:9:
+../User/Inc/seven_segment.h:14:9: error: unknown type name 'uint8_t'
+   14 |         uint8_t count;
+      |         ^~~~~~~
+../User/Inc/seven_segment.h:16:9: error: expected specifier-qualifier-list before 'uint8_t'
+   16 |         uint8_t (* const get_seconds)(SevenSegment*);
+      |         ^~~~~~~
+../User/Src/seven_segment.c:16:8: error: unknown type name 'uint8_t'
+   16 | static uint8_t get_seconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t get_milliseconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c: In function 'get_milliseconds':
+../User/Src/seven_segment.c:23:21: warning: statement with no effect [-Wunused-value]
+   23 |         this->count % 10;
+      |         ~~~~~~~~~~~~^~~~
+../User/Src/seven_segment.c:24:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   24 | }
+      | ^
+../User/Src/seven_segment.c: At top level:
+../User/Src/seven_segment.c:26:48: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };
+      |                                                ^~~~~~~~~~~
+../User/Src/seven_segment.c:26:48: note: (near initialization for 'segment')
+../User/Src/seven_segment.c:26:61: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };
+      |                                                             ^~~~~~~~~~~~~~~~
+../User/Src/seven_segment.c:26:61: note: (near initialization for 'segment')
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+08:31:29 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+In file included from ../User/Src/seven_segment.c:9:
+../User/Inc/seven_segment.h:14:9: error: unknown type name 'uint8_t'
+   14 |         uint8_t count;
+      |         ^~~~~~~
+../User/Inc/seven_segment.h:16:9: error: expected specifier-qualifier-list before 'uint8_t'
+   16 |         uint8_t (* const get_seconds)(SevenSegment*);
+      |         ^~~~~~~
+../User/Src/seven_segment.c:16:8: error: unknown type name 'uint8_t'
+   16 | static uint8_t get_seconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t get_milliseconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c:26:48: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };
+      |                                                ^~~~~~~~~~~
+../User/Src/seven_segment.c:26:48: note: (near initialization for 'segment')
+../User/Src/seven_segment.c:26:61: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };
+      |                                                             ^~~~~~~~~~~~~~~~
+../User/Src/seven_segment.c:26:61: note: (near initialization for 'segment')
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+08:32:00 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+In file included from ../User/Src/seven_segment.c:9:
+../User/Inc/seven_segment.h:14:9: error: unknown type name 'uint8_t'
+   14 |         uint8_t count;
+      |         ^~~~~~~
+../User/Inc/seven_segment.h:16:9: error: expected specifier-qualifier-list before 'uint8_t'
+   16 |         uint8_t (* const get_seconds)(SevenSegment*);
+      |         ^~~~~~~
+../User/Src/seven_segment.c:16:8: error: unknown type name 'uint8_t'
+   16 | static uint8_t get_seconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t get_milliseconds(SevenSegment* this)
+      |        ^~~~~~~
+../User/Src/seven_segment.c:26:48: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };
+      |                                                ^~~~~~~~~~~
+../User/Src/seven_segment.c:26:48: note: (near initialization for 'segment')
+../User/Src/seven_segment.c:26:61: warning: excess elements in struct initializer
+   26 | SevenSegment segment = { .count = 0, count_up, get_seconds, get_milliseconds };
+      |                                                             ^~~~~~~~~~~~~~~~
+../User/Src/seven_segment.c:26:61: note: (near initialization for 'segment')
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+08:32:34 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15288	     40	   1720	  17048	   4298	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:35:16 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:24:
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../User/Inc/common.h:11:33: warning: implicit declaration of function 'get_segment' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:345:33: note: in expansion of macro 'GET_INSTANCE'
+  345 |         SevenSegment* segment = GET_INSTANCE(segment);
+      |                                 ^~~~~~~~~~~~
+../User/Inc/common.h:11:33: warning: initialization of 'SevenSegment *' {aka 'struct _SevenSegment *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:345:33: note: in expansion of macro 'GET_INSTANCE'
+  345 |         SevenSegment* segment = GET_INSTANCE(segment);
+      |                                 ^~~~~~~~~~~~
+../Core/Src/main.c:351:46: warning: passing argument 2 of '_7SEG_SetNumber' makes integer from pointer without a cast [-Wint-conversion]
+  351 |                 _7SEG_SetNumber(DGT1, segment->get_seconds, ON);
+      |                                       ~~~~~~~^~~~~~~~~~~~~
+      |                                              |
+      |                                              uint8_t (*)(SevenSegment *) {aka unsigned char (*)(struct _SevenSegment *)}
+In file included from ../Core/Src/main.c:28:
+../User/Inc/7SEG.h:126:37: note: expected 'int' but argument is of type 'uint8_t (*)(SevenSegment *)' {aka 'unsigned char (*)(struct _SevenSegment *)'}
+  126 | void _7SEG_SetNumber(int digit, int num, int dp);
+      |                                 ~~~~^~~
+../Core/Src/main.c:352:46: warning: passing argument 2 of '_7SEG_SetNumber' makes integer from pointer without a cast [-Wint-conversion]
+  352 |                 _7SEG_SetNumber(DGT2, segment->get_milliseconds, OFF);
+      |                                       ~~~~~~~^~~~~~~~~~~~~~~~~~
+      |                                              |
+      |                                              uint8_t (*)(SevenSegment *) {aka unsigned char (*)(struct _SevenSegment *)}
+../User/Inc/7SEG.h:126:37: note: expected 'int' but argument is of type 'uint8_t (*)(SevenSegment *)' {aka 'unsigned char (*)(struct _SevenSegment *)'}
+  126 | void _7SEG_SetNumber(int digit, int num, int dp);
+      |                                 ~~~~^~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15392	     56	   1720	  17168	   4310	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:35:35 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:24:
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../User/Inc/common.h:11:33: warning: implicit declaration of function 'get_segment' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:345:33: note: in expansion of macro 'GET_INSTANCE'
+  345 |         SevenSegment* segment = GET_INSTANCE(segment);
+      |                                 ^~~~~~~~~~~~
+../User/Inc/common.h:11:33: warning: initialization of 'SevenSegment *' {aka 'struct _SevenSegment *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:345:33: note: in expansion of macro 'GET_INSTANCE'
+  345 |         SevenSegment* segment = GET_INSTANCE(segment);
+      |                                 ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15404	     56	   1720	  17180	   431c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:36:59 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15404	     56	   1720	  17180	   431c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:37:05 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15404	     56	   1720	  17180	   431c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:46:28 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/seven_segment.c: In function 'display':
+../User/Src/seven_segment.c:28:31: error: 'segment' undeclared (first use in this function); did you mean 'get_segment'?
+   28 |         _7SEG_SetNumber(DGT1, segment->get_seconds(segment), ON);
+      |                               ^~~~~~~
+      |                               get_segment
+../User/Src/seven_segment.c:28:31: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/seven_segment.c: At top level:
+../User/Src/seven_segment.c:26:13: warning: 'display' defined but not used [-Wunused-function]
+   26 | static void display(SevenSegment* this)
+      |             ^~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+08:46:56 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c:26:13: warning: 'display' defined but not used [-Wunused-function]
+   26 | static void display(SevenSegment* this)
+      |             ^~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15908	    120	   1720	  17748	   4554	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:47:06 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15964	    120	   1720	  17804	   458c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:47:57 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15976	    120	   1720	  17816	   4598	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:48:02 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15976	    120	   1720	  17816	   4598	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+08:51:17 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  15988	    120	   1720	  17828	   45a4	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:51:20 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15988	    120	   1720	  17828	   45a4	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+08:53:03 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16016	    124	   1716	  17856	   45c0	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:53:17 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    124	   1716	  17864	   45c8	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+08:53:20 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    124	   1716	  17864	   45c8	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:03:30 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/seven_segment.c:44:96: error: 'SevenSegment' {aka 'struct _SevenSegment'} has no member named 'discount_seconds'
+   44 | SevenSegment segment = { .count = 0, count_up, set_count_zero, get_seconds, get_milliseconds, .discount_seconds, count_stop };
+      |                                                                                                ^~~~~~~~~~~~~~~~
+../User/Src/seven_segment.c:44:112: error: expected '=' before ',' token
+   44 | SevenSegment segment = { .count = 0, count_up, set_count_zero, get_seconds, get_milliseconds, .discount_seconds, count_stop };
+      |                                                                                                                ^
+../User/Src/seven_segment.c:38:13: warning: 'count_stop' defined but not used [-Wunused-function]
+   38 | static void count_stop(SevenSegment* this)
+      |             ^~~~~~~~~~
+../User/Src/seven_segment.c:32:13: warning: 'count_seconds' defined but not used [-Wunused-function]
+   32 | static void count_seconds(SevenSegment* this)
+      |             ^~~~~~~~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:03:52 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/seven_segment.c:32:13: warning: 'count_seconds' defined but not used [-Wunused-function]
+   32 | static void count_seconds(SevenSegment* this)
+      |             ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    124	   1716	  17864	   45c8	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:04:42 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/seven_segment.c:32:13: warning: 'count_seconds' defined but not used [-Wunused-function]
+   32 | static void count_seconds(SevenSegment* this)
+      |             ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16024	    124	   1716	  17864	   45c8	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:05:59 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/seven_segment.c: In function 'count_stop':
+../User/Src/seven_segment.c:40:28: warning: implicit declaration of function 'GET_INSTANCE'; did you mean 'IS_TIM_INSTANCE'? [-Wimplicit-function-declaration]
+   40 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+      |                            IS_TIM_INSTANCE
+../User/Src/seven_segment.c:40:28: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+../User/Src/seven_segment.c:40:28: warning: 'button_1' is used uninitialized [-Wuninitialized]
+   40 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../User/Src/seven_segment.c:40:17: note: 'button_1' was declared here
+   40 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/seven_segment.o: in function `count_stop':
+C:/Github/digital-alarm-clock-challenge/Challenge 1-3. Count button press duration/Debug/../User/Src/seven_segment.c:40: undefined reference to `GET_INSTANCE'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Challenge 1-3. Count button press duration.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:06:44 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16112	    124	   1716	  17952	   4620	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:06:51 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16112	    124	   1716	  17952	   4620	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:07:23 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16092	    124	   1716	  17932	   460c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:07:26 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16092	    124	   1716	  17932	   460c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:09:19 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c: In function 'count_stop':
+../User/Src/seven_segment.c:40:17: warning: unused variable 'button_1' [-Wunused-variable]
+   40 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                 ^~~~~~~~
+../User/Src/seven_segment.c: In function 'count_init':
+../User/Src/seven_segment.c:52:13: error: 'button_1' undeclared (first use in this function); did you mean 'Button'?
+   52 |         if (button_1->is_pressed(button_1) == true)
+      |             ^~~~~~~~
+      |             Button
+../User/Src/seven_segment.c:52:13: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/seven_segment.c: At top level:
+../User/Src/seven_segment.c:38:13: warning: 'count_stop' defined but not used [-Wunused-function]
+   38 | static void count_stop(SevenSegment* this)
+      |             ^~~~~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:09:29 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c:38:13: warning: 'count_stop' defined but not used [-Wunused-function]
+   38 | static void count_stop(SevenSegment* this)
+      |             ^~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16072	    124	   1716	  17912	   45f8	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:09:32 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16072	    124	   1716	  17912	   45f8	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+09:10:20 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c: In function 'count_init':
+../User/Src/seven_segment.c:56:17: error: 'segment' undeclared (first use in this function); did you mean 'get_segment'?
+   56 |                 segment.set_count_zero(segment);
+      |                 ^~~~~~~
+      |                 get_segment
+../User/Src/seven_segment.c:56:17: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/seven_segment.c: At top level:
+../User/Src/seven_segment.c:38:13: warning: 'count_stop' defined but not used [-Wunused-function]
+   38 | static void count_stop(SevenSegment* this)
+      |             ^~~~~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:11:30 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c: In function 'count_init':
+../User/Src/seven_segment.c:65:40: error: incompatible type for argument 1 of 'segment.set_count_zero'
+   65 |                 segment.set_count_zero(segment);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        SevenSegment {aka struct _SevenSegment}
+../User/Src/seven_segment.c:65:40: note: expected 'SevenSegment *' {aka 'struct _SevenSegment *'} but argument is of type 'SevenSegment' {aka 'struct _SevenSegment'}
+../User/Src/seven_segment.c: At top level:
+../User/Src/seven_segment.c:47:13: warning: 'count_stop' defined but not used [-Wunused-function]
+   47 | static void count_stop(SevenSegment* this)
+      |             ^~~~~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/seven_segment.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:11:56 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c:47:13: warning: 'count_stop' defined but not used [-Wunused-function]
+   47 | static void count_stop(SevenSegment* this)
+      |             ^~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16080	    124	   1716	  17920	   4600	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:12:00 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16080	    124	   1716	  17920	   4600	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+09:19:01 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16164	    124	   1716	  18004	   4654	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:24:33 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16200	    124	   1716	  18040	   4678	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:24:35 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16200	    124	   1716	  18040	   4678	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:26:19 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16208	    124	   1716	  18048	   4680	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:27:57 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16228	    124	   1716	  18068	   4694	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:28:54 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16220	    124	   1716	  18060	   468c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:29:00 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16220	    124	   1716	  18060	   468c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:30:48 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16240	    124	   1716	  18080	   46a0	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:30:50 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16240	    124	   1716	  18080	   46a0	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:33:28 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c: In function 'turn_on_led':
+../User/Src/led.c:33:15: warning: unused variable 'uart' [-Wunused-variable]
+   33 |         Uart* uart = GET_INSTANCE(uart);
+      |               ^~~~
+../User/Src/led.c: In function 'turn_off_led':
+../User/Src/led.c:49:15: warning: unused variable 'uart' [-Wunused-variable]
+   49 |         Uart* uart = GET_INSTANCE(uart);
+      |               ^~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16160	    116	   1716	  17992	   4648	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:33:40 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16144	    116	   1716	  17976	   4638	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:33:43 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16144	    116	   1716	  17976	   4638	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:36:05 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16132	    116	   1716	  17964	   462c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:36:07 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16132	    116	   1716	  17964	   462c	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+09:49:01 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16092	    116	   1716	  17924	   4604	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:49:41 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c:40:13: warning: 'count_init' defined but not used [-Wunused-function]
+   40 | static void count_init(SevenSegment* this)
+      |             ^~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16036	    116	   1716	  17868	   45cc	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:50:33 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c:16:13: warning: 'count_init' declared 'static' but never defined [-Wunused-function]
+   16 | static void count_init(SevenSegment* this);
+      |             ^~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16036	    116	   1716	  17868	   45cc	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:56:00 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c:16:13: warning: 'count_init' declared 'static' but never defined [-Wunused-function]
+   16 | static void count_init(SevenSegment* this);
+      |             ^~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16036	    116	   1716	  17868	   45cc	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:56:58 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/seven_segment.c:17:64: warning: initialization of 'void (*)(SevenSegment *)' {aka 'void (*)(struct _SevenSegment *)'} from incompatible pointer type 'uint8_t (*)(SevenSegment *)' {aka 'unsigned char (*)(struct _SevenSegment *)'} [-Wincompatible-pointer-types]
+   17 | SevenSegment segment = { .count = 0, count_up, set_count_zero, get_seconds, get_milliseconds, .display = count_stop };
+      |                                                                ^~~~~~~~~~~
+../User/Src/seven_segment.c:17:64: note: (near initialization for 'segment.set_count_zero')
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16004	    116	   1716	  17836	   45ac	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:57:19 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16036	    116	   1716	  17868	   45cc	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:58:10 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16036	    116	   1716	  17868	   45cc	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+09:58:19 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16036	    116	   1716	  17868	   45cc	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+10:29:43 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:24:
+../Core/Src/main.c: In function 'main':
+../User/Inc/common.h:11:33: warning: implicit declaration of function 'get_red' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:114:28: note: in expansion of macro 'GET_INSTANCE'
+  114 |   Led*          red      = GET_INSTANCE(red);
+      |                            ^~~~~~~~~~~~
+../User/Inc/common.h:11:33: warning: initialization of 'Led *' {aka 'struct _Led *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:114:28: note: in expansion of macro 'GET_INSTANCE'
+  114 |   Led*          red      = GET_INSTANCE(red);
+      |                            ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Github/digital-alarm-clock-challenge/Challenge 1-3. Count button press duration/Debug/../Core/Src/main.c:114: undefined reference to `get_red'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Challenge 1-3. Count button press duration.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:30:25 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:11: error: 'red' undeclared (first use in this function); did you mean 'Led'?
+  122 |           red->operate(red, button_1);
+      |           ^~~
+      |           Led
+../Core/Src/main.c:122:11: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:115:17: warning: unused variable 'right_red' [-Wunused-variable]
+  115 |   Led*          right_red = GET_INSTANCE(right_red);
+      |                 ^~~~~~~~~
+../Core/Src/main.c:114:17: warning: unused variable 'left_red' [-Wunused-variable]
+  114 |   Led*          left_red  = GET_INSTANCE(left_red);
+      |                 ^~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:31:00 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:41: error: 'buttpn_1' undeclared (first use in this function); did you mean 'button_1'?
+  123 |           right_red->operate(right_red, buttpn_1);
+      |                                         ^~~~~~~~
+      |                                         button_1
+../Core/Src/main.c:123:41: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:31:06 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16100	    104	   1720	  17924	   4604	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+10:31:09 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16100	    104	   1720	  17924	   4604	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+10:32:09 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c:18:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   18 | Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .last_button = false, .operate = turn_off_left  };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:19:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   19 | Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .last_button = false, .operate = turn_off_left  };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:20:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   20 | Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .last_button = false, .operate = turn_off_left  };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:22:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   22 | Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_right };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:23:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   23 | Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_right };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:24:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   24 | Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_right };
+      |                                                                                                         ^~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:19: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+  122 |           left_red->operate(left_red, button_1);
+      |                   ^~
+../Core/Src/main.c:123:20: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+  123 |           right_red->operate(right_red, button_1);
+      |                    ^~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:32:16 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c:18:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   18 | Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .last_button = false, .operate = turn_off_left  };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:19:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   19 | Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .last_button = false, .operate = turn_off_left  };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:20:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   20 | Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .last_button = false, .operate = turn_off_left  };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:22:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   22 | Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_right };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:23:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   23 | Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_right };
+      |                                                                                                         ^~~~~~~
+../User/Src/led.c:24:105: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   24 | Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_right };
+      |                                                                                                         ^~~~~~~
+make: *** [User/Src/subdir.mk:31: User/Src/led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:32:26 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 1-3. Count button press duration.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-3. Count button press duration\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-3. Count button press duration.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-3. Count button press duration.elf
+ 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-3.\ Count\ button\ press\ duration.elf  > "Challenge 1-3. Count button press duration.list"
+   text	   data	    bss	    dec	    hex	filename
+  16100	    104	   1720	  17924	   4604	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-3. Count button press duration.list
+ 
+10:32:29 **** Incremental Build of configuration Debug for project Challenge 1-3. Count button press duration ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 1-3.\ Count\ button\ press\ duration.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16100	    104	   1720	  17924	   4604	Challenge 1-3. Count button press duration.elf
+Finished building: default.size.stdout
+ 

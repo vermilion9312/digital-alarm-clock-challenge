@@ -1,0 +1,7 @@
+../User/Src/seven_segment.c:20:13:count_up	16	static
+../User/Src/seven_segment.c:25:13:set_count_zero	16	static
+../User/Src/seven_segment.c:30:16:get_seconds	16	static
+../User/Src/seven_segment.c:35:16:get_milliseconds	16	static
+../User/Src/seven_segment.c:40:13:count_stop	24	static
+../User/Src/seven_segment.c:59:13:count_seconds	32	static
+../User/Src/seven_segment.c:75:15:get_segment	4	static

@@ -25,7 +25,7 @@
 #include "button.h"
 #include "led.h"
 #include "uart.h"
-#include "7SEG.h"
+#include "seven_segment.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -109,16 +109,19 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//  Button* button_1 = GET_INSTANCE(button_1);
-//  Led* red   = GET_INSTANCE(red);
+
+  Button*       button_1  = GET_INSTANCE(button_1);
+  Led*          left_red  = GET_INSTANCE(left_red);
+  Led*          right_red = GET_INSTANCE(right_red);
+  SevenSegment* segment   = GET_INSTANCE(segment);
 
   while (1)
   {
 
-//	  button_1->update(button_1);
-//	  red->operate(red, button_1);
-//	  HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
-//	  HAL_Delay(1000);
+	  button_1->update(button_1);
+	  left_red->display(left_red, button_1);
+	  right_red->display(right_red, button_1);
+	  segment->display(segment);
 
     /* USER CODE END WHILE */
 
@@ -341,16 +344,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	static uint8_t count = 0;
+	SevenSegment* segment = GET_INSTANCE(segment);
+
 	if (htim->Instance == TIM6)
 	{
-		HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
-
-		_7SEG_SetNumber(DGT1, count / 10, ON);
-		_7SEG_SetNumber(DGT2, count % 10, OFF);
-
-		count++;
-
+		segment->count_up(segment);
 	}
 }
 

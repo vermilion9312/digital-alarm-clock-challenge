@@ -27,7 +27,7 @@ User/Src/led.o: ../User/Src/led.c ../User/Inc/led.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../User/Inc/button.h ../User/Inc/common.h ../User/Inc/uart.h
+ ../User/Inc/button.h
 ../User/Inc/led.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -59,5 +59,3 @@ User/Src/led.o: ../User/Src/led.c ../User/Inc/led.h ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../User/Inc/button.h:
-../User/Inc/common.h:
-../User/Inc/uart.h:
