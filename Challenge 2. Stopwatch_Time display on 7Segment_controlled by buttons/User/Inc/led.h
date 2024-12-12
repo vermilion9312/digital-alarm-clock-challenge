@@ -20,6 +20,7 @@ typedef struct _Led Led;
 struct _Led {
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
+	bool previous_button;
 	void (* operate)(Led*, Button*);
 };
 

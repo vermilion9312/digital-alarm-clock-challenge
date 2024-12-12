@@ -11102,3 +11102,835 @@ Finished building: default.size.stdout
  
 Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
  
+08:31:30 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:17: warning: unused variable 'segment' [-Wunused-variable]
+  124 |   SevenSegment* segment   = GET_INSTANCE(segment);
+      |                 ^~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16952	    196	   1724	  18872	   49b8	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:35:34 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16960	    196	   1724	  18880	   49c0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:48:51 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/led.c: In function 'turn_on_left':
+../User/Src/led.c:28:21: warning: unused variable 'previous_button_state' [-Wunused-variable]
+   28 |         static bool previous_button_state = false;
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16960	    196	   1724	  18880	   49c0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:49:22 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16960	    196	   1724	  18880	   49c0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:51:50 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16976	    196	   1724	  18896	   49d0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:55:30 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16976	    196	   1724	  18896	   49d0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:56:04 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+../User/Src/led.c: In function 'turn_on_left':
+../User/Src/led.c:28:21: warning: unused variable 'previous_button_state' [-Wunused-variable]
+   28 |         static bool previous_button_state = false;
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../User/Src/led.c: In function 'turn_off_left':
+../User/Src/led.c:42:21: warning: unused variable 'previous_button_state' [-Wunused-variable]
+   42 |         static bool previous_button_state = false;
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../User/Src/led.c: In function 'turn_on_right':
+../User/Src/led.c:57:21: warning: unused variable 'previous_button_state' [-Wunused-variable]
+   57 |         static bool previous_button_state = false;
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+../User/Src/led.c: In function 'turn_off_right':
+../User/Src/led.c:71:21: warning: unused variable 'previous_button_state' [-Wunused-variable]
+   71 |         static bool previous_button_state = false;
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16960	    196	   1724	  18880	   49c0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:56:42 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16944	    196	   1724	  18864	   49b0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:02:41 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  16992	    196	   1724	  18912	   49e0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:05:48 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:13:75: error: expected expression before '/' token
+   13 |         this->_is_pressed = HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin);/
+      |                                                                           ^
+make: *** [User/Src/subdir.mk:34: User/Src/button.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:05:52 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17020	    196	   1724	  18940	   49fc	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:05:54 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17020	    196	   1724	  18940	   49fc	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+09:55:12 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:55:17 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+09:56:41 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:57:09 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:57:42 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:58:06 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+09:59:24 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:00:10 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:02:45 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:10:28 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:10:51 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:15:52 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+10:16:10 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:16:34 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:16:54 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:17:11 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:17:32 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:17:59 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17044	    196	   1724	  18964	   4a14	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:24:40 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:14:12: warning: type defaults to 'int' in declaration of 'previous_state' [-Wimplicit-int]
+   14 |     static previous_state = false;
+      |            ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:25:01 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:14:12: warning: type defaults to 'int' in declaration of 'previous_state' [-Wimplicit-int]
+   14 |     static previous_state = false;
+      |            ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:25:21 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:14:12: warning: type defaults to 'int' in declaration of 'previous_state' [-Wimplicit-int]
+   14 |     static previous_state = false;
+      |            ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:50:01 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:24:9: warning: the address of 'HAL_GetTick' will always evaluate as 'true' [-Waddress]
+   24 |     if (&& HAL_GetTick() - previous_tick > 15)
+      |         ^~
+../User/Src/button.c:24:23: error: expected ')' before '(' token
+   24 |     if (&& HAL_GetTick() - previous_tick > 15)
+      |        ~              ^
+      |                       )
+../User/Src/button.c:24:5: error: label 'HAL_GetTick' used but not defined
+   24 |     if (&& HAL_GetTick() - previous_tick > 15)
+      |     ^~
+../User/Src/button.c:13:21: warning: variable 'previous_tick' set but not used [-Wunused-but-set-variable]
+   13 |     static uint32_t previous_tick = 0;
+      |                     ^~~~~~~~~~~~~
+make: *** [User/Src/subdir.mk:34: User/Src/button.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:52:33 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:52:40 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:52:59 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:53:14 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:53:28 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:53:46 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17072	    196	   1732	  19000	   4a38	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:54:20 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+../User/Src/seven_segment.c: In function 'stop':
+../User/Src/seven_segment.c:21:21: warning: variable 'previous_button_state' set but not used [-Wunused-but-set-variable]
+   21 |         static bool previous_button_state = false;
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17056	    196	   1732	  18984	   4a28	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:55:32 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17136	    196	   1732	  19064	   4a78	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:55:52 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17136	    196	   1732	  19064	   4a78	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:56:42 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17136	    196	   1732	  19064	   4a78	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:57:20 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:13:21: warning: variable 'previous_tick' set but not used [-Wunused-but-set-variable]
+   13 |     static uint32_t previous_tick = 0;
+      |                     ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17060	    196	   1732	  18988	   4a2c	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+10:58:08 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:13:21: warning: variable 'previous_tick' set but not used [-Wunused-but-set-variable]
+   13 |     static uint32_t previous_tick = 0;
+      |                     ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17060	    196	   1732	  18988	   4a2c	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+11:31:43 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17168	    196	   1732	  19096	   4a98	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+11:32:00 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17176	    196	   1732	  19104	   4aa0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+11:33:12 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+../User/Src/button.c: In function 'update':
+../User/Src/button.c:15:21: warning: duplicate 'volatile' declaration specifier [-Wduplicate-decl-specifier]
+   15 |     volatile static volatile bool current_state = false;
+      |                     ^~~~~~~~
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17176	    196	   1732	  19104	   4aa0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+11:33:18 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17176	    196	   1732	  19104	   4aa0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+11:33:21 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17176	    196	   1732	  19104	   4aa0	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+11:33:52 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17168	    196	   1732	  19096	   4a98	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:42:49 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17168	    196	   1732	  19096	   4a98	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:42:53 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17168	    196	   1732	  19096	   4a98	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+08:43:32 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17020	    196	   1724	  18940	   49fc	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:50:07 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17020	    196	   1724	  18940	   49fc	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 
+08:51:04 **** Incremental Build of configuration Debug for project Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons ****
+make -j16 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
+arm-none-eabi-gcc -o "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+ 
+arm-none-eabi-size  Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf 
+arm-none-eabi-objdump -h -S Challenge\ 2.\ Stopwatch_Time\ display\ on\ 7Segment_controlled\ by\ buttons.elf  > "Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list"
+   text	   data	    bss	    dec	    hex	filename
+  17020	    196	   1724	  18940	   49fc	Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 2. Stopwatch_Time display on 7Segment_controlled by buttons.list
+ 

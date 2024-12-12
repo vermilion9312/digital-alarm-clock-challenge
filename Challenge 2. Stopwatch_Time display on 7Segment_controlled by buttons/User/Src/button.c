@@ -10,7 +10,14 @@
 
 static void update(Button* this)
 {
-	this->_is_pressed = HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin);
+	if (HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin) == GPIO_PIN_SET)
+	{
+		if (this->_is_pressed == false) this->_is_pressed = true;
+	}
+	else
+	{
+		if (this->_is_pressed == true) this->_is_pressed = false;
+	}
 }
 
 static bool is_pressed(Button* this)

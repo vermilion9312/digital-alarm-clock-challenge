@@ -15,68 +15,60 @@ static void turn_off_left(Led* this, Button* button);
 static void turn_on_right(Led* this, Button* button);
 static void turn_off_right(Led* this, Button* button);
 
-Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .operate = turn_off_left  };
-Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .operate = turn_off_left  };
-Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .operate = turn_off_left  };
+Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .previous_button = false, .operate = turn_off_left  };
+Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .previous_button = false, .operate = turn_off_left  };
+Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .previous_button = false, .operate = turn_off_left  };
 
-Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .operate = turn_off_right };
-Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .operate = turn_off_right };
-Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .operate = turn_off_right };
+Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .previous_button = false, .operate = turn_off_right };
+Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .previous_button = false, .operate = turn_off_right };
+Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .previous_button = false, .operate = turn_off_right };
 
 static void turn_on_left(Led* this, Button* button)
 {
-	static bool previous_button_state = false;
-
 	TURN_ON_LED;
 
-	if (previous_button_state == false && button->is_pressed(button) == true)
+	if (this->previous_button == false && button->is_pressed(button) == true)
 	{
 		this->operate = turn_off_left;
 	}
 
-	previous_button_state = button->is_pressed(button);
+	this->previous_button = button->is_pressed(button);
 }
 
 static void turn_off_left(Led* this, Button* button)
 {
-	static bool previous_button_state = false;
-
 	TURN_OFF_LED;
 
-	if (previous_button_state == false && button->is_pressed(button) == true)
+	if (this->previous_button == false && button->is_pressed(button) == true)
 	{
 		this->operate = turn_on_left;
 	}
 
-	previous_button_state = button->is_pressed(button);
+	this->previous_button = button->is_pressed(button);
 }
 
 static void turn_on_right(Led* this, Button* button)
 {
-	static bool previous_button_state = false;
-
 	TURN_ON_LED;
 
-	if (previous_button_state == true && button->is_pressed(button) == false)
+	if (this->previous_button == true && button->is_pressed(button) == false)
 	{
 		this->operate = turn_off_right;
 	}
 
-	previous_button_state = button->is_pressed(button);
+	this->previous_button = button->is_pressed(button);
 }
 
 static void turn_off_right(Led* this, Button* button)
 {
-	static bool previous_button_state = false;
-
 	TURN_OFF_LED;
 
-	if (previous_button_state == true && button->is_pressed(button) == false)
+	if (this->previous_button == true && button->is_pressed(button) == false)
 	{
 		this->operate = turn_on_right;
 	}
 
-	previous_button_state = button->is_pressed(button);
+	this->previous_button = button->is_pressed(button);
 }
 
 Led* get_left_red(void)

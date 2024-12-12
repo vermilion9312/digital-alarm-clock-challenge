@@ -66,18 +66,18 @@ static void run(SevenSegment* this)
 {
 	Button* button_2 = GET_INSTANCE(button_2);
 	Timer* timer = GET_INSTANCE(timer);
-	static bool temp2 = 0;
+	static bool previous_button_state = false;
 
 	_7SEG_SetNumber(DGT1, timer->get_seconds(timer), timer->get_milliseconds(timer) < 5 ? ON : OFF);
 	_7SEG_SetNumber(DGT2, timer->get_milliseconds(timer), OFF);
 
-	if (temp2 == false && button_2->is_pressed(button_2) == true)
+	if (previous_button_state == false && button_2->is_pressed(button_2) == true)
 	{
 		timer->record_count(timer);
 		this->operate = pause;
 	}
 
-	temp2 = button_2->is_pressed(button_2);
+	previous_button_state = button_2->is_pressed(button_2);
 }
 
 SevenSegment* get_segment(void)
