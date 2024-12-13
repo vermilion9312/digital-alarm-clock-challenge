@@ -1286,3 +1286,12 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-13 08:42:11.969
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-13 10:11:29.046
+!MESSAGE Indexed 'Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times' (28 sources, 128 headers) in 2.58 sec: 13,145 declarations; 65,083 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.31%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-13 10:13:15.821
+!MESSAGE Indexed 'Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times' (28 sources, 128 headers) in 1.4 sec: 13,145 declarations; 65,083 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.31%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-13 10:22:56.634
+!MESSAGE Indexed 'Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times' (29 sources, 129 headers) in 2.47 sec: 13,182 declarations; 66,030 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.3%)

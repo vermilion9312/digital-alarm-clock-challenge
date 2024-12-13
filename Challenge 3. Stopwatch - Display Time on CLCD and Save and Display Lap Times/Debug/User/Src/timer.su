@@ -1,0 +1,9 @@
+../User/Src/timer.c:11:13:count_up	16	static
+../User/Src/timer.c:16:13:set_count	16	static
+../User/Src/timer.c:21:13:record_count	16	static
+../User/Src/timer.c:26:17:get_recorded_count	16	static
+../User/Src/timer.c:31:16:get_milliseconds	16	static
+../User/Src/timer.c:36:16:get_senconds	16	static
+../User/Src/timer.c:41:16:get_minutes	16	static
+../User/Src/timer.c:46:16:get_hours	16	static
+../User/Src/timer.c:67:8:get_timer	4	static
