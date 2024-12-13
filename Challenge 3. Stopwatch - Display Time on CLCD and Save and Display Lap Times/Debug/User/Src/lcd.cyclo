@@ -1,0 +1,5 @@
+../User/Src/lcd.c:18:13:stop	3
+../User/Src/lcd.c:37:13:run	7
+../User/Src/lcd.c:88:13:pause	6
+../User/Src/lcd.c:123:13:display_time	2
+../User/Src/lcd.c:153:6:get_lcd	1

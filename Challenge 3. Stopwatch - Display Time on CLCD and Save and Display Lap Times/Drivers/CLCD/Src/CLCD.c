@@ -55,62 +55,62 @@ void CLCD_GPIO_Init(void)
 
 void CLCD_Write_Instruction(unsigned char b)
 {
-	//»óÀ§ 4ºñÆ®
+	//ï¿½ï¿½ï¿½ï¿½ 4ï¿½ï¿½Æ®
 	GPIO_D7->ODR = (b & 0x80) ? GPIO_D7->ODR | GPIO_PIN_D7 : GPIO_D7->ODR & ~GPIO_PIN_D7; //D7
 	GPIO_D6->ODR = (b & 0x40) ? GPIO_D6->ODR | GPIO_PIN_D6 : GPIO_D6->ODR & ~GPIO_PIN_D6; //D6
 	GPIO_D5->ODR = (b & 0x20) ? GPIO_D5->ODR | GPIO_PIN_D5 : GPIO_D5->ODR & ~GPIO_PIN_D5; //D5
 	GPIO_D4->ODR = (b & 0x10) ? GPIO_D4->ODR | GPIO_PIN_D4 : GPIO_D4->ODR & ~GPIO_PIN_D4; //D4
 	
-	GPIO_RS->ODR = GPIO_RS->ODR & ~GPIO_PIN_RS; //RS¸¦ Low
-	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RW¸¦ Low
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_RS->ODR = GPIO_RS->ODR & ~GPIO_PIN_RS; //RSï¿½ï¿½ Low
+	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RWï¿½ï¿½ Low
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 	
-	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //EN¸¦ High
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //ENï¿½ï¿½ High
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 	
-	//ÇÏÀ§ 4ºñÆ®
+	//ï¿½ï¿½ï¿½ï¿½ 4ï¿½ï¿½Æ®
 	GPIO_D7->ODR = (b & 0x08) ? GPIO_D7->ODR | GPIO_PIN_D7 : GPIO_D7->ODR & ~GPIO_PIN_D7; //D7
 	GPIO_D6->ODR = (b & 0x04) ? GPIO_D6->ODR | GPIO_PIN_D6 : GPIO_D6->ODR & ~GPIO_PIN_D6; //D6
 	GPIO_D5->ODR = (b & 0x02) ? GPIO_D5->ODR | GPIO_PIN_D5 : GPIO_D5->ODR & ~GPIO_PIN_D5; //D5
 	GPIO_D4->ODR = (b & 0x01) ? GPIO_D4->ODR | GPIO_PIN_D4 : GPIO_D4->ODR & ~GPIO_PIN_D4; //D4
 
-	GPIO_RS->ODR = GPIO_RS->ODR & ~GPIO_PIN_RS; //RS¸¦ Low
-	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RW¸¦ Low
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_RS->ODR = GPIO_RS->ODR & ~GPIO_PIN_RS; //RSï¿½ï¿½ Low
+	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RWï¿½ï¿½ Low
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 
-	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //EN¸¦ High
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //ENï¿½ï¿½ High
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 
 	HAL_Delay(1);
 }
 
 void CLCD_Write_Display(unsigned char b)
 {
-	//»óÀ§ 4ºñÆ®
+	//ï¿½ï¿½ï¿½ï¿½ 4ï¿½ï¿½Æ®
 	GPIO_D7->ODR = (b & 0x80) ? GPIO_D7->ODR | GPIO_PIN_D7 : GPIO_D7->ODR & ~GPIO_PIN_D7; //D7
 	GPIO_D6->ODR = (b & 0x40) ? GPIO_D6->ODR | GPIO_PIN_D6 : GPIO_D6->ODR & ~GPIO_PIN_D6; //D6
 	GPIO_D5->ODR = (b & 0x20) ? GPIO_D5->ODR | GPIO_PIN_D5 : GPIO_D5->ODR & ~GPIO_PIN_D5; //D5
 	GPIO_D4->ODR = (b & 0x10) ? GPIO_D4->ODR | GPIO_PIN_D4 : GPIO_D4->ODR & ~GPIO_PIN_D4; //D4
 	
-	GPIO_RS->ODR = GPIO_RS->ODR | GPIO_PIN_RS; //RS¸¦ High
-	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RW¸¦ Low
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_RS->ODR = GPIO_RS->ODR | GPIO_PIN_RS; //RSï¿½ï¿½ High
+	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RWï¿½ï¿½ Low
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 	
-	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //EN¸¦ High
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //ENï¿½ï¿½ High
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 	
-	//ÇÏÀ§ 4ºñÆ®
+	//ï¿½ï¿½ï¿½ï¿½ 4ï¿½ï¿½Æ®
 	GPIO_D7->ODR = (b & 0x08) ? GPIO_D7->ODR | GPIO_PIN_D7 : GPIO_D7->ODR & ~GPIO_PIN_D7; //D7
 	GPIO_D6->ODR = (b & 0x04) ? GPIO_D6->ODR | GPIO_PIN_D6 : GPIO_D6->ODR & ~GPIO_PIN_D6; //D6
 	GPIO_D5->ODR = (b & 0x02) ? GPIO_D5->ODR | GPIO_PIN_D5 : GPIO_D5->ODR & ~GPIO_PIN_D5; //D5
 	GPIO_D4->ODR = (b & 0x01) ? GPIO_D4->ODR | GPIO_PIN_D4 : GPIO_D4->ODR & ~GPIO_PIN_D4; //D4
 	
-	GPIO_RS->ODR = GPIO_RS->ODR | GPIO_PIN_RS; //RS¸¦ High
-	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RW¸¦ Low
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_RS->ODR = GPIO_RS->ODR | GPIO_PIN_RS; //RSï¿½ï¿½ High
+	GPIO_RW->ODR = GPIO_RW->ODR & ~GPIO_PIN_RW; //RWï¿½ï¿½ Low
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 	
-	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //EN¸¦ High
-	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //EN¸¦ Low
+	GPIO_EN->ODR = GPIO_EN->ODR | GPIO_PIN_EN; //ENï¿½ï¿½ High
+	GPIO_EN->ODR = GPIO_EN->ODR & ~GPIO_PIN_EN; //ENï¿½ï¿½ Low
 	
 	HAL_Delay(1);
 }
@@ -128,7 +128,7 @@ void CLCD_Gotoxy(unsigned char x, unsigned char y)
 	}
 }
 
-void CLCD_Puts(unsigned char x, unsigned char y, unsigned char *str)
+void CLCD_Puts(unsigned char x, unsigned char y, char *str)
 {
 	unsigned int i=0;
 

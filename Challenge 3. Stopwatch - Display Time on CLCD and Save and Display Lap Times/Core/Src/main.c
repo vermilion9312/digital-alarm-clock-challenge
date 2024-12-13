@@ -27,7 +27,7 @@
 #include "uart.h"
 #include "seven_segment.h"
 #include "timer.h"
-#include "CLCD.h"
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -126,14 +126,23 @@ int main(void)
 
   SevenSegment* segment = GET_INSTANCE(segment);
 
+  Lcd* lcd = GET_INSTANCE(lcd);
+
   while (1)
   {
+
 	  left_red->operate(left_red, button_1);
 	  left_green->operate(left_green, button_2);
 	  left_blue->operate(left_blue, button_3);
 	  right_red->operate(right_red, button_4);
 
 	  segment->operate(segment);
+
+	  lcd->operate(lcd);
+
+
+
+
 
     /* USER CODE END WHILE */
 
@@ -228,9 +237,9 @@ static void MX_TIM6_Init(void)
 
   /* USER CODE END TIM6_Init 1 */
   htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 10000 - 1;
+  htim6.Init.Prescaler = 84 - 1;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 840 - 1;
+  htim6.Init.Period = 1000 - 1;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {

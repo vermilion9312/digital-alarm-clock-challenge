@@ -54,7 +54,7 @@ void CLCD_GPIO_Init(void);
 void CLCD_Write_Instruction(unsigned char b);
 void CLCD_Write_Display(unsigned char b);
 void CLCD_Gotoxy(unsigned char x, unsigned char y);
-void CLCD_Puts(unsigned char x, unsigned char y, unsigned char *str);
+void CLCD_Puts(unsigned char x, unsigned char y, char *str);
 void CLCD_Init(void);
 void CLCD_Clear(void);
 

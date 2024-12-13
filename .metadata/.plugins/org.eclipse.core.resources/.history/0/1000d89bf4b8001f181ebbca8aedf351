@@ -1,0 +1,20 @@
+/*
+ * lcd.h
+ *
+ *  Created on: Dec 13, 2024
+ *      Author: LeeJooHo
+ */
+
+#ifndef INC_LCD_H_
+#define INC_LCD_H_
+
+#include <stdio.h>
+#include "CLCD.h"
+
+typedef struct _Lcd Lcd;
+
+struct _Lcd {
+
+};
+
+#endif /* INC_LCD_H_ */

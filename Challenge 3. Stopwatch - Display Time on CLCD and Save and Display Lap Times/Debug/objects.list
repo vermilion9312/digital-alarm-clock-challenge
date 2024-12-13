@@ -24,6 +24,7 @@
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
 "./Drivers/Seven_segment/Src/7SEG.o"
 "./User/Src/button.o"
+"./User/Src/lcd.o"
 "./User/Src/led.o"
 "./User/Src/seven_segment.o"
 "./User/Src/timer.o"

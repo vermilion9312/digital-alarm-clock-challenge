@@ -1,0 +1,14 @@
+/*
+ * lcd.c
+ *
+ *  Created on: Dec 13, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "lcd.h"
+
+static void operate(Lcd* this)
+{
+	Timer
+}
