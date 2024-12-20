@@ -1,5 +1,0 @@
-../User/Src/lcd.c:18:13:stop	24	static
-../User/Src/lcd.c:37:13:run	48	static
-../User/Src/lcd.c:88:13:pause	32	static
-../User/Src/lcd.c:123:13:display_time	112	static
-../User/Src/lcd.c:153:6:get_lcd	4	static

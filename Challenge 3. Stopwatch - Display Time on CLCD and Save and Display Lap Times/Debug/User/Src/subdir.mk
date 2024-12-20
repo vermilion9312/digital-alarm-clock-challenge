@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../User/Src/button.c \
+../User/Src/digital_clock.c \
 ../User/Src/lcd.c \
 ../User/Src/led.c \
 ../User/Src/seven_segment.c \
@@ -14,6 +15,7 @@ C_SRCS += \
 
 OBJS += \
 ./User/Src/button.o \
+./User/Src/digital_clock.o \
 ./User/Src/lcd.o \
 ./User/Src/led.o \
 ./User/Src/seven_segment.o \
@@ -22,6 +24,7 @@ OBJS += \
 
 C_DEPS += \
 ./User/Src/button.d \
+./User/Src/digital_clock.d \
 ./User/Src/lcd.d \
 ./User/Src/led.d \
 ./User/Src/seven_segment.d \
@@ -36,7 +39,7 @@ User/Src/%.o User/Src/%.su User/Src/%.cyclo: ../User/Src/%.c User/Src/subdir.mk
 clean: clean-User-2f-Src
 
 clean-User-2f-Src:
-	-$(RM) ./User/Src/button.cyclo ./User/Src/button.d ./User/Src/button.o ./User/Src/button.su ./User/Src/lcd.cyclo ./User/Src/lcd.d ./User/Src/lcd.o ./User/Src/lcd.su ./User/Src/led.cyclo ./User/Src/led.d ./User/Src/led.o ./User/Src/led.su ./User/Src/seven_segment.cyclo ./User/Src/seven_segment.d ./User/Src/seven_segment.o ./User/Src/seven_segment.su ./User/Src/timer.cyclo ./User/Src/timer.d ./User/Src/timer.o ./User/Src/timer.su ./User/Src/uart.cyclo ./User/Src/uart.d ./User/Src/uart.o ./User/Src/uart.su
+	-$(RM) ./User/Src/button.cyclo ./User/Src/button.d ./User/Src/button.o ./User/Src/button.su ./User/Src/digital_clock.cyclo ./User/Src/digital_clock.d ./User/Src/digital_clock.o ./User/Src/digital_clock.su ./User/Src/lcd.cyclo ./User/Src/lcd.d ./User/Src/lcd.o ./User/Src/lcd.su ./User/Src/led.cyclo ./User/Src/led.d ./User/Src/led.o ./User/Src/led.su ./User/Src/seven_segment.cyclo ./User/Src/seven_segment.d ./User/Src/seven_segment.o ./User/Src/seven_segment.su ./User/Src/timer.cyclo ./User/Src/timer.d ./User/Src/timer.o ./User/Src/timer.su ./User/Src/uart.cyclo ./User/Src/uart.d ./User/Src/uart.o ./User/Src/uart.su
 
 .PHONY: clean-User-2f-Src
 

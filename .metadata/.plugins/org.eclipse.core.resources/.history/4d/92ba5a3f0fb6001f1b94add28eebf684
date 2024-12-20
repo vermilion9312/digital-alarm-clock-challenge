@@ -1,4 +1,0 @@
-../User/Src/uart.c:13:13:receive	16	static
-../User/Src/uart.c:18:16:get_data	16	static
-../User/Src/uart.c:23:16:reset_data	16	static
-../User/Src/uart.c:32:7:get_uart	4	static

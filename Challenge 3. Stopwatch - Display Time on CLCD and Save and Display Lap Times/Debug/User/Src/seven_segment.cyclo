@@ -1,4 +1,4 @@
 ../User/Src/seven_segment.c:17:13:stop	3
 ../User/Src/seven_segment.c:39:13:run	3
-../User/Src/seven_segment.c:59:13:pause	5
-../User/Src/seven_segment.c:90:15:get_segment	1
+../User/Src/seven_segment.c:58:13:pause	5
+../User/Src/seven_segment.c:89:15:get_segment	1

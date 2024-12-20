@@ -1,6 +1,0 @@
-../User/Src/button.c:11:13:update	16	static
-../User/Src/button.c:16:13:is_pressed	16	static
-../User/Src/button.c:26:9:get_button_1	4	static
-../User/Src/button.c:31:9:get_button_2	4	static
-../User/Src/button.c:36:9:get_button_3	4	static
-../User/Src/button.c:41:9:get_button_4	4	static

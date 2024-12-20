@@ -1,0 +1,22 @@
+/*
+ * digital_clock.c
+ *
+ *  Created on: Dec 20, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "digital_clock.h"
+
+Mode clock;
+Mode timer;
+Mode stopwatch;
+Mode alarm;
+Mode music_player;
+
+
+void set_mode(DigitalClock* this, Mode* mode)
+{
+	this->mode = mode;
+}
+

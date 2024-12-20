@@ -25,8 +25,8 @@ static void stop(SevenSegment* this)
 
 	timer->set_count(timer, 0);
 
-	_7SEG_SetNumber(DGT1, timer->get_seconds(timer), ON);
-	_7SEG_SetNumber(DGT2, timer->get_100_milliseconds(timer), OFF);
+	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), ON);
+	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
 
 	if (previous_button_state == false && button_2->is_pressed(button_2) == true)
 	{
@@ -41,15 +41,14 @@ static void run(SevenSegment* this)
 	Button* button_2 = GET_INSTANCE(button_2);
 	Timer* timer = GET_INSTANCE(timer);
 	static bool previous_button_state = false;
-	Time* run_time = GET_INSTANCE(run_time);
 
-	_7SEG_SetNumber(DGT1, timer->get_seconds(timer), timer->get_100_milliseconds(timer) < 5 ? ON : OFF);
-	_7SEG_SetNumber(DGT2, timer->get_100_milliseconds(timer), OFF);
+	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), timer->get_time(timer, _100_MILLISECONDS) < 5 ? ON : OFF);
+	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
 
 	if (previous_button_state == false && button_2->is_pressed(button_2) == true)
 	{
 		timer->record_count(timer);
-		timer->record_time(timer, run_time);
+//		timer->record_time(timer, run_time);
 		this->operate = pause;
 	}
 
@@ -68,8 +67,8 @@ static void pause(SevenSegment* this)
 
 	timer->set_count(timer, timer->get_recorded_count(timer));
 
-	_7SEG_SetNumber(DGT1, timer->get_seconds(timer), ON);
-	_7SEG_SetNumber(DGT2, timer->get_100_milliseconds(timer), OFF);
+	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), ON);
+	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
 
 	if (previous_button_state_2 == false && button_2->is_pressed(button_2) == true)
 	{

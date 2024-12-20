@@ -1,0 +1,25 @@
+/*
+ * digital_clock.h
+ *
+ *  Created on: Dec 20, 2024
+ *      Author: LeeJooHo
+ */
+
+#ifndef INC_DIGITAL_CLOCK_H_
+#define INC_DIGITAL_CLOCK_H_
+
+typedef struct _Mode Mode;
+
+struct _Mode {
+
+};
+
+typedef struct _DigitalClock DigitalClock;
+
+struct _DigitalClock {
+	Mode* mode;
+	void (* set_mode)(DigitalClock*, Mode*);
+	void (* operate)(DigitalClock*);
+};
+
+#endif /* INC_DIGITAL_CLOCK_H_ */

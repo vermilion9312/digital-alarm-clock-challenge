@@ -10,6 +10,8 @@
 
 #include <stdint.h>
 
+typedef enum { HOURS, MINUTES, SECONDS, _100_MILLISECONDS, MILLISECONDS } TimeKind;
+
 typedef struct _Time Time;
 
 struct _Time {
@@ -33,15 +35,10 @@ struct _Timer {
 	void (* const record_count)(Timer*);
 	uint32_t (*const get_recorded_count)(Timer*);
 	void (* const record_time)(Timer*, Time*);
-
-
-	uint8_t (* const get_milliseconds)(Timer*);
-	uint8_t (* const get_100_milliseconds)(Timer*);
-	uint8_t (* const get_seconds)(Timer*);
-	uint8_t (* const get_minutes)(Timer*);
-	uint8_t (* const get_hours)(Timer*);
-
+	uint8_t (* const get_recorded_time)(Timer*, Time*, TimeKind);
+	uint8_t (* const get_time)(Timer*, TimeKind);
 };
+
 
 Timer* get_timer(void);
 Time* get_lap_time(void);

@@ -43,7 +43,7 @@ static void run(Lcd* this)
 	static bool previous_button_3 = false;
 	static bool previous_button_4 = false;
 	Timer* timer = GET_INSTANCE(timer);
-	static uint8_t i = 0;
+	static uint8_t lap_count = 0;
 	char ttemp[5] = { 0, };
 	Time* lap_time = GET_INSTANCE(lap_time);
 
@@ -58,13 +58,13 @@ static void run(Lcd* this)
 
 	if (previous_button_3 == false && button_3->is_pressed(button_3) == true)
 	{
-		memcpy(&(lap_time[i]), timer->time, sizeof(timer->time));
+		memcpy(&(lap_time[lap_count]), timer->time, sizeof(timer->time));
 
-		sprintf(ttemp, "LP%d", i + 1);
+		sprintf(ttemp, "LP%d", lap_count + 1);
 
 
 
-		if (i < 10)
+		if (lap_count < 10)
 		{
 			display_time(ttemp, BOTTOM_LINE, OTHERS, timer->time);
 		}
@@ -130,22 +130,22 @@ static void display_time(char* head, Line line, State state, Time* time)
 
 	CLCD_Puts(0, line, head);
 
-	sprintf(housrs,"%02d", time->hours);
+	sprintf(housrs,"%02d", state == STOP ? timer->get_recorded_time(timer, time, HOURS) : timer->get_time(timer, HOURS));
 	CLCD_Puts(4, line, housrs);
 
 	CLCD_Puts(6, line, ":");
 
-	sprintf(minutes,"%02d", time->minutes);
+	sprintf(minutes,"%02d", state == STOP ? timer->get_recorded_time(timer, time, MINUTES) :timer->get_time(timer, MINUTES));
 	CLCD_Puts(7, line, minutes);
 
 	CLCD_Puts(9, line, ":");
 
-	sprintf(seconds, "%02d", time->seconds);
+	sprintf(seconds, "%02d", state == STOP ? timer->get_recorded_time(timer, time, SECONDS) : timer->get_time(timer, SECONDS));
 	CLCD_Puts(10, line, seconds);
 
 	CLCD_Puts(12, line, ".");
 
-	sprintf(string, "%03d", state ? time->milliseconds : 0);
+	sprintf(string, "%03d", state == STOP ? timer->get_recorded_time(timer, time, MILLISECONDS) : timer->get_time(timer, MILLISECONDS));
 	CLCD_Puts(13, line, string);
 }
 

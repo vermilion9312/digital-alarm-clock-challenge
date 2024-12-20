@@ -1,34 +1,17 @@
-17:03:05 **** Incremental Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
+15:56:50 **** Incremental Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
 make -j16 all 
-arm-none-eabi-gcc "../User/Src/lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/lcd.d" -MT"User/Src/lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/lcd.o"
-arm-none-eabi-gcc "../User/Src/seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/seven_segment.d" -MT"User/Src/seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/seven_segment.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../User/Src/lcd.c: In function 'run':
-../User/Src/lcd.c:61:59: warning: argument to 'sizeof' in 'memcpy' call is the same pointer type 'Time *' {aka 'struct _Time *'} as the destination; expected 'Time' {aka 'struct _Time'} or an explicit length [-Wsizeof-pointer-memaccess]
-   61 |                 memcpy(&(lap_time[i]), timer->time, sizeof(timer->time));
-      |                                                           ^
-../User/Src/lcd.c: In function 'display_time':
-../User/Src/lcd.c:125:16: warning: unused variable 'timer' [-Wunused-variable]
-  125 |         Timer* timer = GET_INSTANCE(timer);
-      |                ^~~~~
-../User/Src/lcd.c: In function 'run':
-../User/Src/lcd.c:63:37: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
-   63 |                 sprintf(ttemp, "LP%d", i + 1);
-      |                                     ^
-../User/Src/lcd.c:63:17: note: 'sprintf' output between 4 and 6 bytes into a destination of size 5
-   63 |                 sprintf(ttemp, "LP%d", i + 1);
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../User/Src/digital_clock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/digital_clock.d" -MT"User/Src/digital_clock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/digital_clock.o"
 arm-none-eabi-gcc -o "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
  
 arm-none-eabi-size  Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf 
 arm-none-eabi-objdump -h -S Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf  > "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list"
    text	   data	    bss	    dec	    hex	filename
-  22436	    292	   2116	  24844	   610c	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+  22520	    280	   2112	  24912	   6150	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
 Finished building: default.size.stdout
  
 Finished building: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list
  
 
-17:03:06 Build Finished. 0 errors, 3 warnings. (took 688ms)
+15:56:50 Build Finished. 0 errors, 0 warnings. (took 544ms)
 

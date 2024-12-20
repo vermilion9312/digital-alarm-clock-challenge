@@ -1,0 +1,61 @@
+/*
+ * digital_clock.c
+ *
+ *  Created on: Dec 20, 2024
+ *      Author: LeeJooHo
+ */
+
+
+#include "digital_clock.h"
+
+Mode clock_mode;
+Mode alarm_mode;
+Mode stopwatch_mode;
+Mode timer_mode;
+
+DigitalClock clock;
+
+void set_mode(DigitalClock* this, Mode* mode)
+{
+
+}
+
+void operate(DigitalClock* this)
+{
+	this->mode->
+}
+
+void operate_clock_mode(DigitalClock* this)
+{
+
+	if (sw1_is_pressed == true)
+	{
+		this->set_mode(this, al)
+	}
+}
+
+void operate_alarm_mode(DigitalClock* this)
+{
+
+}
+
+void operate_stopwatch_mode(DigitalClock* this)
+{
+
+}
+
+void operate_timer_mode(DigitalClock* this)
+{
+
+}
+
+
+
+
+
+
+DigitalClock* get_clock(void)
+{
+	return &clock;
+}
+
