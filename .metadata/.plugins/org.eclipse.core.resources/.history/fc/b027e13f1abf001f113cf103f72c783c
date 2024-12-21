@@ -1,0 +1,14 @@
+/*
+ * mode.c
+ *
+ *  Created on: Dec 21, 2024
+ *      Author: vermi
+ */
+
+
+#include "mode.h"
+
+Mode clock_mode;
+Mode alarm_mode;
+Mode stopwatch_mode;
+Mode timer_mode;

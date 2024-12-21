@@ -1,0 +1,10 @@
+../User/Src/_102_lcd.c:19:13:operate	1
+../User/Src/_102_lcd.c:25:6:operate_clock_mode_lcd	1
+../User/Src/_102_lcd.c:30:6:operate_alarm_mode_lcd	1
+../User/Src/_102_lcd.c:35:6:operate_stopwatch_mode_lcd	1
+../User/Src/_102_lcd.c:40:6:operate_timer_mode_lcd	1
+../User/Src/_102_lcd.c:46:13:stop	3
+../User/Src/_102_lcd.c:65:13:run	7
+../User/Src/_102_lcd.c:116:13:pause	6
+../User/Src/_102_lcd.c:151:13:display_time	5
+../User/Src/_102_lcd.c:181:6:get_lcd	1

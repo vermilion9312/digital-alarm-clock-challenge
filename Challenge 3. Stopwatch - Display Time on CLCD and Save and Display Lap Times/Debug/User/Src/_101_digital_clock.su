@@ -1,0 +1,7 @@
+../User/Src/_101_digital_clock.c:17:13:set_mode	16	static
+../User/Src/_101_digital_clock.c:22:13:operate	16	static
+../User/Src/_101_digital_clock.c:27:6:operate_clock_mode_digital_clock	16	static
+../User/Src/_101_digital_clock.c:36:6:operate_alarm_mode_digital_clock	16	static
+../User/Src/_101_digital_clock.c:45:6:operate_stopwatch_mode_digital_clock	16	static
+../User/Src/_101_digital_clock.c:54:6:operate_timer_mode_digital_clock	16	static
+../User/Src/_101_digital_clock.c:63:15:get_clock	8	static

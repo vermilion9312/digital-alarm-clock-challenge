@@ -1,0 +1,29 @@
+/*
+ * _101_digital_clock.h
+ *
+ *  Created on: Dec 20, 2024
+ *      Author: LeeJooHo
+ */
+
+#ifndef INC__101_DIGITAL_CLOCK_H_
+#define INC__101_DIGITAL_CLOCK_H_
+
+#include <_001_mode.h>
+
+typedef struct _Mode Mode;
+typedef struct _DigitalClock DigitalClock;
+
+struct _DigitalClock {
+	Mode* mode;
+	void (* const set_mode)(DigitalClock*, Mode*);
+	void (* const operate)(DigitalClock*);
+};
+
+void operate_clock_mode_digital_clock(DigitalClock* this);
+void operate_alarm_mode_digital_clock(DigitalClock* this);
+void operate_stopwatch_mode_digital_clock(DigitalClock* this);
+void operate_timer_mode_digital_clock(DigitalClock* this);
+
+DigitalClock* get_clock(void);
+
+#endif /* INC__101_DIGITAL_CLOCK_H_ */

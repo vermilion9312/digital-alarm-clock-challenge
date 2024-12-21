@@ -17,17 +17,18 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <_000_common.h>
+#include <_001_mode.h>
+#include <_002_timer.h>
+#include <_003_uart.h>
+#include <_102_lcd.h>
+#include <_103_seven_segment.h>
+#include <_104_led.h>
+#include <_105_button.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "common.h"
-#include "button.h"
-#include "led.h"
-#include "uart.h"
-#include "seven_segment.h"
-#include "timer.h"
-#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -114,39 +115,12 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  Button* button_1 = GET_INSTANCE(button_1);
-  Button* button_2 = GET_INSTANCE(button_2);
-  Button* button_3 = GET_INSTANCE(button_3);
-  Button* button_4 = GET_INSTANCE(button_4);
-
-  Led* left_red   = GET_INSTANCE(left_red);
-  Led* left_green = GET_INSTANCE(left_green);
-  Led* left_blue  = GET_INSTANCE(left_blue);
-  Led* right_red  = GET_INSTANCE(right_red);
-
-  SevenSegment* segment = GET_INSTANCE(segment);
-
-  Lcd* lcd = GET_INSTANCE(lcd);
+  DigitalClock* clock = GET_INSTANCE(clock);
 
   while (1)
   {
-	  button_1->update(button_1);
-	  button_2->update(button_2);
-	  button_3->update(button_3);
-	  button_4->update(button_4);
 
-	  left_red->operate(left_red, button_1);
-	  left_green->operate(left_green, button_2);
-	  left_blue->operate(left_blue, button_3);
-	  right_red->operate(right_red, button_4);
-
-	  segment->operate(segment);
-
-	  lcd->operate(lcd);
-
-
-
-
+	  clock->operate(clock);
 
     /* USER CODE END WHILE */
 
@@ -401,15 +375,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-//	Button* button_1 = GET_INSTANCE(button_1);
-//	Button* button_2 = GET_INSTANCE(button_2);
-//	Button* button_3 = GET_INSTANCE(button_3);
-//	Button* button_4 = GET_INSTANCE(button_4);
-//
-//	if (GPIO_Pin == BUTTON_1_Pin) button_1->update(button_1);
-//	if (GPIO_Pin == BUTTON_2_Pin) button_2->update(button_2);
-//	if (GPIO_Pin == BUTTON_3_Pin) button_3->update(button_3);
-//	if (GPIO_Pin == BUTTON_4_Pin) button_4->update(button_4);
+	Button* button_1 = GET_INSTANCE(button_1);
+	Button* button_2 = GET_INSTANCE(button_2);
+	Button* button_3 = GET_INSTANCE(button_3);
+	Button* button_4 = GET_INSTANCE(button_4);
+
+	if (GPIO_Pin == BUTTON_1_Pin) button_1->update(button_1);
+	if (GPIO_Pin == BUTTON_2_Pin) button_2->update(button_2);
+	if (GPIO_Pin == BUTTON_3_Pin) button_3->update(button_3);
+	if (GPIO_Pin == BUTTON_4_Pin) button_4->update(button_4);
 }
 
 /* USER CODE END 4 */

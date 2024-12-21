@@ -1,4 +1,7 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+Core/Src/main.o: ../Core/Src/main.c ../User/Inc/_000_common.h \
+ ../User/Inc/_001_mode.h ../User/Inc/_101_digital_clock.h \
+ ../User/Inc/_102_lcd.h ../User/Inc/_002_timer.h \
+ ../User/Inc/_105_button.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -27,11 +30,15 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../User/Inc/common.h ../User/Inc/button.h ../User/Inc/led.h \
- ../User/Inc/button.h ../User/Inc/uart.h ../User/Inc/seven_segment.h \
- ../Drivers/Seven_segment/Inc/7SEG.h ../User/Inc/common.h \
- ../User/Inc/timer.h ../User/Inc/timer.h ../User/Inc/lcd.h \
- ../Drivers/CLCD/Inc/CLCD.h
+ ../Drivers/CLCD/Inc/CLCD.h ../User/Inc/_103_seven_segment.h \
+ ../Drivers/Seven_segment/Inc/7SEG.h ../User/Inc/_104_led.h \
+ ../User/Inc/_003_uart.h
+../User/Inc/_000_common.h:
+../User/Inc/_001_mode.h:
+../User/Inc/_101_digital_clock.h:
+../User/Inc/_102_lcd.h:
+../User/Inc/_002_timer.h:
+../User/Inc/_105_button.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -61,15 +68,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-../User/Inc/common.h:
-../User/Inc/button.h:
-../User/Inc/led.h:
-../User/Inc/button.h:
-../User/Inc/uart.h:
-../User/Inc/seven_segment.h:
-../Drivers/Seven_segment/Inc/7SEG.h:
-../User/Inc/common.h:
-../User/Inc/timer.h:
-../User/Inc/timer.h:
-../User/Inc/lcd.h:
 ../Drivers/CLCD/Inc/CLCD.h:
+../User/Inc/_103_seven_segment.h:
+../Drivers/Seven_segment/Inc/7SEG.h:
+../User/Inc/_104_led.h:
+../User/Inc/_003_uart.h:

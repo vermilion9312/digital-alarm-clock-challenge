@@ -1,0 +1,58 @@
+/*
+ * _001_mode.c
+ *
+ *  Created on: Dec 21, 2024
+ *      Author: vermi
+ */
+
+
+#include <_001_mode.h>
+
+Mode clock_mode = {
+		.operate_clock = OPERATE(digital_clock, clock_mode),
+		.operate_lcd = OPERATE(lcd, clock_mode),
+		.operate_segment = NULL,
+		.operate_led = NULL
+};
+
+Mode alarm_mode = {
+		.operate_clock = OPERATE(digital_clock, alarm_mode),
+		.operate_lcd = OPERATE(lcd, alarm_mode),
+		.operate_segment = NULL,
+		.operate_led = NULL
+};
+
+Mode stopwatch_mode = {
+		.operate_clock = OPERATE(digital_clock, stopwatch_mode),
+		.operate_lcd = OPERATE(lcd, stopwatch_mode),
+		.operate_segment = NULL,
+		.operate_led = NULL
+};
+
+Mode timer_mode = {
+		.operate_clock = OPERATE(digital_clock, timer_mode),
+		.operate_lcd = OPERATE(lcd, timer_mode),
+		.operate_segment = NULL,
+		.operate_led = NULL
+};
+
+Mode* get_clock_mode(void)
+{
+	return &clock_mode;
+}
+
+Mode* get_alarm_mode(void)
+{
+	return &alarm_mode;
+}
+
+Mode* get_stopwatch_mode(void)
+{
+	return &stopwatch_mode;
+}
+
+Mode* get_timer_mode(void)
+{
+
+	return &timer_mode;
+}

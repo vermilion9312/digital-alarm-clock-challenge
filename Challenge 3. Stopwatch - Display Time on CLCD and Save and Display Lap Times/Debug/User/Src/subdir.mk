@@ -5,31 +5,34 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../User/Src/button.c \
-../User/Src/digital_clock.c \
-../User/Src/lcd.c \
-../User/Src/led.c \
-../User/Src/seven_segment.c \
-../User/Src/timer.c \
-../User/Src/uart.c 
+../User/Src/_001_mode.c \
+../User/Src/_002_timer.c \
+../User/Src/_003_uart.c \
+../User/Src/_101_digital_clock.c \
+../User/Src/_102_lcd.c \
+../User/Src/_103_seven_segment.c \
+../User/Src/_104_led.c \
+../User/Src/_105_button.c 
 
 OBJS += \
-./User/Src/button.o \
-./User/Src/digital_clock.o \
-./User/Src/lcd.o \
-./User/Src/led.o \
-./User/Src/seven_segment.o \
-./User/Src/timer.o \
-./User/Src/uart.o 
+./User/Src/_001_mode.o \
+./User/Src/_002_timer.o \
+./User/Src/_003_uart.o \
+./User/Src/_101_digital_clock.o \
+./User/Src/_102_lcd.o \
+./User/Src/_103_seven_segment.o \
+./User/Src/_104_led.o \
+./User/Src/_105_button.o 
 
 C_DEPS += \
-./User/Src/button.d \
-./User/Src/digital_clock.d \
-./User/Src/lcd.d \
-./User/Src/led.d \
-./User/Src/seven_segment.d \
-./User/Src/timer.d \
-./User/Src/uart.d 
+./User/Src/_001_mode.d \
+./User/Src/_002_timer.d \
+./User/Src/_003_uart.d \
+./User/Src/_101_digital_clock.d \
+./User/Src/_102_lcd.d \
+./User/Src/_103_seven_segment.d \
+./User/Src/_104_led.d \
+./User/Src/_105_button.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -39,7 +42,7 @@ User/Src/%.o User/Src/%.su User/Src/%.cyclo: ../User/Src/%.c User/Src/subdir.mk
 clean: clean-User-2f-Src
 
 clean-User-2f-Src:
-	-$(RM) ./User/Src/button.cyclo ./User/Src/button.d ./User/Src/button.o ./User/Src/button.su ./User/Src/digital_clock.cyclo ./User/Src/digital_clock.d ./User/Src/digital_clock.o ./User/Src/digital_clock.su ./User/Src/lcd.cyclo ./User/Src/lcd.d ./User/Src/lcd.o ./User/Src/lcd.su ./User/Src/led.cyclo ./User/Src/led.d ./User/Src/led.o ./User/Src/led.su ./User/Src/seven_segment.cyclo ./User/Src/seven_segment.d ./User/Src/seven_segment.o ./User/Src/seven_segment.su ./User/Src/timer.cyclo ./User/Src/timer.d ./User/Src/timer.o ./User/Src/timer.su ./User/Src/uart.cyclo ./User/Src/uart.d ./User/Src/uart.o ./User/Src/uart.su
+	-$(RM) ./User/Src/_001_mode.cyclo ./User/Src/_001_mode.d ./User/Src/_001_mode.o ./User/Src/_001_mode.su ./User/Src/_002_timer.cyclo ./User/Src/_002_timer.d ./User/Src/_002_timer.o ./User/Src/_002_timer.su ./User/Src/_003_uart.cyclo ./User/Src/_003_uart.d ./User/Src/_003_uart.o ./User/Src/_003_uart.su ./User/Src/_101_digital_clock.cyclo ./User/Src/_101_digital_clock.d ./User/Src/_101_digital_clock.o ./User/Src/_101_digital_clock.su ./User/Src/_102_lcd.cyclo ./User/Src/_102_lcd.d ./User/Src/_102_lcd.o ./User/Src/_102_lcd.su ./User/Src/_103_seven_segment.cyclo ./User/Src/_103_seven_segment.d ./User/Src/_103_seven_segment.o ./User/Src/_103_seven_segment.su ./User/Src/_104_led.cyclo ./User/Src/_104_led.d ./User/Src/_104_led.o ./User/Src/_104_led.su ./User/Src/_105_button.cyclo ./User/Src/_105_button.d ./User/Src/_105_button.o ./User/Src/_105_button.su
 
 .PHONY: clean-User-2f-Src
 

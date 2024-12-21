@@ -1,0 +1,10 @@
+../User/Src/_104_led.c:26:13:turn_on_left	16	static
+../User/Src/_104_led.c:38:13:turn_off_left	16	static
+../User/Src/_104_led.c:50:13:turn_on_right	16	static
+../User/Src/_104_led.c:62:13:turn_off_right	16	static
+../User/Src/_104_led.c:74:6:get_left_red	4	static
+../User/Src/_104_led.c:79:6:get_left_green	4	static
+../User/Src/_104_led.c:84:6:get_left_blue	4	static
+../User/Src/_104_led.c:89:6:get_right_red	4	static
+../User/Src/_104_led.c:94:6:get_right_green	4	static
+../User/Src/_104_led.c:99:6:get_right_blue	4	static

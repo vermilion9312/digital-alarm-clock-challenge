@@ -1,0 +1,33 @@
+/*
+ * mode.h
+ *
+ *  Created on: Dec 21, 2024
+ *      Author: vermi
+ */
+
+#ifndef INC__01_MODE_H_
+#define INC__01_MODE_H_
+
+#include <_01_digital_clock.h>
+#include <_02_lcd.h>
+#include <_03_seven_segment.h>
+#include <_04_led.h>
+#include <stdbool.h>
+
+typedef struct _DigitalClock DigitalClock;
+typedef struct _SevenSegment SevenSegment;
+typedef struct _Mode Mode;
+
+struct _Mode {
+	void (* const operate_clock)(DigitalClock*);
+	void (* const operate_lcd)(Lcd*);
+	void (* const operate_segment)(SevenSegment*);
+	void (* const operate_led)(Led*);
+};
+
+Mode* get_clock_mode(void);
+Mode* get_alarm_mode(void);
+Mode* get_stopwatch_mode(void);
+Mode* get_timer_mode(void);
+
+#endif /* INC__01_MODE_H_ */
