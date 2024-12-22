@@ -18,7 +18,6 @@ Lcd lcd = { .mode = NULL, operate };
 
 static void operate(Lcd* this)
 {
-	this->mode->operate_lcd(this);
 }
 
 
@@ -180,6 +179,6 @@ static void display_time(char* head, Line line, State state, Time* time)
 
 Lcd* get_lcd(void)
 {
-	lcd.mode = GET_INSTANCE(clock_mode);
+	lcd.mode = GET_INSTANCE(mode);
 	return &lcd;
 }

@@ -9,25 +9,27 @@
 #define INC__103_SEVEN_SEGMENT_H_
 
 #include <_000_common.h>
-#include <_001_mode.h>
 #include <_002_timer.h>
 #include <_105_button.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include "7SEG.h"
+#include <_001_mode.h>
 
 typedef struct _SevenSegment SevenSegment;
-typedef struct _DigitalClock DigitalClock;
+
+typedef void (* OperateSegment)(SevenSegment*);
 
 struct _SevenSegment {
-	DigitalClock* clock;
+	Mode* mode;
+	Mode (* const get_current_mode)(SevenSegment*);
+	void (* const set_state)(SevenSegment*, OperateSegment);
 	void (* operate)(SevenSegment*);
 };
 
-void operate_clock_mode_segment(SevenSegment* this);
-void operate_alarm_mode_segment(SevenSegment* this);
-void operate_stopwatch_mode_segment(SevenSegment* this);
-void operate_timer_mode_segment(SevenSegment* this);
+void operate_stop(SevenSegment* this);
+void operate_pause(SevenSegment* this);
+void operate_run(SevenSegment* this);
 
 SevenSegment* get_segment(void);
 

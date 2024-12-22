@@ -1,8 +1,6 @@
 User/Src/_103_seven_segment.o: ../User/Src/_103_seven_segment.c \
  ../User/Inc/_103_seven_segment.h ../User/Inc/_000_common.h \
- ../User/Inc/_001_mode.h ../User/Inc/_101_digital_clock.h \
- ../User/Inc/_102_lcd.h ../User/Inc/_002_timer.h \
- ../User/Inc/_105_button.h ../Core/Inc/main.h \
+ ../User/Inc/_002_timer.h ../User/Inc/_105_button.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -31,13 +29,9 @@ User/Src/_103_seven_segment.o: ../User/Src/_103_seven_segment.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Drivers/CLCD/Inc/CLCD.h ../User/Inc/_104_led.h \
- ../Drivers/Seven_segment/Inc/7SEG.h
+ ../Drivers/Seven_segment/Inc/7SEG.h ../User/Inc/_001_mode.h
 ../User/Inc/_103_seven_segment.h:
 ../User/Inc/_000_common.h:
-../User/Inc/_001_mode.h:
-../User/Inc/_101_digital_clock.h:
-../User/Inc/_102_lcd.h:
 ../User/Inc/_002_timer.h:
 ../User/Inc/_105_button.h:
 ../Core/Inc/main.h:
@@ -69,6 +63,5 @@ User/Src/_103_seven_segment.o: ../User/Src/_103_seven_segment.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-../Drivers/CLCD/Inc/CLCD.h:
-../User/Inc/_104_led.h:
 ../Drivers/Seven_segment/Inc/7SEG.h:
+../User/Inc/_001_mode.h:

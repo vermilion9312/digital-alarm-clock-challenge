@@ -9,6 +9,5 @@
 #define INC__000_COMMON_H_
 
 #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
-#define OPERATE(device, mode) operate_##mode##_##device
 
 #endif /* INC__000_COMMON_H_ */

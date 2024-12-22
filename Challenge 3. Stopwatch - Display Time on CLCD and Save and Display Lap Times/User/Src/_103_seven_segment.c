@@ -8,94 +8,80 @@
 
 #include <_103_seven_segment.h>
 
-static void operate(SevenSegment* this);
-static void stop(SevenSegment* this);
-static void pause(SevenSegment* this);
-static void run(SevenSegment* this);
+static void set_state(SevenSegment* this, OperateSegment operate);
+static Mode get_current_mode(SevenSegment* this);
 
-SevenSegment segment = { .clock = NULL, operate };
 
-static void operate(SevenSegment* this)
+
+SevenSegment segment = { .mode = NULL, get_current_mode, set_state, operate_stop };
+
+
+static void set_state(SevenSegment* this, OperateSegment operate)
 {
-	this->clock->mode->operate_segment(this);
+	this->operate = operate;
 }
 
-SevenSegment* get_segment(void)
+static Mode get_current_mode(SevenSegment* this)
 {
-	segment.clock = GET_INSTANCE(clock);
-	return &segment;
+	return *this->mode;
 }
 
-void operate_clock_mode_segment(SevenSegment* this)
+
+void operate_stop(SevenSegment* this)
 {
-
-}
-
-void operate_alarm_mode_segment(SevenSegment* this)
-{
-
-}
-
-void operate_stopwatch_mode_segment(SevenSegment* this)
-{
-	SevenSegment* segment = GET_INSTANCE(segment);
-
-	segment->operate(segment);
-}
-
-void operate_timer_mode_segment(SevenSegment* this)
-{
-
-}
-
-static void stop(SevenSegment* this)
-{
-	Button* button_2 = GET_INSTANCE(button_2);
 	Timer* timer = GET_INSTANCE(timer);
-	static bool previous_button_state = false;
+	Button* button_2 = GET_INSTANCE(button_2);
+	static bool last_button = false;
 
 	DGT1_DP_ON;
 	DGT2_DP_OFF;
 
 	timer->set_count(timer, 0);
 
-	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), ON);
-	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
+//	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), ON);
+//	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
+	_7SEG_SetNumber(DGT2, this->get_current_mode(this), ON);
 
-	if (previous_button_state == false && button_2->is_pressed(button_2) == true)
+	if (this->get_current_mode(this) == STOPWATCH_MODE)
 	{
-		this->operate = run;
+		if (last_button == false && button_2->is_pressed(button_2) == true)
+		{
+			this->set_state(this, operate_run);
+		}
 	}
 
-	previous_button_state = button_2->is_pressed(button_2);
+
+	last_button = button_2->is_pressed(button_2);
 }
 
-static void run(SevenSegment* this)
+void operate_run(SevenSegment* this)
 {
-	Button* button_2 = GET_INSTANCE(button_2);
 	Timer* timer = GET_INSTANCE(timer);
-	static bool previous_button_state = false;
+	Button* button_2 = GET_INSTANCE(button_2);
+	static bool last_button = false;
 
 	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), timer->get_time(timer, _100_MILLISECONDS) < 5 ? ON : OFF);
 	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
 
-	if (previous_button_state == false && button_2->is_pressed(button_2) == true)
+
+	if (this->get_current_mode(this) == STOPWATCH_MODE)
 	{
-		timer->record_count(timer);
-//		timer->record_time(timer, run_time);
-		this->operate = pause;
+		if (last_button == false && button_2->is_pressed(button_2) == true)
+		{
+			this->set_state(this, operate_pause);
+		}
 	}
 
-	previous_button_state = button_2->is_pressed(button_2);
+	last_button = button_2->is_pressed(button_2);
 }
 
-static void pause(SevenSegment* this)
+void operate_pause(SevenSegment* this)
 {
+	Timer* timer = GET_INSTANCE(timer);
 	Button* button_2 = GET_INSTANCE(button_2);
 	Button* button_3 = GET_INSTANCE(button_3);
-	Timer* timer = GET_INSTANCE(timer);
-	static bool previous_button_state_2 = false;
-	static bool previous_button_state_3 = false;
+	static bool last_button_2 = false;
+	static bool last_button_3 = false;
 
 	DGT1_DP_ON;
 
@@ -104,18 +90,26 @@ static void pause(SevenSegment* this)
 	_7SEG_SetNumber(DGT1, timer->get_time(timer, SECONDS), ON);
 	_7SEG_SetNumber(DGT2, timer->get_time(timer, _100_MILLISECONDS), OFF);
 
-	if (previous_button_state_2 == false && button_2->is_pressed(button_2) == true)
+	if (this->get_current_mode(this) == STOPWATCH_MODE)
 	{
-		timer->set_count(timer, timer->get_recorded_count(timer));
-		this->operate = run;
+		if (last_button_2 == false && button_2->is_pressed(button_2) == true)
+		{
+			this->set_state(this, operate_run);
+		}
+
+		if (last_button_3 == false && button_3->is_pressed(button_3) == true)
+		{
+			this->set_state(this, operate_stop);
+		}
 	}
 
-	if (previous_button_state_3 == false && button_3->is_pressed(button_3) == true)
-	{
-		timer->set_count(timer, 0);
-		this->operate = stop;
-	}
-
-	previous_button_state_2 = button_2->is_pressed(button_2);
-	previous_button_state_3 = button_3->is_pressed(button_3);
+	last_button_2 = button_2->is_pressed(button_2);
+	last_button_3 = button_3->is_pressed(button_3);
 }
+
+SevenSegment* get_segment(void)
+{
+	segment.mode = GET_INSTANCE(mode);
+	return &segment;
+}
+

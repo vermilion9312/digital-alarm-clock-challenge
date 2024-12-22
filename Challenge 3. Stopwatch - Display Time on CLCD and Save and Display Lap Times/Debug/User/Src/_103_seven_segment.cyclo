@@ -1,9 +1,6 @@
-../User/Src/_103_seven_segment.c:18:13:operate	1
-../User/Src/_103_seven_segment.c:23:6:operate_clock_mode_segment	1
-../User/Src/_103_seven_segment.c:28:6:operate_alarm_mode_segment	1
-../User/Src/_103_seven_segment.c:33:6:operate_stopwatch_mode_segment	1
-../User/Src/_103_seven_segment.c:38:6:operate_timer_mode_segment	1
-../User/Src/_103_seven_segment.c:43:13:stop	3
-../User/Src/_103_seven_segment.c:65:13:run	3
-../User/Src/_103_seven_segment.c:84:13:pause	5
-../User/Src/_103_seven_segment.c:115:15:get_segment	1
+../User/Src/_103_seven_segment.c:19:13:set_state	1
+../User/Src/_103_seven_segment.c:24:13:get_current_mode	1
+../User/Src/_103_seven_segment.c:30:6:operate_stop	4
+../User/Src/_103_seven_segment.c:57:6:operate_run	4
+../User/Src/_103_seven_segment.c:78:6:operate_pause	6
+../User/Src/_103_seven_segment.c:110:15:get_segment	1

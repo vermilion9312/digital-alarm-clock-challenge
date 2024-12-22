@@ -1,4 +1,1 @@
-../User/Src/_001_mode.c:39:7:get_clock_mode	4	static
-../User/Src/_001_mode.c:44:7:get_alarm_mode	4	static
-../User/Src/_001_mode.c:49:7:get_stopwatch_mode	4	static
-../User/Src/_001_mode.c:54:7:get_timer_mode	4	static
+../User/Src/_001_mode.c:13:7:get_mode	4	static
