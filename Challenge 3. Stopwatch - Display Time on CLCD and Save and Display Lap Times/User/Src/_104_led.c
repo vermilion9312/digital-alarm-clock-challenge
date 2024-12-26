@@ -10,65 +10,68 @@
 
 #include <_104_led.h>
 
-static void turn_on_left(Led* this, Button* button);
-static void turn_off_left(Led* this, Button* button);
-static void turn_on_right(Led* this, Button* button);
-static void turn_off_right(Led* this, Button* button);
+static void turn_on_led(Led* this, Button* button);
+static void turn_off_led(Led* this, Button* button);
 
-Led left_red    = { .mode = NULL, .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .previous_button = false, .operate = turn_off_left  };
-Led left_green  = { .mode = NULL, .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .previous_button = false, .operate = turn_off_left  };
-Led left_blue   = { .mode = NULL, .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .previous_button = false, .operate = turn_off_left  };
+Led left_red    = { .mode = NULL, .is_transitioned = false, .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .last_button = false, .operate = turn_off_led };
+Led left_green  = { .mode = NULL, .is_transitioned = false, .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .last_button = false, .operate = turn_off_led };
+Led left_blue   = { .mode = NULL, .is_transitioned = false, .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .last_button = false, .operate = turn_off_led };
 
-Led right_red   = { .mode = NULL, .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .previous_button = false, .operate = turn_off_right };
-Led right_green = { .mode = NULL, .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .previous_button = false, .operate = turn_off_right };
-Led right_blue  = { .mode = NULL, .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .previous_button = false, .operate = turn_off_right };
+Led right_red   = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_led };
+Led right_green = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_led };
+Led right_blue  = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_led };
 
-static void turn_on_left(Led* this, Button* button)
+static void turn_on_led(Led* this, Button* button)
 {
+//	static bool last_button = false;
+
 	TURN_ON_LED;
 
-	if (this->previous_button == false && button->is_pressed(button) == true)
+
+
+	if (this->is_transitioned == false)
 	{
-		this->operate = turn_off_left;
+		if (this->last_button == false && button->is_pressed(button) == true)
+		{
+			this->operate = turn_off_led;
+			this->is_transitioned = true;
+		}
 	}
 
-	this->previous_button = button->is_pressed(button);
+	if (this->last_button == true && button->is_pressed(button) == false)
+	{
+		this->is_transitioned = false;
+	}
+
+
+
+	this->last_button = button->is_pressed(button);
 }
 
-static void turn_off_left(Led* this, Button* button)
+static void turn_off_led(Led* this, Button* button)
 {
+//	static bool last_button = false;
+
 	TURN_OFF_LED;
 
-	if (this->previous_button == false && button->is_pressed(button) == true)
+
+
+	if (this->is_transitioned == false)
 	{
-		this->operate = turn_on_left;
+		if (this->last_button == false && button->is_pressed(button) == true)
+		{
+			this->operate = turn_on_led;
+			this->is_transitioned = true;
+		}
 	}
 
-	this->previous_button = button->is_pressed(button);
-}
-
-static void turn_on_right(Led* this, Button* button)
-{
-	TURN_ON_LED;
-
-	if (this->previous_button == true && button->is_pressed(button) == false)
+	if (this->last_button == true && button->is_pressed(button) == false)
 	{
-		this->operate = turn_off_right;
+		this->is_transitioned = false;
 	}
 
-	this->previous_button = button->is_pressed(button);
-}
 
-static void turn_off_right(Led* this, Button* button)
-{
-	TURN_OFF_LED;
-
-	if (this->previous_button == true && button->is_pressed(button) == false)
-	{
-		this->operate = turn_on_right;
-	}
-
-	this->previous_button = button->is_pressed(button);
+	this->last_button = button->is_pressed(button);
 }
 
 Led* get_left_red(void)

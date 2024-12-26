@@ -1,6 +1,6 @@
 ../User/Src/_103_seven_segment.c:19:13:set_state	16	static
 ../User/Src/_103_seven_segment.c:24:13:get_current_mode	16	static
-../User/Src/_103_seven_segment.c:30:6:operate_stop	24	static
-../User/Src/_103_seven_segment.c:57:6:operate_run	32	static
-../User/Src/_103_seven_segment.c:78:6:operate_pause	40	static
-../User/Src/_103_seven_segment.c:110:15:get_segment	8	static
+../User/Src/_103_seven_segment.c:30:13:operate_stop	24	static
+../User/Src/_103_seven_segment.c:62:13:operate_run	40	static
+../User/Src/_103_seven_segment.c:90:13:operate_pause	40	static
+../User/Src/_103_seven_segment.c:134:15:get_segment	8	static

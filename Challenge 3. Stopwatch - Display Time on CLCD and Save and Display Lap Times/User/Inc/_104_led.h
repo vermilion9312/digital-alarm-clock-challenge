@@ -21,9 +21,10 @@ typedef struct _Led Led;
 
 struct _Led {
 	Mode* mode;
+	bool is_transitioned;
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
-	bool previous_button;
+	bool last_button;
 	void (* operate)(Led*, Button*);
 };
 

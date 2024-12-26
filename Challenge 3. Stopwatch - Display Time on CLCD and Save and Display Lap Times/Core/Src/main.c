@@ -116,26 +116,34 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  DigitalClock* clock = GET_INSTANCE(clock);
+  Button* button_1 = GET_INSTANCE(button_1);
+  Button* button_2 = GET_INSTANCE(button_2);
+  Button* button_3 = GET_INSTANCE(button_3);
+  Button* button_4 = GET_INSTANCE(button_4);
+
   SevenSegment* segment = GET_INSTANCE(segment);
 
-	Button* button_1 = GET_INSTANCE(button_1);
-	Button* button_2 = GET_INSTANCE(button_2);
-	Button* button_3 = GET_INSTANCE(button_3);
-	Button* button_4 = GET_INSTANCE(button_4);
+  Lcd* lcd = GET_INSTANCE(lcd);
+
+  Led* left_red   = GET_INSTANCE(left_red);
+  Led* left_green = GET_INSTANCE(left_green);
+  Led* left_blue  = GET_INSTANCE(left_blue);
+  Led* right_red  = GET_INSTANCE(right_red);
 
   while (1)
   {
+	  button_1->update(button_1);
+	  button_2->update(button_2);
+	  button_3->update(button_3);
+	  button_4->update(button_4);
 
-	button_1->update(button_1);
-	button_2->update(button_2);
-		button_3->update(button_3);
-	button_4->update(button_4);
-
-	  clock->operate(clock);
 	  segment->operate(segment);
+	  lcd->operate(lcd);
 
-
+	  left_red->operate(left_red, button_1);
+	  left_green->operate(left_green, button_2);
+	  left_blue->operate(left_blue, button_3);
+	  right_red->operate(right_red, button_4);
 
     /* USER CODE END WHILE */
 

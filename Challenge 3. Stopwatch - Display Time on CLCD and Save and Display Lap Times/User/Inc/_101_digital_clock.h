@@ -12,6 +12,7 @@
 #include <_104_led.h>
 #include <stdbool.h>
 #include <_000_common.h>
+#include "7SEG.h"
 
 
 typedef struct _DigitalClock DigitalClock;
@@ -19,6 +20,8 @@ typedef void (* OperateClock)(DigitalClock*);
 
 struct _DigitalClock {
 	Mode* mode;
+	bool is_transitioned;
+	Mode (* const get_current_mode)(DigitalClock*);
 	void (* const set_mode)(DigitalClock*, OperateClock);
 	void (* operate)(DigitalClock*);
 };

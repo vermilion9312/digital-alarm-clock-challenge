@@ -13,15 +13,15 @@ static void set_count(Timer* this, uint32_t count);
 static void record_count(Timer* this);
 static uint32_t get_recorded_count(Timer* this);
 static void record_time(Timer* this, Time* time);
-static uint8_t get_recorded_time(Timer* this, Time* time, TimeKind time_kind);
 static uint8_t get_time(Timer* this, TimeKind time_kind);
 
 static Time current_time;
-static Time recorded_run_time;
+static Time recorded_time;
 static Time lap_time[9];
+static Time time;
 
 Timer timer = {
-		.time = &recorded_run_time,
+		.time = &time,
 
 		.count = 0,
 		.recorded_count = 0,
@@ -32,13 +32,17 @@ Timer timer = {
 		record_count,
 		get_recorded_count,
 		record_time,
-		get_recorded_time,
 		get_time
 };
 
 static void count_up(Timer* this)
 {
 	this->count++;
+	this->time->milliseconds = this->count % 1000;
+	this->time->_100_milliseconds = (this->count / 100) % 10;
+	this->time->seconds = (this->count / 1000) % 60;
+	this->time->minutes = (this->count / 60000) % 60;
+	this->time->hours   = (this->count / 3600000) % 24;
 }
 
 static void set_count(Timer* this, uint32_t count)
@@ -66,9 +70,8 @@ static void record_time(Timer* this, Time* time)
 	this->time->milliseconds      = this->count;
 }
 
-static uint8_t get_recorded_time(Timer* this, Time* time, TimeKind time_kind)
+static uint8_t get_time(Timer* this, TimeKind time_kind)
 {
-	this->time = time;
 	switch(time_kind)
 	{
 	case HOURS:
@@ -93,35 +96,9 @@ static uint8_t get_recorded_time(Timer* this, Time* time, TimeKind time_kind)
 	return -1;
 }
 
-static uint8_t get_time(Timer* this, TimeKind time_kind)
+Time* get_recorded_time(void)
 {
-	switch(time_kind)
-	{
-	case HOURS:
-		return this->count / 3600000 % 24;
-		break;
-	case MINUTES:
-		return this->count / 60000 % 60;
-		break;
-	case SECONDS:
-		return this->count / 1000 % 60;
-		break;
-	case _100_MILLISECONDS:
-		return this->count % 1000 / 100;
-		break;
-	case MILLISECONDS:
-		return this->count;
-		break;
-	default:
-		break;
-	}
-
-	return -1;
-}
-
-Time* get_recorded_run_time(void)
-{
-	return &recorded_run_time;
+	return &recorded_time;
 }
 
 Timer* get_timer(void)

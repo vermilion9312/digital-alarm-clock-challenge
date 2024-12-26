@@ -29,7 +29,7 @@ User/Src/_101_digital_clock.o: ../User/Src/_101_digital_clock.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../User/Inc/_000_common.h
+ ../User/Inc/_000_common.h ../Drivers/Seven_segment/Inc/7SEG.h
 ../User/Inc/_101_digital_clock.h:
 ../User/Inc/_001_mode.h:
 ../User/Inc/_104_led.h:
@@ -64,3 +64,4 @@ User/Src/_101_digital_clock.o: ../User/Src/_101_digital_clock.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../User/Inc/_000_common.h:
+../Drivers/Seven_segment/Inc/7SEG.h:

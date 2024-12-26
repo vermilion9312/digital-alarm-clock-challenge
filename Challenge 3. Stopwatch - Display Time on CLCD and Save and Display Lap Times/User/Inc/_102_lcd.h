@@ -20,16 +20,13 @@ typedef enum { STOP, OTHERS } State;
 typedef enum { TOP_LINE, BOTTOM_LINE } Line;
 
 typedef struct _Lcd Lcd;
+typedef void (* OperateLcd)(Lcd*);
 
 struct _Lcd {
 	Mode* mode;
+	void (* const set_state)(Lcd*, OperateLcd);
 	void (* operate)(Lcd*);
 };
-
-void operate_clock_mode_lcd(Lcd* this);
-void operate_alarm_mode_lcd(Lcd* this);
-void operate_stopwatch_mode_lcd(Lcd* this);
-void operate_timer_mode_lcd(Lcd* this);
 
 Lcd* get_lcd(void);
 

@@ -22,14 +22,13 @@ typedef void (* OperateSegment)(SevenSegment*);
 
 struct _SevenSegment {
 	Mode* mode;
+	bool is_transitioned;
 	Mode (* const get_current_mode)(SevenSegment*);
 	void (* const set_state)(SevenSegment*, OperateSegment);
 	void (* operate)(SevenSegment*);
 };
 
-void operate_stop(SevenSegment* this);
-void operate_pause(SevenSegment* this);
-void operate_run(SevenSegment* this);
+
 
 SevenSegment* get_segment(void);
 
