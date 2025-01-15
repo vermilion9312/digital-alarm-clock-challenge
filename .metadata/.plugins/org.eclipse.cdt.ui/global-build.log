@@ -25321,3 +25321,40 @@ Finished building: default.size.stdout
  
 Finished building: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list
  
+00:13:18 **** Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+ 
+arm-none-eabi-size  Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf 
+arm-none-eabi-objdump -h -S Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf  > "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list"
+   text	   data	    bss	    dec	    hex	filename
+  22576	    332	   2116	  25024	   61c0	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list
+ 
+00:22:37 **** Incremental Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+ 
+arm-none-eabi-size  Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf 
+arm-none-eabi-objdump -h -S Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf  > "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list"
+   text	   data	    bss	    dec	    hex	filename
+  22464	    332	   2116	  24912	   6150	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list
+ 
+00:22:42 **** Incremental Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
+make -j4 all 
+arm-none-eabi-size  Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22464	    332	   2116	  24912	   6150	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+Finished building: default.size.stdout
+ 

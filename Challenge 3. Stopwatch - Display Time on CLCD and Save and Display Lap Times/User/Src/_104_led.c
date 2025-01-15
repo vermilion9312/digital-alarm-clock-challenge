@@ -21,6 +21,52 @@ Led right_red   = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_RED_G
 Led right_green = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_led };
 Led right_blue  = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_led };
 
+//static void turn_on_led(Led* this, Button* button)
+//{
+////	static bool last_button = false;
+//
+//	TURN_ON_LED;
+//
+//	if (this->is_transitioned == false)
+//	{
+//		if (this->last_button == false && button->is_pressed(button) == true)
+//		{
+//			this->operate = turn_off_led;
+//			this->is_transitioned = true;
+//		}
+//	}
+//
+//	if (this->last_button == true && button->is_pressed(button) == false)
+//	{
+//		this->is_transitioned = false;
+//	}
+//
+//	this->last_button = button->is_pressed(button);
+//}
+//
+//static void turn_off_led(Led* this, Button* button)
+//{
+////	static bool last_button = false;
+//
+//	TURN_OFF_LED;
+//
+//	if (this->is_transitioned == false)
+//	{
+//		if (this->last_button == false && button->is_pressed(button) == true)
+//		{
+//			this->operate = turn_on_led;
+//			this->is_transitioned = true;
+//		}
+//	}
+//
+//	if (this->last_button == true && button->is_pressed(button) == false)
+//	{
+//		this->is_transitioned = false;
+//	}
+//
+//	this->last_button = button->is_pressed(button);
+//}
+
 static void turn_on_led(Led* this, Button* button)
 {
 //	static bool last_button = false;
@@ -28,22 +74,10 @@ static void turn_on_led(Led* this, Button* button)
 	TURN_ON_LED;
 
 
-
-	if (this->is_transitioned == false)
+	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-		if (this->last_button == false && button->is_pressed(button) == true)
-		{
-			this->operate = turn_off_led;
-			this->is_transitioned = true;
-		}
+		this->operate = turn_off_led;
 	}
-
-	if (this->last_button == true && button->is_pressed(button) == false)
-	{
-		this->is_transitioned = false;
-	}
-
-
 
 	this->last_button = button->is_pressed(button);
 }
@@ -55,21 +89,10 @@ static void turn_off_led(Led* this, Button* button)
 	TURN_OFF_LED;
 
 
-
-	if (this->is_transitioned == false)
+	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-		if (this->last_button == false && button->is_pressed(button) == true)
-		{
-			this->operate = turn_on_led;
-			this->is_transitioned = true;
-		}
+		this->operate = turn_on_led;
 	}
-
-	if (this->last_button == true && button->is_pressed(button) == false)
-	{
-		this->is_transitioned = false;
-	}
-
 
 	this->last_button = button->is_pressed(button);
 }

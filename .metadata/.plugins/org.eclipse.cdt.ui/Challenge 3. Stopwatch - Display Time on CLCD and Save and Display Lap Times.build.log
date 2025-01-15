@@ -1,32 +1,10 @@
-16:34:38 **** Incremental Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
-make -j16 all 
-arm-none-eabi-gcc "../User/Src/_102_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_102_lcd.d" -MT"User/Src/_102_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_102_lcd.o"
-../User/Src/_102_lcd.c: In function 'run':
-../User/Src/_102_lcd.c:67:67: warning: argument to 'sizeof' in 'memcpy' call is the same pointer type 'Time *' {aka 'struct _Time *'} as the destination; expected 'Time' {aka 'struct _Time'} or an explicit length [-Wsizeof-pointer-memaccess]
-   67 |                 memcpy(&(lap_time[lap_count]), timer->time, sizeof(timer->time));
-      |                                                                   ^
-../User/Src/_102_lcd.c: In function 'display_time':
-../User/Src/_102_lcd.c:129:16: warning: unused variable 'timer' [-Wunused-variable]
-  129 |         Timer* timer = GET_INSTANCE(timer);
-      |                ^~~~~
-../User/Src/_102_lcd.c: In function 'run':
-../User/Src/_102_lcd.c:69:37: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
-   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
-      |                                     ^
-../User/Src/_102_lcd.c:69:17: note: 'sprintf' output between 4 and 6 bytes into a destination of size 5
-   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
- 
+00:22:42 **** Incremental Build of configuration Debug for project Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times ****
+make -j4 all 
 arm-none-eabi-size  Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf 
-arm-none-eabi-objdump -h -S Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ Save\ and\ Display\ Lap\ Times.elf  > "Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list"
    text	   data	    bss	    dec	    hex	filename
-  22528	    332	   2116	  24976	   6190	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
+  22464	    332	   2116	  24912	   6150	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
 Finished building: default.size.stdout
  
-Finished building: Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.list
- 
 
-16:34:39 Build Finished. 0 errors, 3 warnings. (took 761ms)
+00:22:42 Build Finished. 0 errors, 0 warnings. (took 370ms)
 

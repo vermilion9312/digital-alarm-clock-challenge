@@ -1,8 +1,8 @@
-../User/Src/_104_led.c:24:13:turn_on_led	16	static
-../User/Src/_104_led.c:51:13:turn_off_led	16	static
-../User/Src/_104_led.c:77:6:get_left_red	4	static
-../User/Src/_104_led.c:82:6:get_left_green	4	static
-../User/Src/_104_led.c:87:6:get_left_blue	4	static
-../User/Src/_104_led.c:92:6:get_right_red	4	static
-../User/Src/_104_led.c:97:6:get_right_green	4	static
-../User/Src/_104_led.c:102:6:get_right_blue	4	static
+../User/Src/_104_led.c:70:13:turn_on_led	16	static
+../User/Src/_104_led.c:85:13:turn_off_led	16	static
+../User/Src/_104_led.c:100:6:get_left_red	4	static
+../User/Src/_104_led.c:105:6:get_left_green	4	static
+../User/Src/_104_led.c:110:6:get_left_blue	4	static
+../User/Src/_104_led.c:115:6:get_right_red	4	static
+../User/Src/_104_led.c:120:6:get_right_green	4	static
+../User/Src/_104_led.c:125:6:get_right_blue	4	static

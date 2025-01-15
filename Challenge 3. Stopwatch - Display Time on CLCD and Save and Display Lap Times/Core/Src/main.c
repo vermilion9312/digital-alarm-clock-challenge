@@ -132,10 +132,10 @@ int main(void)
 
   while (1)
   {
-	  button_1->update(button_1);
-	  button_2->update(button_2);
-	  button_3->update(button_3);
-	  button_4->update(button_4);
+//	  button_1->update(button_1);
+//	  button_2->update(button_2);
+//	  button_3->update(button_3);
+//	  button_4->update(button_4);
 
 	  segment->operate(segment);
 	  lcd->operate(lcd);
@@ -398,15 +398,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-//	Button* button_1 = GET_INSTANCE(button_1);
-//	Button* button_2 = GET_INSTANCE(button_2);
-//	Button* button_3 = GET_INSTANCE(button_3);
-//	Button* button_4 = GET_INSTANCE(button_4);
-//
-//	if (GPIO_Pin == BUTTON_1_Pin) button_1->update(button_1);
-//	if (GPIO_Pin == BUTTON_2_Pin) button_2->update(button_2);
-//	if (GPIO_Pin == BUTTON_3_Pin) button_3->update(button_3);
-//	if (GPIO_Pin == BUTTON_4_Pin) button_4->update(button_4);
+	Button* button_1 = GET_INSTANCE(button_1);
+	Button* button_2 = GET_INSTANCE(button_2);
+	Button* button_3 = GET_INSTANCE(button_3);
+	Button* button_4 = GET_INSTANCE(button_4);
+
+	if (GPIO_Pin == BUTTON_1_Pin) button_1->update(button_1);
+	if (GPIO_Pin == BUTTON_2_Pin) button_2->update(button_2);
+	if (GPIO_Pin == BUTTON_3_Pin) button_3->update(button_3);
+	if (GPIO_Pin == BUTTON_4_Pin) button_4->update(button_4);
 }
 
 /* USER CODE END 4 */
