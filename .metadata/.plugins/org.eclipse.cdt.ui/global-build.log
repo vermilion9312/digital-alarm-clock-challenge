@@ -25358,3 +25358,1273 @@ arm-none-eabi-size  Challenge\ 3.\ Stopwatch\ -\ Display\ Time\ on\ CLCD\ and\ S
   22464	    332	   2116	  24912	   6150	Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.elf
 Finished building: default.size.stdout
  
+00:37:44 **** Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_001_mode.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_001_mode.d" -MT"User/Src/_001_mode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_001_mode.o"
+arm-none-eabi-gcc "../User/Src/_002_timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_002_timer.d" -MT"User/Src/_002_timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_002_timer.o"
+arm-none-eabi-gcc "../User/Src/_003_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_003_uart.d" -MT"User/Src/_003_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_003_uart.o"
+arm-none-eabi-gcc "../User/Src/_101_digital_clock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_101_digital_clock.d" -MT"User/Src/_101_digital_clock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_101_digital_clock.o"
+../User/Src/_002_timer.c:18:13: warning: 'current_time' defined but not used [-Wunused-variable]
+   18 | static Time current_time;
+      |             ^~~~~~~~~~~~
+arm-none-eabi-gcc "../User/Src/_102_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_102_lcd.d" -MT"User/Src/_102_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_102_lcd.o"
+arm-none-eabi-gcc "../User/Src/_103_seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_103_seven_segment.d" -MT"User/Src/_103_seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_103_seven_segment.o"
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+../User/Src/_105_button.c: In function 'new_button':
+../User/Src/_105_button.c:30:24: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+   30 |         Button* this = malloc(sizeof(Button));
+      |                        ^~~~~~
+../User/Src/_105_button.c:10:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+    9 | #include <_105_button.h>
+  +++ |+#include <stdlib.h>
+   10 | 
+../User/Src/_105_button.c:30:24: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+   30 |         Button* this = malloc(sizeof(Button));
+      |                        ^~~~~~
+../User/Src/_105_button.c:30:24: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+../User/Src/_105_button.c:31:9: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]
+   31 |         assert(this);
+      |         ^~~~~~
+../User/Src/_105_button.c:10:1: note: 'assert' is defined in header '<assert.h>'; did you forget to '#include <assert.h>'?
+    9 | #include <_105_button.h>
+  +++ |+#include <assert.h>
+   10 | 
+../User/Src/_105_button.c: At top level:
+../User/Src/_105_button.c:23:13: warning: 'is_pressed' defined but not used [-Wunused-function]
+   23 | static bool is_pressed(Button* this)
+      |             ^~~~~~~~~~
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+../User/Src/_102_lcd.c: In function 'run':
+../User/Src/_102_lcd.c:67:67: warning: argument to 'sizeof' in 'memcpy' call is the same pointer type 'Time *' {aka 'struct _Time *'} as the destination; expected 'Time' {aka 'struct _Time'} or an explicit length [-Wsizeof-pointer-memaccess]
+   67 |                 memcpy(&(lap_time[lap_count]), timer->time, sizeof(timer->time));
+      |                                                                   ^
+../User/Src/_102_lcd.c: In function 'display_time':
+../User/Src/_102_lcd.c:129:16: warning: unused variable 'timer' [-Wunused-variable]
+  129 |         Timer* timer = GET_INSTANCE(timer);
+      |                ^~~~~
+../User/Src/_102_lcd.c: In function 'run':
+../User/Src/_102_lcd.c:69:37: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
+      |                                     ^
+../User/Src/_102_lcd.c:69:17: note: 'sprintf' output between 4 and 6 bytes into a destination of size 5
+   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Drivers/Seven_segment/Src/7SEG.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Seven_segment/Src/7SEG.d" -MT"Drivers/Seven_segment/Src/7SEG.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Seven_segment/Src/7SEG.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/CLCD/Src/CLCD.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/CLCD/Src/CLCD.d" -MT"Drivers/CLCD/Src/CLCD.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/CLCD/Src/CLCD.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f407vetx.d" -MT"Core/Startup/startup_stm32f407vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f407vetx.o" "../Core/Startup/startup_stm32f407vetx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:119: undefined reference to `get_button_1'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:120: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:121: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:122: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `HAL_GPIO_EXTI_Callback':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:401: undefined reference to `get_button_1'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:402: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:403: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:404: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `stop':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:27: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `run':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:45: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:46: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:47: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `pause':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:94: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:95: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:96: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_stop':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:33: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_run':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:65: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_pause':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:93: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:94: undefined reference to `get_button_3'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: test.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:38:20 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_101_digital_clock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_101_digital_clock.d" -MT"User/Src/_101_digital_clock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_101_digital_clock.o"
+arm-none-eabi-gcc "../User/Src/_102_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_102_lcd.d" -MT"User/Src/_102_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_102_lcd.o"
+arm-none-eabi-gcc "../User/Src/_103_seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_103_seven_segment.d" -MT"User/Src/_103_seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_103_seven_segment.o"
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+../User/Src/_102_lcd.c: In function 'run':
+../User/Src/_102_lcd.c:67:67: warning: argument to 'sizeof' in 'memcpy' call is the same pointer type 'Time *' {aka 'struct _Time *'} as the destination; expected 'Time' {aka 'struct _Time'} or an explicit length [-Wsizeof-pointer-memaccess]
+   67 |                 memcpy(&(lap_time[lap_count]), timer->time, sizeof(timer->time));
+      |                                                                   ^
+../User/Src/_102_lcd.c: In function 'display_time':
+../User/Src/_102_lcd.c:129:16: warning: unused variable 'timer' [-Wunused-variable]
+  129 |         Timer* timer = GET_INSTANCE(timer);
+      |                ^~~~~
+../User/Src/_102_lcd.c: In function 'run':
+../User/Src/_102_lcd.c:69:37: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
+      |                                     ^
+../User/Src/_102_lcd.c:69:17: note: 'sprintf' output between 4 and 6 bytes into a destination of size 5
+   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/_105_button.c:23:13: warning: 'is_pressed' defined but not used [-Wunused-function]
+   23 | static bool is_pressed(Button* this)
+      |             ^~~~~~~~~~
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:119: undefined reference to `get_button_1'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:120: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:121: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:122: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `HAL_GPIO_EXTI_Callback':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:401: undefined reference to `get_button_1'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:402: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:403: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:404: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `stop':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:27: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `run':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:45: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:46: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:47: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `pause':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:94: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:95: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:96: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_stop':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:33: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_run':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:65: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_pause':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:93: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:94: undefined reference to `get_button_3'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: test.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:38:33 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_101_digital_clock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_101_digital_clock.d" -MT"User/Src/_101_digital_clock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_101_digital_clock.o"
+arm-none-eabi-gcc "../User/Src/_102_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_102_lcd.d" -MT"User/Src/_102_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_102_lcd.o"
+arm-none-eabi-gcc "../User/Src/_103_seven_segment.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_103_seven_segment.d" -MT"User/Src/_103_seven_segment.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_103_seven_segment.o"
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+In file included from ../User/Inc/_104_led.h:15,
+                 from ../User/Inc/_101_digital_clock.h:12,
+                 from ../User/Src/_101_digital_clock.c:9:
+../User/Src/_101_digital_clock.c: In function 'operate_clock_mode':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_1' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_101_digital_clock.c:33:28: note: in expansion of macro 'GET_INSTANCE'
+   33 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_101_digital_clock.c:33:28: note: in expansion of macro 'GET_INSTANCE'
+   33 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Src/_101_digital_clock.c: In function 'operate_alarm_mode':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_101_digital_clock.c:55:28: note: in expansion of macro 'GET_INSTANCE'
+   55 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Src/_101_digital_clock.c: In function 'operate_stopwatch_mode':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_101_digital_clock.c:80:28: note: in expansion of macro 'GET_INSTANCE'
+   80 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Src/_101_digital_clock.c: In function 'operate_timer_mode':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_101_digital_clock.c:105:28: note: in expansion of macro 'GET_INSTANCE'
+  105 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+In file included from ../User/Inc/_103_seven_segment.h:11,
+                 from ../User/Src/_103_seven_segment.c:9:
+../User/Src/_103_seven_segment.c: In function 'operate_stop':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_103_seven_segment.c:33:28: note: in expansion of macro 'GET_INSTANCE'
+   33 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_103_seven_segment.c:33:28: note: in expansion of macro 'GET_INSTANCE'
+   33 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Src/_103_seven_segment.c: In function 'operate_run':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_103_seven_segment.c:65:28: note: in expansion of macro 'GET_INSTANCE'
+   65 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Src/_103_seven_segment.c: In function 'operate_pause':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_103_seven_segment.c:93:28: note: in expansion of macro 'GET_INSTANCE'
+   93 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_103_seven_segment.c:94:28: note: in expansion of macro 'GET_INSTANCE'
+   94 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_103_seven_segment.c:94:28: note: in expansion of macro 'GET_INSTANCE'
+   94 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+In file included from ../User/Inc/_102_lcd.h:11,
+                 from ../User/Src/_102_lcd.c:9:
+../User/Src/_102_lcd.c: In function 'stop':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:27:28: note: in expansion of macro 'GET_INSTANCE'
+   27 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:27:28: note: in expansion of macro 'GET_INSTANCE'
+   27 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Src/_102_lcd.c: In function 'run':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:45:28: note: in expansion of macro 'GET_INSTANCE'
+   45 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:46:28: note: in expansion of macro 'GET_INSTANCE'
+   46 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:46:28: note: in expansion of macro 'GET_INSTANCE'
+   46 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_4' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:47:28: note: in expansion of macro 'GET_INSTANCE'
+   47 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:47:28: note: in expansion of macro 'GET_INSTANCE'
+   47 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Src/_102_lcd.c:67:67: warning: argument to 'sizeof' in 'memcpy' call is the same pointer type 'Time *' {aka 'struct _Time *'} as the destination; expected 'Time' {aka 'struct _Time'} or an explicit length [-Wsizeof-pointer-memaccess]
+   67 |                 memcpy(&(lap_time[lap_count]), timer->time, sizeof(timer->time));
+      |                                                                   ^
+../User/Src/_102_lcd.c: In function 'pause':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:94:28: note: in expansion of macro 'GET_INSTANCE'
+   94 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:95:28: note: in expansion of macro 'GET_INSTANCE'
+   95 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../User/Src/_102_lcd.c:96:28: note: in expansion of macro 'GET_INSTANCE'
+   96 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Src/_102_lcd.c: In function 'display_time':
+../User/Src/_102_lcd.c:129:16: warning: unused variable 'timer' [-Wunused-variable]
+  129 |         Timer* timer = GET_INSTANCE(timer);
+      |                ^~~~~
+../User/Src/_102_lcd.c: In function 'run':
+../User/Src/_102_lcd.c:69:37: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
+      |                                     ^
+../User/Src/_102_lcd.c:69:17: note: 'sprintf' output between 4 and 6 bytes into a destination of size 5
+   69 |                 sprintf(ttemp, "LP%d", lap_count + 1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/_105_button.c:23:13: warning: 'is_pressed' defined but not used [-Wunused-function]
+   23 | static bool is_pressed(Button* this)
+      |             ^~~~~~~~~~
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+In file included from ../Core/Src/main.c:20:
+../Core/Src/main.c: In function 'main':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_1' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:119:22: note: in expansion of macro 'GET_INSTANCE'
+  119 |   Button* button_1 = GET_INSTANCE(button_1);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:119:22: note: in expansion of macro 'GET_INSTANCE'
+  119 |   Button* button_1 = GET_INSTANCE(button_1);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:120:22: note: in expansion of macro 'GET_INSTANCE'
+  120 |   Button* button_2 = GET_INSTANCE(button_2);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:120:22: note: in expansion of macro 'GET_INSTANCE'
+  120 |   Button* button_2 = GET_INSTANCE(button_2);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:121:22: note: in expansion of macro 'GET_INSTANCE'
+  121 |   Button* button_3 = GET_INSTANCE(button_3);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:121:22: note: in expansion of macro 'GET_INSTANCE'
+  121 |   Button* button_3 = GET_INSTANCE(button_3);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_4' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:122:22: note: in expansion of macro 'GET_INSTANCE'
+  122 |   Button* button_4 = GET_INSTANCE(button_4);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:122:22: note: in expansion of macro 'GET_INSTANCE'
+  122 |   Button* button_4 = GET_INSTANCE(button_4);
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:401:28: note: in expansion of macro 'GET_INSTANCE'
+  401 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:402:28: note: in expansion of macro 'GET_INSTANCE'
+  402 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:403:28: note: in expansion of macro 'GET_INSTANCE'
+  403 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:404:28: note: in expansion of macro 'GET_INSTANCE'
+  404 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:119: undefined reference to `get_button_1'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:120: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:121: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:122: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `HAL_GPIO_EXTI_Callback':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:401: undefined reference to `get_button_1'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:402: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:403: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../Core/Src/main.c:404: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `stop':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:27: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `run':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:45: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:46: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:47: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_102_lcd.o: in function `pause':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:94: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:95: undefined reference to `get_button_3'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_102_lcd.c:96: undefined reference to `get_button_4'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_stop':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:33: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_run':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:65: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./User/Src/_103_seven_segment.o: in function `operate_pause':
+C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:93: undefined reference to `get_button_2'
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Github/digital-alarm-clock-challenge/test/Debug/../User/Src/_103_seven_segment.c:94: undefined reference to `get_button_3'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: test.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:39:49 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:21:10: fatal error: _001_mode.h: No such file or directory
+   21 | #include <_001_mode.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../User/Src/_105_button.c:23:13: warning: 'is_pressed' defined but not used [-Wunused-function]
+   23 | static bool is_pressed(Button* this)
+      |             ^~~~~~~~~~
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+In file included from ../User/Src/_104_led.c:11:
+../User/Inc/_104_led.h:14:10: fatal error: _001_mode.h: No such file or directory
+   14 | #include <_001_mode.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [User/Src/subdir.mk:22: User/Src/_104_led.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:40:13 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../User/Src/_104_led.c:11:
+../User/Inc/_104_led.h:14:10: fatal error: _001_mode.h: No such file or directory
+   14 | #include <_001_mode.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Core/Src/main.c:22:
+../User/Inc/_104_led.h:14:10: fatal error: _001_mode.h: No such file or directory
+   14 | #include <_001_mode.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [User/Src/subdir.mk:22: User/Src/_104_led.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+../User/Src/_105_button.c:23:13: warning: 'is_pressed' defined but not used [-Wunused-function]
+   23 | static bool is_pressed(Button* this)
+      |             ^~~~~~~~~~
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:40:22 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../User/Src/_104_led.c:11:
+../User/Inc/_104_led.h:22:9: error: unknown type name 'Mode'
+   22 |         Mode* mode;
+      |         ^~~~
+make: *** [User/Src/subdir.mk:22: User/Src/_104_led.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:22:
+../User/Inc/_104_led.h:22:9: error: unknown type name 'Mode'
+   22 |         Mode* mode;
+      |         ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:354:9: error: unknown type name 'Uart'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |         ^~~~
+In file included from ../Core/Src/main.c:20:
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_uart' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c:358:21: error: request for member 'receive' in something not a structure or union
+  358 |                 uart->receive(uart);
+      |                     ^~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:364:9: error: unknown type name 'Timer'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |         ^~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_timer' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../Core/Src/main.c:368:22: error: request for member 'count_up' in something not a structure or union
+  368 |                 timer->count_up(timer);
+      |                      ^~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_1' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_4' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:40:31 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/_104_led.c:16:22: error: 'Led' {aka 'struct _Led'} has no member named 'mode'
+   16 | Led left_red    = { .mode = NULL, .is_transitioned = false, .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .last_button = false, .operate = turn_off_led };
+      |                      ^~~~
+../User/Src/_104_led.c:17:22: error: 'Led' {aka 'struct _Led'} has no member named 'mode'
+   17 | Led left_green  = { .mode = NULL, .is_transitioned = false, .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .last_button = false, .operate = turn_off_led };
+      |                      ^~~~
+../User/Src/_104_led.c:18:22: error: 'Led' {aka 'struct _Led'} has no member named 'mode'
+   18 | Led left_blue   = { .mode = NULL, .is_transitioned = false, .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .last_button = false, .operate = turn_off_led };
+      |                      ^~~~
+../User/Src/_104_led.c:20:22: error: 'Led' {aka 'struct _Led'} has no member named 'mode'
+   20 | Led right_red   = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .last_button = false, .operate = turn_off_led };
+      |                      ^~~~
+../User/Src/_104_led.c:21:22: error: 'Led' {aka 'struct _Led'} has no member named 'mode'
+   21 | Led right_green = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .last_button = false, .operate = turn_off_led };
+      |                      ^~~~
+../User/Src/_104_led.c:22:22: error: 'Led' {aka 'struct _Led'} has no member named 'mode'
+   22 | Led right_blue  = { .mode = NULL, .is_transitioned = false, .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .last_button = false, .operate = turn_off_led };
+      |                      ^~~~
+make: *** [User/Src/subdir.mk:22: User/Src/_104_led.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:354:9: error: unknown type name 'Uart'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |         ^~~~
+In file included from ../Core/Src/main.c:20:
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_uart' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c:358:21: error: request for member 'receive' in something not a structure or union
+  358 |                 uart->receive(uart);
+      |                     ^~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:364:9: error: unknown type name 'Timer'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |         ^~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_timer' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../Core/Src/main.c:368:22: error: request for member 'count_up' in something not a structure or union
+  368 |                 timer->count_up(timer);
+      |                      ^~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_1' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_4' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:40:47 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/_104_led.c: In function 'get_left_red':
+../User/Src/_104_led.c:102:17: error: 'left_red' undeclared (first use in this function); did you mean 'get_left_red'?
+  102 |         return &left_red;
+      |                 ^~~~~~~~
+      |                 get_left_red
+../User/Src/_104_led.c:102:17: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/_104_led.c: In function 'get_left_green':
+../User/Src/_104_led.c:107:17: error: 'left_green' undeclared (first use in this function); did you mean 'get_left_green'?
+  107 |         return &left_green;
+      |                 ^~~~~~~~~~
+      |                 get_left_green
+../User/Src/_104_led.c: In function 'get_left_blue':
+../User/Src/_104_led.c:112:17: error: 'left_blue' undeclared (first use in this function); did you mean 'get_left_blue'?
+  112 |         return &left_blue;
+      |                 ^~~~~~~~~
+      |                 get_left_blue
+../User/Src/_104_led.c: In function 'get_right_red':
+../User/Src/_104_led.c:117:17: error: 'right_red' undeclared (first use in this function); did you mean 'get_right_red'?
+  117 |         return &right_red ;
+      |                 ^~~~~~~~~
+      |                 get_right_red
+../User/Src/_104_led.c: In function 'get_right_green':
+../User/Src/_104_led.c:122:17: error: 'right_green' undeclared (first use in this function); did you mean 'get_right_green'?
+  122 |         return &right_green;
+      |                 ^~~~~~~~~~~
+      |                 get_right_green
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../User/Src/_104_led.c: In function 'get_right_blue':
+../User/Src/_104_led.c:127:17: error: 'right_blue' undeclared (first use in this function); did you mean 'get_right_blue'?
+  127 |         return &right_blue;
+      |                 ^~~~~~~~~~
+      |                 get_right_blue
+../User/Src/_104_led.c: In function 'get_left_red':
+../User/Src/_104_led.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+  103 | }
+      | ^
+../User/Src/_104_led.c: In function 'get_left_green':
+../User/Src/_104_led.c:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+  108 | }
+      | ^
+../User/Src/_104_led.c: In function 'get_left_blue':
+../User/Src/_104_led.c:113:1: warning: control reaches end of non-void function [-Wreturn-type]
+  113 | }
+      | ^
+../User/Src/_104_led.c: In function 'get_right_red':
+../User/Src/_104_led.c:118:1: warning: control reaches end of non-void function [-Wreturn-type]
+  118 | }
+      | ^
+../User/Src/_104_led.c: In function 'get_right_green':
+../User/Src/_104_led.c:123:1: warning: control reaches end of non-void function [-Wreturn-type]
+  123 | }
+      | ^
+../User/Src/_104_led.c: In function 'get_right_blue':
+../User/Src/_104_led.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+  128 | }
+      | ^
+make: *** [User/Src/subdir.mk:22: User/Src/_104_led.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:354:9: error: unknown type name 'Uart'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |         ^~~~
+In file included from ../Core/Src/main.c:20:
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_uart' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c:358:21: error: request for member 'receive' in something not a structure or union
+  358 |                 uart->receive(uart);
+      |                     ^~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:364:9: error: unknown type name 'Timer'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |         ^~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_timer' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../Core/Src/main.c:368:22: error: request for member 'count_up' in something not a structure or union
+  368 |                 timer->count_up(timer);
+      |                      ^~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_1' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_4' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:41:01 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:354:9: error: unknown type name 'Uart'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |         ^~~~
+In file included from ../Core/Src/main.c:20:
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_uart' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:354:22: note: in expansion of macro 'GET_INSTANCE'
+  354 |         Uart* uart = GET_INSTANCE(uart);
+      |                      ^~~~~~~~~~~~
+../Core/Src/main.c:358:21: error: request for member 'receive' in something not a structure or union
+  358 |                 uart->receive(uart);
+      |                     ^~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:364:9: error: unknown type name 'Timer'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |         ^~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_timer' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:364:24: note: in expansion of macro 'GET_INSTANCE'
+  364 |         Timer* timer = GET_INSTANCE(timer);
+      |                        ^~~~~~~~~~~~
+../Core/Src/main.c:368:22: error: request for member 'count_up' in something not a structure or union
+  368 |                 timer->count_up(timer);
+      |                      ^~
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_1' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:374:28: note: in expansion of macro 'GET_INSTANCE'
+  374 |         Button* button_1 = GET_INSTANCE(button_1);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_2' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:375:28: note: in expansion of macro 'GET_INSTANCE'
+  375 |         Button* button_2 = GET_INSTANCE(button_2);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_3' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:376:28: note: in expansion of macro 'GET_INSTANCE'
+  376 |         Button* button_3 = GET_INSTANCE(button_3);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: implicit declaration of function 'get_button_4' [-Wimplicit-function-declaration]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+../User/Inc/_000_common.h:11:33: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   11 | #define GET_INSTANCE(name, ...) get_##name(__VA_ARGS__)
+      |                                 ^~~~
+../Core/Src/main.c:377:28: note: in expansion of macro 'GET_INSTANCE'
+  377 |         Button* button_4 = GET_INSTANCE(button_4);
+      |                            ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:41:31 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test.elf
+ 
+arm-none-eabi-size  test.elf 
+arm-none-eabi-objdump -h -S test.elf  > "test.list"
+   text	   data	    bss	    dec	    hex	filename
+  15736	     12	   1716	  17464	   4438	test.elf
+Finished building: default.size.stdout
+ 
+Finished building: test.list
+ 
+00:42:28 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+../User/Src/_105_button.c: In function 'new_button':
+../User/Src/_105_button.c:36:26: error: assignment of read-only member 'is_pressed'
+   36 |         this->is_pressed = is_pressed;
+      |                          ^
+../User/Src/_105_button.c: At top level:
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/_105_button.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+00:42:39 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/_105_button.c:11:13: warning: 'update' defined but not used [-Wunused-function]
+   11 | static void update(Button* this)
+      |             ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test.elf
+ 
+arm-none-eabi-size  test.elf 
+arm-none-eabi-objdump -h -S test.elf  > "test.list"
+   text	   data	    bss	    dec	    hex	filename
+  15736	     12	   1716	  17464	   4438	test.elf
+Finished building: default.size.stdout
+ 
+Finished building: test.list
+ 
+00:43:05 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  107 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:108:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  108 |   CLCD_Init();
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test.elf
+ 
+arm-none-eabi-size  test.elf 
+arm-none-eabi-objdump -h -S test.elf  > "test.list"
+   text	   data	    bss	    dec	    hex	filename
+  15736	     12	   1716	  17464	   4438	test.elf
+Finished building: default.size.stdout
+ 
+Finished building: test.list
+ 
+06:52:03 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:20:10: fatal error: _000_common.h: No such file or directory
+   20 | #include <_000_common.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../User/Src/_104_led.c: In function 'turn_on':
+../User/Src/_104_led.c:17:17: error: 'Led' {aka 'struct _Led'} has no member named 'last_button'
+   17 |         if (this->last_button == false && button->is_pressed(button) == true)
+      |                 ^~
+../User/Src/_104_led.c:19:21: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   19 |                 this->operate = turn_off_led;
+      |                     ^~
+../User/Src/_104_led.c:19:33: error: 'turn_off_led' undeclared (first use in this function)
+   19 |                 this->operate = turn_off_led;
+      |                                 ^~~~~~~~~~~~
+../User/Src/_104_led.c:19:33: note: each undeclared identifier is reported only once for each function it appears in
+../User/Src/_104_led.c:22:13: error: 'Led' {aka 'struct _Led'} has no member named 'last_button'
+   22 |         this->last_button = button->is_pressed(button);
+      |             ^~
+../User/Src/_104_led.c: In function 'turn_off':
+../User/Src/_104_led.c:29:17: error: 'Led' {aka 'struct _Led'} has no member named 'last_button'
+   29 |         if (this->last_button == false && button->is_pressed(button) == true)
+      |                 ^~
+../User/Src/_104_led.c:31:21: error: 'Led' {aka 'struct _Led'} has no member named 'operate'
+   31 |                 this->operate = turn_on_led;
+      |                     ^~
+../User/Src/_104_led.c:31:33: error: 'turn_on_led' undeclared (first use in this function); did you mean 'turn_on'?
+   31 |                 this->operate = turn_on_led;
+      |                                 ^~~~~~~~~~~
+      |                                 turn_on
+../User/Src/_104_led.c:34:13: error: 'Led' {aka 'struct _Led'} has no member named 'last_button'
+   34 |         this->last_button = button->is_pressed(button);
+      |             ^~
+../User/Src/_104_led.c: In function 'new_led':
+../User/Src/_104_led.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+   40 | }
+      | ^
+../User/Src/_104_led.c: At top level:
+../User/Src/_104_led.c:25:13: warning: 'turn_off' defined but not used [-Wunused-function]
+   25 | static void turn_off(Led* this, Button* button)
+      |             ^~~~~~~~
+../User/Src/_104_led.c:13:13: warning: 'turn_on' defined but not used [-Wunused-function]
+   13 | static void turn_on(Led* this, Button* button)
+      |             ^~~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/_104_led.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+06:52:41 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_104_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_104_led.d" -MT"User/Src/_104_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_104_led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:20:10: fatal error: _000_common.h: No such file or directory
+   20 | #include <_000_common.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+06:52:51 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  105 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:106:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  107 |   CLCD_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c:114:22: warning: implicit declaration of function 'new_button' [-Wimplicit-function-declaration]
+  114 |   Button* button_1 = new_button(BUTTON_1_GPIO_Port, BUTTON_1_Pin);
+      |                      ^~~~~~~~~~
+../Core/Src/main.c:114:22: warning: initialization of 'Button *' {aka 'struct _Button *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test.elf
+ 
+arm-none-eabi-size  test.elf 
+arm-none-eabi-objdump -h -S test.elf  > "test.list"
+   text	   data	    bss	    dec	    hex	filename
+  20540	    104	   2048	  22692	   58a4	test.elf
+Finished building: default.size.stdout
+ 
+Finished building: test.list
+ 
+06:53:51 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/_105_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/_105_button.d" -MT"User/Src/_105_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/_105_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/CLCD/Inc -I../Drivers/Seven_segment/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../User/Src/_105_button.c:42:20: error: initializer element is not constant
+   42 | Button* button_1 = new_button(BUTTON_1_GPIO_Port, BUTTON_1_Pin);
+      |                    ^~~~~~~~~~
+make: *** [User/Src/subdir.mk:22: User/Src/_105_button.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:3: warning: implicit declaration of function '_7SEG_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  105 |   _7SEG_GPIO_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:106:3: warning: implicit declaration of function 'CLCD_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+  106 |   CLCD_GPIO_Init();
+      |   ^~~~~~~~~~~~~~
+      |   MX_GPIO_Init
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'CLCD_Init' [-Wimplicit-function-declaration]
+  107 |   CLCD_Init();
+      |   ^~~~~~~~~
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:02:12 **** Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/button.d" -MT"User/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/button.o"
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f407vetx.d" -MT"Core/Startup/startup_stm32f407vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f407vetx.o" "../Core/Startup/startup_stm32f407vetx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "Challenge 1-1. Button input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-1. Button input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-1. Button input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-1. Button input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf  > "Challenge 1-1. Button input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   6728	    132	   1572	   8432	   20f0	Challenge 1-1. Button input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-1. Button input to toggle LED.list
+ 
+11:07:38 **** Incremental Build of configuration Debug for project Challenge 1-1. Button input to toggle LED ****
+make -j4 all 
+arm-none-eabi-gcc "../User/Src/led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"User/Src/led.d" -MT"User/Src/led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "User/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../User/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Challenge 1-1. Button input to toggle LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Github\digital-alarm-clock-challenge\Challenge 1-1. Button input to toggle LED\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Challenge 1-1. Button input to toggle LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Challenge 1-1. Button input to toggle LED.elf
+ 
+arm-none-eabi-size  Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf 
+arm-none-eabi-objdump -h -S Challenge\ 1-1.\ Button\ input\ to\ toggle\ LED.elf  > "Challenge 1-1. Button input to toggle LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   6756	    156	   1572	   8484	   2124	Challenge 1-1. Button input to toggle LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Challenge 1-1. Button input to toggle LED.list
+ 

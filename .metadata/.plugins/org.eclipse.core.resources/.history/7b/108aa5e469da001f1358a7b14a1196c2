@@ -1,0 +1,39 @@
+/*
+ * _105_button.c
+ *
+ *  Created on: Nov 30, 2024
+ *      Author: vermi
+ */
+
+
+#include <_105_button.h>
+
+static void update(Button* this)
+{
+	if (HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin) == GPIO_PIN_SET)
+	{
+		if (this->button_state == false) this->button_state = true;
+	}
+	else
+	{
+		if (this->button_state == true) this->button_state = false;
+	}
+}
+
+static bool is_pressed(Button* this)
+{
+	return this->button_state;
+}
+
+Button* new_button(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, bool button_state)
+{
+	Button* this = malloc(sizeof(Button));
+	assert(this);
+
+	this->GPIOx = GPIOx;
+	this->GPIO_Pin = GPIO_Pin;
+	this->button_state = button_state;
+	this->is_pressed = is_pressed;
+
+	return this;
+}

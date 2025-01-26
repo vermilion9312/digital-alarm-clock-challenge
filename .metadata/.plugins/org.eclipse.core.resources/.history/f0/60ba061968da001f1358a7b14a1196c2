@@ -1,0 +1,9 @@
+../User/Src/_002_timer.c:37:13:count_up	16	static
+../User/Src/_002_timer.c:48:13:set_count	16	static
+../User/Src/_002_timer.c:53:13:record_count	16	static
+../User/Src/_002_timer.c:58:17:get_recorded_count	16	static
+../User/Src/_002_timer.c:63:13:record_time	16	static
+../User/Src/_002_timer.c:73:16:get_time	16	static
+../User/Src/_002_timer.c:99:7:get_recorded_time	4	static
+../User/Src/_002_timer.c:104:8:get_timer	4	static
+../User/Src/_002_timer.c:109:7:get_lap_time	4	static

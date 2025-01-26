@@ -12,17 +12,17 @@ static void update(Button* this)
 {
 	if (HAL_GPIO_ReadPin(this->GPIOx, this->GPIO_Pin) == GPIO_PIN_SET)
 	{
-		if (this->_is_pressed == false) this->_is_pressed = true;
+		if (this->button_state == false) this->button_state = true;
 	}
 	else
 	{
-		if (this->_is_pressed == true) this->_is_pressed = false;
+		if (this->button_state == true) this->button_state = false;
 	}
 }
 
 static bool is_pressed(Button* this)
 {
-	return this->_is_pressed;
+	return this->button_state;
 }
 
 static Button button_1 = { BUTTON_1_GPIO_Port, BUTTON_1_Pin, false, update, is_pressed };

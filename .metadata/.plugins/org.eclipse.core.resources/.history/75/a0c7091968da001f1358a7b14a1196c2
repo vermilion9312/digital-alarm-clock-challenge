@@ -1,0 +1,5 @@
+../User/Src/seven_segment.c:18:13:operate	16	static
+../User/Src/seven_segment.c:23:13:stop	24	static
+../User/Src/seven_segment.c:45:13:run	32	static
+../User/Src/seven_segment.c:64:13:pause	40	static
+../User/Src/seven_segment.c:95:15:get_segment	8	static

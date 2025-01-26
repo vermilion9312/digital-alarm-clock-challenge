@@ -12,15 +12,25 @@
 #include "main.h"
 #include "button.h"
 
+#define TURN_OFF_LED HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_RESET)
+#define TURN_ON_LED  HAL_GPIO_WritePin(this->GPIOx, this->GPIO_Pin, GPIO_PIN_SET)
+
 typedef struct _Led Led;
+typedef void (* Operate)(Led*, Button*);
+typedef struct _LedState LedState;
+
+typedef struct _LedState {
+	void (* const turn_off_led)(Led*, Button*);
+	void (* const turn_on_led)(Led*, Button*);
+};
 
 struct _Led {
+	LedState* state;
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
 	bool last_button;
-	void (* operate)(Led*, Button*);
-	void (* const on)(Led*, Button*);
-	void (* const off)(Led*, Button*);
+	Operate operate;
+	void (* const set_state)(Led*, Operate);
 };
 
 Led* get_left_red(void);
