@@ -16,9 +16,9 @@ typedef struct _Button Button;
 struct _Button {
 	GPIO_TypeDef* GPIOx;
 	uint16_t GPIO_Pin;
-	bool _is_pressed;
 	void (* const update)(Button*);
 	bool (* const is_pressed)(Button*);
+	bool button_state;
 };
 
 Button* get_button_1(void);

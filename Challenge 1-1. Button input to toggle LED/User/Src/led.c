@@ -16,16 +16,13 @@ static void turn_off_left(Led* this, Button* button);
 static void turn_on_right(Led* this, Button* button);
 static void turn_off_right(Led* this, Button* button);
 
-static LedState led_off_state = {};
-static LedState led_on_state = {};
+static Led left_red   = { LEFT_RED_GPIO_Port,   LEFT_RED_Pin,   turn_off_left, set_state };
+static Led left_green = { LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin, turn_off_left, set_state };
+static Led left_blue  = { LEFT_BLUE_GPIO_Port,  LEFT_BLUE_Pin,  turn_off_left, set_state };
 
-static Led left_red    = { .GPIOx = LEFT_RED_GPIO_Port,    .GPIO_Pin = LEFT_RED_Pin,    .operate = turn_off_left, .set_state = set_state };
-static Led left_green  = { .GPIOx = LEFT_GREEN_GPIO_Port,  .GPIO_Pin = LEFT_GREEN_Pin,  .operate = turn_off_left, .set_state = set_state };
-static Led left_blue   = { .GPIOx = LEFT_BLUE_GPIO_Port,   .GPIO_Pin = LEFT_BLUE_Pin,   .operate = turn_off_left, .set_state = set_state };
-
-static Led right_red   = { .GPIOx = RIGHT_RED_GPIO_Port,   .GPIO_Pin = RIGHT_RED_Pin,   .operate = turn_off_right, .set_state = set_state };
-static Led right_green = { .GPIOx = RIGHT_GREEN_GPIO_Port, .GPIO_Pin = RIGHT_GREEN_Pin, .operate = turn_off_right, .set_state = set_state };
-static Led right_blue  = { .GPIOx = RIGHT_BLUE_GPIO_Port,  .GPIO_Pin = RIGHT_BLUE_Pin,  .operate = turn_off_right, .set_state = set_state };
+static Led right_red   = { RIGHT_RED_GPIO_Port,   RIGHT_RED_Pin,   turn_off_right, set_state };
+static Led right_green = { RIGHT_GREEN_GPIO_Port, RIGHT_GREEN_Pin, turn_off_right, set_state };
+static Led right_blue  = { RIGHT_BLUE_GPIO_Port,  RIGHT_BLUE_Pin,  turn_off_right, set_state };
 
 static void set_state(Led* this, Operate operate)
 {
@@ -38,7 +35,7 @@ static void turn_off_left(Led* this, Button* button)
 
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-//		this->set_state;
+		this->set_state(this, turn_on_left);
 	}
 
 	this->last_button = button->is_pressed(button);
@@ -50,7 +47,7 @@ static void turn_on_left(Led* this, Button* button)
 
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-//		this->set_state(this, );
+		this->set_state(this, turn_off_left);
 	}
 
 	this->last_button = button->is_pressed(button);

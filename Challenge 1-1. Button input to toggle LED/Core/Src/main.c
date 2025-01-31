@@ -108,7 +108,6 @@ int main(void)
 
   while (1)
   {
-
 	  button_1->update(button_1);
 	  button_2->update(button_2);
 	  button_3->update(button_3);
