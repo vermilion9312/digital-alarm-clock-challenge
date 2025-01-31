@@ -1,7 +1,0 @@
-../User/Src/_101_digital_clock.c:20:13:get_current_mode	16	static
-../User/Src/_101_digital_clock.c:25:13:set_mode	16	static
-../User/Src/_101_digital_clock.c:31:13:operate_clock_mode	24	static
-../User/Src/_101_digital_clock.c:53:13:operate_alarm_mode	24	static
-../User/Src/_101_digital_clock.c:77:13:operate_stopwatch_mode	24	static
-../User/Src/_101_digital_clock.c:103:13:operate_timer_mode	24	static
-../User/Src/_101_digital_clock.c:126:15:get_clock	8	static

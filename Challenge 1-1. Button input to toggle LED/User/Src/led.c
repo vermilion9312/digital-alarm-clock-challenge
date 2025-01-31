@@ -38,7 +38,7 @@ static void turn_off_left(Led* this, Button* button)
 
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-		this->set_state;
+//		this->set_state;
 	}
 
 	this->last_button = button->is_pressed(button);
@@ -50,7 +50,7 @@ static void turn_on_left(Led* this, Button* button)
 
 	if (this->last_button == false && button->is_pressed(button) == true)
 	{
-		this->set_state(this, );
+//		this->set_state(this, );
 	}
 
 	this->last_button = button->is_pressed(button);
