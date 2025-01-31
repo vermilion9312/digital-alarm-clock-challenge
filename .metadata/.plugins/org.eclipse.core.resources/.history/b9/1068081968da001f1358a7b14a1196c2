@@ -1,6 +1,0 @@
-../User/Src/_103_seven_segment.c:19:13:set_state	1
-../User/Src/_103_seven_segment.c:24:13:get_current_mode	1
-../User/Src/_103_seven_segment.c:30:13:operate_stop	6
-../User/Src/_103_seven_segment.c:62:13:operate_run	6
-../User/Src/_103_seven_segment.c:90:13:operate_pause	10
-../User/Src/_103_seven_segment.c:134:15:get_segment	1

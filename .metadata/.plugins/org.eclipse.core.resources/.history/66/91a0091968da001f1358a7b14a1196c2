@@ -1,5 +1,0 @@
-../User/Src/seven_segment.c:18:13:operate	1
-../User/Src/seven_segment.c:23:13:stop	3
-../User/Src/seven_segment.c:45:13:run	3
-../User/Src/seven_segment.c:64:13:pause	5
-../User/Src/seven_segment.c:95:15:get_segment	1

@@ -1,6 +1,0 @@
-../User/Src/_102_lcd.c:19:6:set_state	16	static
-../User/Src/_102_lcd.c:24:13:stop	24	static
-../User/Src/_102_lcd.c:43:13:run	48	static
-../User/Src/_102_lcd.c:92:13:pause	32	static
-../User/Src/_102_lcd.c:127:13:display_time	112	static
-../User/Src/_102_lcd.c:157:6:get_lcd	8	static

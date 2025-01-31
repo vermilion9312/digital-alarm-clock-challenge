@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;test/Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.ioc&apos; to &apos;test.ioc&apos;" description="Rename resource &apos;Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Challenge 3. Stopwatch - Display Time on CLCD and Save and Display Lap Times.ioc" name="test.ioc" stamp="1737732605425" updateReferences="true"/>
-</session>

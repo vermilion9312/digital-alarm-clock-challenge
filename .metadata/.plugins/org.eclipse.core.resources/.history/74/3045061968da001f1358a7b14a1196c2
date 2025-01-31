@@ -1,9 +1,0 @@
-../User/Src/_002_timer.c:37:13:count_up	1
-../User/Src/_002_timer.c:48:13:set_count	1
-../User/Src/_002_timer.c:53:13:record_count	1
-../User/Src/_002_timer.c:58:17:get_recorded_count	1
-../User/Src/_002_timer.c:63:13:record_time	1
-../User/Src/_002_timer.c:73:16:get_time	6
-../User/Src/_002_timer.c:99:7:get_recorded_time	1
-../User/Src/_002_timer.c:104:8:get_timer	1
-../User/Src/_002_timer.c:109:7:get_lap_time	1

@@ -1,5 +1,0 @@
-../User/Src/button.c:11:13:update	1
-../User/Src/button.c:16:13:is_pressed	1
-../User/Src/button.c:25:9:get_button_1	1
-../User/Src/button.c:30:9:get_button_2	1
-../User/Src/button.c:35:9:get_button_3	1
