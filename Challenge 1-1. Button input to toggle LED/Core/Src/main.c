@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2024 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -21,7 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "common.h"
 #include "button.h"
 #include "led.h"
 /* USER CODE END Includes */
@@ -94,31 +93,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  Button* button_1 = GET_INSTANCE(button_1);
-  Button* button_2 = GET_INSTANCE(button_2);
-  Button* button_3 = GET_INSTANCE(button_3);
 
-  Led* left_red   = GET_INSTANCE(left_red);
-  Led* left_green = GET_INSTANCE(left_green);
-  Led* left_blue  = GET_INSTANCE(left_blue);
-
-  Led* right_red   = GET_INSTANCE(right_red);
-  Led* right_green = GET_INSTANCE(right_green);
-  Led* right_blue  = GET_INSTANCE(right_blue);
-
+  Button* button_1 = new_Button(BUTTON_1_GPIO_Port, BUTTON_1_Pin);
+  LED*    left_red = new_LED(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
   while (1)
   {
-	  button_1->update(button_1);
-	  button_2->update(button_2);
-	  button_3->update(button_3);
 
+	  button_1->operate(button_1);
 	  left_red->operate(left_red, button_1);
-	  left_green->operate(left_green, button_2);
-	  left_blue->operate(left_blue, button_3);
-
-	  right_red->operate(right_red, button_1);
-	  right_green->operate(right_green, button_2);
-	  right_blue->operate(right_blue, button_3);
 
     /* USER CODE END WHILE */
 
@@ -184,7 +166,6 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, RIGHT_BLUE_Pin|RIGHT_GREEN_Pin, GPIO_PIN_SET);
@@ -198,40 +179,40 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : BUTTON_1_Pin */
   GPIO_InitStruct.Pin = BUTTON_1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BUTTON_1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BUTTON_2_Pin */
   GPIO_InitStruct.Pin = BUTTON_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BUTTON_2_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : RIGHT_BLUE_Pin RIGHT_GREEN_Pin */
   GPIO_InitStruct.Pin = RIGHT_BLUE_Pin|RIGHT_GREEN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : BUTTON_4_Pin BUTTON_3_Pin */
   GPIO_InitStruct.Pin = BUTTON_4_Pin|BUTTON_3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LEFT_RED_Pin LEFT_GREEN_Pin LEFT_BLUE_Pin */
   GPIO_InitStruct.Pin = LEFT_RED_Pin|LEFT_GREEN_Pin|LEFT_BLUE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pin : RIGHT_RED_Pin */
   GPIO_InitStruct.Pin = RIGHT_RED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(RIGHT_RED_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
