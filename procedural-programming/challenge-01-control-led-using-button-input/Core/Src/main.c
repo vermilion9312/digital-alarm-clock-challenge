@@ -21,8 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "button.h"
 #include "led.h"
+#include "button.h"
+#include "operation.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,14 +94,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-  Button* button_1 = new_Button(BUTTON_1_GPIO_Port, BUTTON_1_Pin);
-  LED*    left_red = new_LED(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
   while (1)
   {
 
-	  button_1->operate(button_1);
-	  left_red->operate(left_red, button_1);
+	  operate(BUTTON_1, LEFT_RED,   RIGHT_RED  );
+	  operate(BUTTON_2, LEFT_GREEN, RIGHT_GREEN);
+	  operate(BUTTON_3, LEFT_BLUE,  RIGHT_BLUE );
 
     /* USER CODE END WHILE */
 
