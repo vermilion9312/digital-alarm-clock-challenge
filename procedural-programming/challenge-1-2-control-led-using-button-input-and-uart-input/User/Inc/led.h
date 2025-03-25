@@ -1,0 +1,36 @@
+/*
+ * led.h
+ *
+ *  Created on: Mar 22, 2025
+ *      Author: vermi
+ */
+
+#ifndef INC_LED_H_
+#define INC_LED_H_
+
+#include "gpio_config.h"
+#include "main.h"
+#include <stdbool.h>
+#include "button.h"
+
+typedef enum {
+	RED,
+	GREEN,
+	BLUE,
+	LED_COUNT
+} LED_Index;
+
+typedef enum {
+	LFET,
+	RIGHT,
+	DIRECTION_COUNT
+} LED_Direction;
+
+void update_led(LED_Index index);
+bool is_on(LED_Index index);
+void turn_on(LED_Index index);
+void turn_off(LED_Index index);
+void led_init(void);
+void change_direction(void);
+
+#endif /* INC_LED_H_ */
