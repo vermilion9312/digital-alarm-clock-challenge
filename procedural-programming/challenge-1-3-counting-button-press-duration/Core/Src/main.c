@@ -23,7 +23,6 @@
 /* USER CODE BEGIN Includes */
 #include "led.h"
 #include "button.h"
-#include "operation.h"
 #include "segment.h"
 #include "timer.h"
 /* USER CODE END Includes */
@@ -107,12 +106,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  _7SEG_SetNumber(DGT1, get_count(SEC), get_count(MS) < 5 ? ON : OFF);
-	  _7SEG_SetNumber(DGT2, get_count(MS), OFF);
-
-	  operate(BUTTON_1, LEFT_RED,   RIGHT_RED  );
-	  operate(BUTTON_2, LEFT_GREEN, RIGHT_GREEN);
-	  operate(BUTTON_3, LEFT_BLUE,  RIGHT_BLUE );
+	  update_button(BUTTON_1);
+	  operate_led(BUTTON_1, LEFT_RED, RIGHT_RED);
+	  operate_segment(BUTTON_1);
+	  update_last_button(BUTTON_1);
 
     /* USER CODE END WHILE */
 
@@ -289,10 +286,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	if (htim->Instance == TIM6)
-	{
-		count_up();
-	}
+	if (htim->Instance == TIM6) count_up();
 }
 /* USER CODE END 4 */
 

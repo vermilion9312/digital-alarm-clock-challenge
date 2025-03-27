@@ -38,3 +38,33 @@ void turn_off(LED_Index index)
 	HAL_GPIO_WritePin(led_config[index].GPIOx, led_config[index].GPIO_Pin, GPIO_PIN_SET);
 }
 
+void operate_led(ButtonIndex button_index, LED_Index press_led_index, LED_Index release_led_index)
+{
+	if (!was_pressed(button_index) && is_pressed(button_index))
+	{
+	  if (is_on(press_led_index))
+	  {
+		  turn_off(press_led_index);
+		  update_led(press_led_index);
+	  }
+	  else
+	  {
+		  turn_on(press_led_index);
+		  update_led(press_led_index);
+	  }
+	}
+
+	if (was_pressed(button_index) && !is_pressed(button_index))
+	{
+	  if (is_on(release_led_index))
+	  {
+		  turn_off(release_led_index);
+		  update_led(release_led_index);
+	  }
+	  else
+	  {
+		  turn_on(release_led_index);
+		  update_led(release_led_index);
+	  }
+	}
+}
