@@ -23,7 +23,6 @@
 /* USER CODE BEGIN Includes */
 #include "led.h"
 #include "button.h"
-#include "operation.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -101,9 +100,13 @@ int main(void)
   {
 	  change_direction();
 
-	  operate(BUTTON_1, RED  );
-	  operate(BUTTON_2, GREEN);
-	  operate(BUTTON_3, BLUE );
+	  update_button(BUTTON_1);
+	  update_button(BUTTON_2);
+	  update_button(BUTTON_3);
+
+	  operate_led(BUTTON_1, RED  );
+	  operate_led(BUTTON_2, GREEN);
+	  operate_led(BUTTON_3, BLUE );
 
     /* USER CODE END WHILE */
 

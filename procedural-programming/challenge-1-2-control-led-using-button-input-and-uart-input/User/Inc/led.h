@@ -26,11 +26,8 @@ typedef enum {
 	DIRECTION_COUNT
 } LED_Direction;
 
-void update_led(LED_Index index);
-bool is_on(LED_Index index);
-void turn_on(LED_Index index);
-void turn_off(LED_Index index);
 void led_init(void);
 void change_direction(void);
+void operate_led(ButtonIndex button_index, LED_Index led_index);
 
 #endif /* INC_LED_H_ */
