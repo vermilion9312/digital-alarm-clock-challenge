@@ -23,10 +23,6 @@ typedef enum {
 	LED_COUNT
 } LED_Index;
 
-void update_led(LED_Index index);
-bool is_on(LED_Index index);
-void turn_on(LED_Index index);
-void turn_off(LED_Index index);
 void operate_led(ButtonIndex button_index, LED_Index press_led_index, LED_Index release_led_index);
 
 #endif /* INC_LED_H_ */

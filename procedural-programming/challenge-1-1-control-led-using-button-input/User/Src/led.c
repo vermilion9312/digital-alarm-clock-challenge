@@ -18,23 +18,23 @@ static GPIO_Config led_config[LED_COUNT] = {
 
 static bool led_state[LED_COUNT];
 
-void update_led(LED_Index index)
+static void update_led(LED_Index index)
 {
 	led_state[index] = !led_state[index];
 }
 
-bool is_on(LED_Index index)
+static bool is_on(LED_Index index)
 {
 	return led_state[index];
 }
 
-void turn_on(LED_Index index)
+static void turn_on(LED_Index index)
 {
 	HAL_GPIO_WritePin(led_config[index].GPIOx, led_config[index].GPIO_Pin, GPIO_PIN_RESET);
 	update_led(index);
 }
 
-void turn_off(LED_Index index)
+static void turn_off(LED_Index index)
 {
 	HAL_GPIO_WritePin(led_config[index].GPIOx, led_config[index].GPIO_Pin, GPIO_PIN_SET);
 	update_led(index);
