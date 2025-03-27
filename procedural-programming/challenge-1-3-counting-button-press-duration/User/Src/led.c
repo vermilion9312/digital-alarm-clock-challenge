@@ -53,6 +53,4 @@ void operate_led(ButtonIndex button_index, LED_Index press_led_index, LED_Index 
 	  if (is_on(release_led_index)) turn_off(release_led_index);
 	  else                          turn_on(release_led_index);
 	}
-
-	update_last_button(button_index);
 }

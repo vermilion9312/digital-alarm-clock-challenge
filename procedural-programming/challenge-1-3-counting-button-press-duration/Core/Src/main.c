@@ -107,8 +107,10 @@ int main(void)
   while (1)
   {
 	  update_button(BUTTON_1);
+
 	  operate_led(BUTTON_1, LEFT_RED, RIGHT_RED);
 	  operate_segment(BUTTON_1);
+
 	  update_last_button(BUTTON_1);
 
     /* USER CODE END WHILE */

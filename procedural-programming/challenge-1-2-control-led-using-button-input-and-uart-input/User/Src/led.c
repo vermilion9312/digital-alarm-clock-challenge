@@ -55,7 +55,6 @@ void led_init(void)
 
 void change_led_direction(void)
 {
-
 	if (!was_pressed(BUTTON_4) && is_pressed(BUTTON_4))
 	{
 		if (led_config == left_led_config)
