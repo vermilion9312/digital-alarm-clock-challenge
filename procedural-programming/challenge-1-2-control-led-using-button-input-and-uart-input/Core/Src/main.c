@@ -98,11 +98,12 @@ int main(void)
 
   while (1)
   {
-	  change_direction();
-
 	  update_button(BUTTON_1);
 	  update_button(BUTTON_2);
 	  update_button(BUTTON_3);
+	  update_button(BUTTON_4);
+
+	  change_led_direction();
 
 	  operate_led(BUTTON_1, RED  );
 	  operate_led(BUTTON_2, GREEN);

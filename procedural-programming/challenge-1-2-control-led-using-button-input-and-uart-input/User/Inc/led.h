@@ -27,7 +27,7 @@ typedef enum {
 } LED_Direction;
 
 void led_init(void);
-void change_direction(void);
+void change_led_direction(void);
 void operate_led(ButtonIndex button_index, LED_Index led_index);
 
 #endif /* INC_LED_H_ */

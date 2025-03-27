@@ -53,9 +53,8 @@ void led_init(void)
 	led_state  = left_led_state;
 }
 
-void change_direction(void)
+void change_led_direction(void)
 {
-	update_button(BUTTON_4);
 
 	if (!was_pressed(BUTTON_4) && is_pressed(BUTTON_4))
 	{
