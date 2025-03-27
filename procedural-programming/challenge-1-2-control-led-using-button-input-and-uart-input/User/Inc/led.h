@@ -20,12 +20,6 @@ typedef enum {
 	LED_COUNT
 } LED_Index;
 
-typedef enum {
-	LFET,
-	RIGHT,
-	DIRECTION_COUNT
-} LED_Direction;
-
 void led_init(void);
 void change_led_direction(void);
 void operate_led(ButtonIndex button_index, LED_Index led_index);
