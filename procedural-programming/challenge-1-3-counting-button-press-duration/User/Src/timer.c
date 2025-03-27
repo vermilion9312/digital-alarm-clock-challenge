@@ -21,7 +21,7 @@ uint16_t get_count(TimeType type)
 	{
 		return count / 10;
 	}
-	else
+	else if (type == MS)
 	{
 		return count % 10;
 	}

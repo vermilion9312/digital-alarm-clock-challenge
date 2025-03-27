@@ -78,14 +78,8 @@ void operate_led(ButtonIndex button_index, LED_Index led_index)
 {
 	if (!was_pressed(button_index) && is_pressed(button_index))
 	{
-	  if (is_on(led_index))
-	  {
-		  turn_off(led_index);
-	  }
-	  else
-	  {
-		  turn_on(led_index);
-	  }
+	  if (is_on(led_index)) turn_off(led_index);
+	  else                  turn_on(led_index);
 	}
 
 	update_last_button(button_index);
