@@ -32,7 +32,7 @@ uint32_t get_count(TimeType type);
 void set_count(uint16_t _count);
 void set_timer(bool state);
 void clear_lap_time(void);
-int8_t save_lap_time(void);
+void save_lap_time(int8_t* index);
 uint32_t get_lap_time(uint8_t index, TimeType type);
 
 #endif /* INC_TIMER_H_ */

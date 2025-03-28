@@ -8,58 +8,15 @@
 
 #include <stopwatch_mode.h>
 
-static void stopped(void);
-static void running(void);
-static void paused(void);
-
-void (* operate_stopwatch_mode)(void) = stopped;
-static char top_ine_buffer[20];
-static char bottom_ine_buffer[20];
+StopwatchModeOperation operate_stopwatch_mode = stopped;
 static int8_t lap_time_index = -1;
+static
 
-static void display_segment(void (* operate_stopwatch_mode)(void))
+void stopped(void)
 {
-	if (operate_stopwatch_mode == running)
-	{
-		_7SEG_SetNumber(DGT1, get_count(SEC), get_count(_100MS) < 5 ? ON : OFF);
-	}
-	else
-	{
-		_7SEG_SetNumber(DGT1, get_count(SEC), ON);
-	}
-
-	_7SEG_SetNumber(DGT2, get_count(_100MS), OFF);
-}
-
-static void display_lcd(void)
-{
-	sprintf(top_ine_buffer, "STW %02lu:%02lu:%02lu:%0lu", get_count(HOUR), get_count(MIN), get_count(SEC), get_count(MS));
-	CLCD_Puts(0, 0, (unsigned char*) top_ine_buffer);
-
-	if (lap_time_index > LAP_TIME_SIZE - 1)
-	{
-		sprintf(bottom_ine_buffer, "LAP FULL(9/9)   ");
-	}
-	else if (lap_time_index > -1)
-	{
-		sprintf(bottom_ine_buffer, "LP%d %02lu:%02lu:%02lu:%03lu", lap_time_index + 1,
-				get_lap_time(lap_time_index, HOUR), get_lap_time(lap_time_index, MIN),
-				get_lap_time(lap_time_index, SEC),  get_lap_time(lap_time_index, MS));
-
-	}
-	else
-	{
-		sprintf(bottom_ine_buffer, "                ");
-	}
-
-
-	CLCD_Puts(0, 1, (unsigned char*) bottom_ine_buffer);
-}
-
-static void stopped(void)
-{
-	display_segment(stopped);
-	display_lcd();
+	operate_segment(stopped);
+	operate_lcd_top();
+	operate_lcd_bottom(lap_time_index);
 
 	if (!was_pressed(BUTTON_2) && is_pressed(BUTTON_2))
 	{
@@ -68,10 +25,11 @@ static void stopped(void)
 	}
 }
 
-static void running(void)
+void running(void)
 {
-	display_segment(running);
-	display_lcd();
+	operate_segment(running);
+	operate_lcd_top();
+	operate_lcd_bottom(lap_time_index);
 
 	if (!was_pressed(BUTTON_2) && is_pressed(BUTTON_2))
 	{
@@ -81,15 +39,20 @@ static void running(void)
 
 	if (!was_pressed(BUTTON_3) && is_pressed(BUTTON_3))
 	{
-		save_lap_time();
-		lap_time_index++;
+		save_lap_time(&lap_time_index); // lap_time++
+	}
+
+	if (!was_pressed(BUTTON_4) && is_pressed(BUTTON_4))
+	{
+		//lap_log++
 	}
 }
 
-static void paused(void)
+void paused(void)
 {
-	display_segment(paused);
-	display_lcd();
+	operate_segment(paused);
+	operate_lcd_top();
+	operate_lcd_bottom(lap_time_index);
 
 	if (!was_pressed(BUTTON_2) && is_pressed(BUTTON_2))
 	{
@@ -109,6 +72,6 @@ static void paused(void)
 
 	if (!was_pressed(BUTTON_4) && is_pressed(BUTTON_4))
 	{
-
+		//lap_log++
 	}
 }

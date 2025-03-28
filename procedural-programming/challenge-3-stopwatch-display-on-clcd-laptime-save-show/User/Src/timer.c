@@ -43,20 +43,15 @@ void set_timer(bool state)
 	timer_state = state;
 }
 
-int8_t save_lap_time(void)
+void save_lap_time(int8_t* index)
 {
-	static uint8_t index;
-
-	if (index == LAP_TIME_SIZE) return -1;
-
-	lap_time[index++] = count;
-
-	return index - 1;
+	if (*index == LAP_TIME_SIZE) return;
+	lap_time[++(*index)] = count;
 }
 
 uint32_t get_lap_time(uint8_t index, TimeType type)
 {
-	uint32_t local = lap_time[index];
+	uint32_t local = lap_time[index - 1];
 
 	switch (type)
 	{

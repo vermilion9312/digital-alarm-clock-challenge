@@ -8,13 +8,19 @@
 #ifndef INC_STOPWATCH_MODE_H_
 #define INC_STOPWATCH_MODE_H_
 
-#include "7SEG.h"
-#include "CLCD.h"
+
 #include "button.h"
 #include "timer.h"
 #include <stdio.h>
 #include <inttypes.h>
+#include "segment.h"
+#include "lcd.h"
 
-extern void (* operate_stopwatch_mode)(void);
+typedef void (* StopwatchModeOperation)(void);
+extern StopwatchModeOperation operate_stopwatch_mode;
+
+void stopped(void);
+void running(void);
+void paused(void);
 
 #endif /* INC_STOPWATCH_MODE_H_ */
