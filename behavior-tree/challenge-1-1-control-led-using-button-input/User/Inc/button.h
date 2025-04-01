@@ -9,8 +9,8 @@
 #define INC_BUTTON_H_
 
 #include <stdbool.h>
-#include "gpio_config.h"
 #include "main.h"
+#include "behavior_tree.h"
 
 typedef enum {
 	BUTTON_1,

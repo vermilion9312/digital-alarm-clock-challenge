@@ -12,10 +12,25 @@
 #include "led.h"
 
 typedef enum {
-	SUCCESS,
-	FAILURE
+	NODE_SUCCESS,
+	NODE_FAILURE
 } NodeState;
 
-typedef NodeState (* Node)(void);
+typedef NodeState (* Tick)(void*);
+typedef struct _LeafNode LeafNode;
+typedef struct _CompositeNode CompositeNode;
+
+struct _LeafNode {
+	Tick tick;
+};
+
+struct _CompositeNode {
+	Tick tick;
+	void** children;
+	size_t count;
+};
+
+NodeState run_sequence(void* this);
+NodeState run_selector(void* this);
 
 #endif /* INC_BEHAVIOR_TREE_H_ */
