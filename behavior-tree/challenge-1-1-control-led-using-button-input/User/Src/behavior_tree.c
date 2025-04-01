@@ -8,43 +8,34 @@
 
 #include "behavior_tree.h"
 
-
-NodeState LED_Off(void)
+NodeState run_sequence(void* this)
 {
-	HAL_GPIO_WritePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin, GPIO_PIN_SET);
-	return FAILURE;
-}
+	CompositeNode* node = (CompositeNode*)this;
 
-NodeState LED_On(void)
-{
-	HAL_GPIO_WritePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin, GPIO_PIN_SET);
-	return FAILURE;
-}
-
-NodeState Selector(Node* children, size_t child_count)
-{
-	for (size_t i = 0; i < child_count; i++)
+	for (size_t i = 0; i < node->count; ++i)
 	{
-		if (children[i]() == SUCCESS)
+		Tick tick = ((LeafNode*)node->children[i])->tick;
+
+		if (tick(node->children[i]) == NODE_FAILURE)
 		{
-			return SUCCESS;
+			return NODE_FAILURE;
 		}
 	}
-
-	return FAILURE;
+	return NODE_SUCCESS;
 }
 
-NodeState Sequence(Node* children, size_t child_count)
+NodeState run_selector(void* this)
 {
-	for (size_t i = 0; i < child_count; i++)
+	CompositeNode* node = (CompositeNode*)this;
+
+	for (size_t i = 0; i < node->count; ++i)
 	{
-		if (children[i]() != SUCCESS)
+		Tick tick = ((LeafNode*)node->children[i])->tick;
+
+		if (tick(node->children[i]) == NODE_SUCCESS)
 		{
-			return FAILURE;
+			return NODE_SUCCESS;
 		}
 	}
-
-	return FAILURE;
+	return NODE_FAILURE;
 }
-
-Node* led_operation = { LED_Off, LED_On };

@@ -24,7 +24,11 @@ struct _LeafNode {
 
 struct _CompositeNode {
 	Tick tick;
-	void** children
+	void** children;
+	size_t count;
 };
+
+NodeState run_sequence(void* this);
+NodeState run_selector(void* this);
 
 #endif /* INC_BEHAVIOR_TREE_H_ */

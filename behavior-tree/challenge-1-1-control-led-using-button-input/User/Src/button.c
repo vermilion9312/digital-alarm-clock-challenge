@@ -20,22 +20,22 @@ static GPIO_Config button_config[BUTTON_COUNT] = {
 static bool button_state[BUTTON_COUNT];
 static bool last_button_state[BUTTON_COUNT];
 
-void update_button(ButtonIndex index)
+NodeState update_button(void* this)
 {
 	button_state[index] = HAL_GPIO_ReadPin(button_config[index].GPIOx, button_config[index].GPIO_Pin);
 }
 
-void update_last_button(ButtonIndex index)
+NodeState update_last_button(void* this)
 {
 	last_button_state[index] = is_pressed(index);
 }
 
-bool is_pressed(ButtonIndex index)
+NodeState is_pressed(ButtonIndex index)
 {
 	return button_state[index];
 }
 
-bool was_pressed(ButtonIndex index)
+NodeState was_pressed(ButtonIndex index)
 {
 	return last_button_state[index];
 }
