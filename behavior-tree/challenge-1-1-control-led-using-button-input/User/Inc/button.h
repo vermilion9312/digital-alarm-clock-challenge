@@ -11,18 +11,19 @@
 #include <stdbool.h>
 #include "main.h"
 #include "behavior_tree.h"
+#include "gpio_config.h"
 
-typedef enum {
-	BUTTON_1,
-	BUTTON_2,
-	BUTTON_3,
-	BUTTON_4,
-	BUTTON_COUNT
-} ButtonIndex;
+typedef struct _ButtonConfig ButtonConfig;
 
-void update_button(ButtonIndex index);
-void update_last_button(ButtonIndex index);
-bool is_pressed(ButtonIndex index);
-bool was_pressed(ButtonIndex index);
+struct _ButtonConfig {
+	GPIO_Config gpio_config;
+	bool state;
+	bool last_state;
+};
+
+NodeState update_button(void*);
+NodeState update_last_button(void*);
+NodeState is_rising_edge(void*);
+NodeState is_falling_edge(void*);
 
 #endif /* INC_BUTTON_H_ */

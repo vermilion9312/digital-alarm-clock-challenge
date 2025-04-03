@@ -13,16 +13,14 @@
 #include <stdbool.h>
 #include "button.h"
 
-typedef enum {
-	LEFT_RED,
-	LEFT_GREEN,
-	LEFT_BLUE,
-	RIGHT_RED,
-	RIGHT_GREEN,
-	RIGHT_BLUE,
-	LED_COUNT
-} LED_Index;
+typedef struct _LED_Config LED_Config;
 
-void operate_led(ButtonIndex button_index, LED_Index press_led_index, LED_Index release_led_index);
+struct _LED_Config {
+	GPIO_Config gpio_config;
+	bool state;
+};
+
+NodeState turn_off_led(void*);
+NodeState turn_on_led(void*);
 
 #endif /* INC_LED_H_ */

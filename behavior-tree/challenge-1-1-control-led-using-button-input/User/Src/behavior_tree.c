@@ -8,11 +8,11 @@
 
 #include "behavior_tree.h"
 
-NodeState run_sequence(void* this)
+NodeState run_sequence(void* _node)
 {
-	CompositeNode* node = (CompositeNode*)this;
+	CompositeNode* node = (CompositeNode*) _node;
 
-	for (size_t i = 0; i < node->count; ++i)
+	for (size_t i = 0; i < node->count; i++)
 	{
 		Tick tick = ((LeafNode*)node->children[i])->tick;
 
@@ -21,14 +21,15 @@ NodeState run_sequence(void* this)
 			return NODE_FAILURE;
 		}
 	}
+
 	return NODE_SUCCESS;
 }
 
-NodeState run_selector(void* this)
+NodeState run_selector(void* _node)
 {
-	CompositeNode* node = (CompositeNode*)this;
+	CompositeNode* node = (CompositeNode*) _node;
 
-	for (size_t i = 0; i < node->count; ++i)
+	for (size_t i = 0; i < node->count; i++)
 	{
 		Tick tick = ((LeafNode*)node->children[i])->tick;
 
@@ -37,5 +38,6 @@ NodeState run_selector(void* this)
 			return NODE_SUCCESS;
 		}
 	}
+
 	return NODE_FAILURE;
 }

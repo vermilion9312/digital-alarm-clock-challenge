@@ -8,6 +8,7 @@
 #ifndef INC_BEHAVIOR_TREE_H_
 #define INC_BEHAVIOR_TREE_H_
 
+#include <stddef.h>
 
 typedef enum {
 	NODE_SUCCESS,
@@ -20,6 +21,7 @@ typedef struct _CompositeNode CompositeNode;
 
 struct _LeafNode {
 	Tick tick;
+	void* data;
 };
 
 struct _CompositeNode {

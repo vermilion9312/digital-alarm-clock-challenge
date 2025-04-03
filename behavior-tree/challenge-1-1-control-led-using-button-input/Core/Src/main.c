@@ -21,8 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "led.h"
-#include "button.h"
+#include "common.h"
+#include "root.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,16 +93,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  CompositeNode* root = GET_INSTANCE(root);
+
   while (1)
   {
-
-	  update_button(BUTTON_1);
-	  update_button(BUTTON_2);
-	  update_button(BUTTON_3);
-
-	  operate_led(BUTTON_1, LEFT_RED,   RIGHT_RED  );
-	  operate_led(BUTTON_2, LEFT_GREEN, RIGHT_GREEN);
-	  operate_led(BUTTON_3, LEFT_BLUE,  RIGHT_BLUE );
+	  root->tick(root);
 
     /* USER CODE END WHILE */
 

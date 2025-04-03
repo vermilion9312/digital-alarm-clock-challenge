@@ -10,34 +10,47 @@
 
 #include "button.h"
 
-static GPIO_Config button_config[BUTTON_COUNT] = {
-		{ BUTTON_1_GPIO_Port, BUTTON_1_Pin },
-		{ BUTTON_2_GPIO_Port, BUTTON_2_Pin },
-		{ BUTTON_3_GPIO_Port, BUTTON_3_Pin },
-		{ BUTTON_4_GPIO_Port, BUTTON_4_Pin },
-};
-
-static bool button_state[BUTTON_COUNT];
-static bool last_button_state[BUTTON_COUNT];
-
-NodeState update_button(void* this)
+NodeState update_button(void* node)
 {
-	button_state[index] = HAL_GPIO_ReadPin(button_config[index].GPIOx, button_config[index].GPIO_Pin);
+	LeafNode*     leaf_node     = (LeafNode*    ) node;
+	ButtonConfig* button_config = (ButtonConfig*) leaf_node->data;
+	GPIO_Config   gpio_config   = (GPIO_Config  ) button_config->gpio_config;
+
+	button_config->state = HAL_GPIO_ReadPin(gpio_config.GPIOx, gpio_config.GPIO_Pin);
+
+	return NODE_SUCCESS;
 }
 
-NodeState update_last_button(void* this)
+NodeState update_last_button(void* node)
 {
-	last_button_state[index] = is_pressed(index);
+	LeafNode*     leaf_node     = (LeafNode*    ) node;
+	ButtonConfig* button_config = (ButtonConfig*) leaf_node->data;
+
+	button_config->last_state = button_config->state;
+
+	return NODE_SUCCESS;
 }
 
-NodeState is_pressed(ButtonIndex index)
+NodeState is_rising_edge(void* node)
 {
-	return button_state[index];
+	LeafNode*     leaf_node     = (LeafNode*    ) node;
+	ButtonConfig* button_config = (ButtonConfig*) leaf_node->data;
+
+	if (button_config->last_state) return NODE_FAILURE;
+	if (!button_config->state    ) return NODE_FAILURE;
+
+	return NODE_SUCCESS;
 }
 
-NodeState was_pressed(ButtonIndex index)
+NodeState is_falling_edge(void* node)
 {
-	return last_button_state[index];
+	LeafNode*     leaf_node     = (LeafNode*    ) node;
+	ButtonConfig* button_config = (ButtonConfig*) leaf_node->data;
+
+	if (!button_config->last_state) return NODE_FAILURE;
+	if (button_config->state      ) return NODE_FAILURE;
+
+	return NODE_SUCCESS;
 }
 
 #endif /* SRC_BUTTON_C_ */
