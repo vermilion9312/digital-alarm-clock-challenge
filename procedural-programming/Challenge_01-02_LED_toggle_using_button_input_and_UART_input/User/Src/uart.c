@@ -8,24 +8,24 @@
 
 #include "uart.h"
 
-static uint8_t data = 99;
+uint8_t data = MAGIC_NUMBER;
 
 void receive_data(void)
 {
 	HAL_UART_Receive_IT(&huart3, &data, sizeof(data));
 }
 
-uint8_t get_rxd(void)
+LED_Index get_rxd(void)
 {
-	if (data == '1') return 0;
-	if (data == '2') return 1;
-	if (data == '3') return 2;
-	if (data == '4') return 3;
+	if (data == '1') return RED;
+	if (data == '2') return GREEN;
+	if (data == '3') return BLUE;
+	if (data == '4') return CHANGE_DIRECTION;
 
-	return 0;
+	return MAGIC_NUMBER;
 }
 
 void reset_data(void)
 {
-	data = 0;
+	data = MAGIC_NUMBER;
 }

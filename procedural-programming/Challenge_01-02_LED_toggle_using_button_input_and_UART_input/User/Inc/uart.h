@@ -8,9 +8,15 @@
 #ifndef INC_UART_H_
 #define INC_UART_H_
 
+#include "led.h"
 #include "main.h"
 
+#define MAGIC_NUMBER 9;
+
+typedef enum _LED_Index LED_Index;
+
 void receive_data(void);
-uint8_t get_rxd(void);
+LED_Index get_rxd(void);
+void reset_data(void);
 
 #endif /* INC_UART_H_ */

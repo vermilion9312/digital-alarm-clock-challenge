@@ -14,10 +14,11 @@
 #include "button.h"
 #include "uart.h"
 
-typedef enum {
+typedef enum _LED_Index {
 	RED,
 	GREEN,
 	BLUE,
+	CHANGE_DIRECTION,
 	LED_COUNT
 } LED_Index;
 

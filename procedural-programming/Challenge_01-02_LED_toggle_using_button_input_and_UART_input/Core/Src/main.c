@@ -124,6 +124,61 @@ int main(void)
 	  update_last_button(BUTTON_3);
 	  update_last_button(BUTTON_4);
 
+
+//	  if (data == '1')
+//	  {
+//		  if (state[0])
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin, GPIO_PIN_SET);
+//		  }
+//		  else
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin, GPIO_PIN_RESET);
+//		  }
+//		  state[0] = !state[0];
+//		  data = 0;
+//	  }
+//	  if (data == '2')
+//	  {
+//		  if (state[1])
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin, GPIO_PIN_SET);
+//		  }
+//		  else
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin, GPIO_PIN_RESET);
+//		  }
+//		  state[1] = !state[1];
+//		  data = 0;
+//	  }
+//	  if (data == '3')
+//	  {
+//		  if (state[2])
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_BLUE_GPIO_Port, LEFT_BLUE_Pin, GPIO_PIN_SET);
+//		  }
+//		  else
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_BLUE_GPIO_Port, LEFT_BLUE_Pin, GPIO_PIN_RESET);
+//		  }
+//		  state[2] = !state[2];
+//		  data = 0;
+//	  }
+//	  if (data == 0 && data == '1')
+//	  {
+//		  if (state[0])
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin, GPIO_PIN_SET);
+//		  }
+//		  else
+//		  {
+//			  HAL_GPIO_WritePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin, GPIO_PIN_RESET);
+//		  }
+//		  state[0] = !state[0];
+//		  data = 0;
+//	  }
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

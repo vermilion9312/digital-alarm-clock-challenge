@@ -17,9 +17,10 @@ void operate_led(ButtonIndex button_index, LED_Index led_index)
 		return;
 	}
 
-//	uint8_t index = get_rxd();
-//	if (index > 3) return;
-//	is_led_on(index) ? turn_off_led(index) : turn_on_led(index);
-//	index = 99;
+	if (get_rxd() == led_index)
+	{
+		is_led_on(led_index) ? turn_off_led(led_index) : turn_on_led(led_index);
+		reset_data();
+	}
 }
 
