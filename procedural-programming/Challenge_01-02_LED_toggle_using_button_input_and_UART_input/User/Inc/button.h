@@ -22,7 +22,7 @@ typedef enum {
 
 void update_button(ButtonIndex button_index);
 void update_last_button(ButtonIndex button_index);
-bool is_button_rising(ButtonIndex button_index);
-bool is_button_falling(ButtonIndex button_index);
+bool is_button_pressed(ButtonIndex button_index);
+bool is_button_released(ButtonIndex button_index);
 
 #endif /* INC_BUTTON_H_ */

@@ -30,7 +30,7 @@ void update_last_button(ButtonIndex button_index)
 	last_button_state[button_index] = button_state[button_index];
 }
 
-bool is_button_rising(ButtonIndex button_index)
+bool is_button_pressed(ButtonIndex button_index)
 {
 	if (last_button_state[button_index]) return false;
 	if (!button_state[button_index]    ) return false;
@@ -38,7 +38,7 @@ bool is_button_rising(ButtonIndex button_index)
 	return true;
 }
 
-bool is_button_falling(ButtonIndex button_index)
+bool is_button_released(ButtonIndex button_index)
 {
 	if (!last_button_state[button_index]) return false;
 	if (button_state[button_index]      ) return false;

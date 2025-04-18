@@ -25,6 +25,6 @@ typedef enum _LED_Index {
 bool is_led_on(LED_Index led_index);
 void turn_on_led(LED_Index led_index);
 void turn_off_led(LED_Index led_index);
-void change_led_direction(ButtonIndex button_index);
+void change_led_direction(void);
 
 #endif /* INC_LED_H_ */

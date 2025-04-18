@@ -42,9 +42,9 @@ void turn_off_led(LED_Index led_index)
 	led_state[led_index] = !led_state[led_index];
 }
 
-void change_led_direction(ButtonIndex button_index)
+void change_led_direction(void)
 {
-	if (is_button_rising(button_index) || get_rxd() == CHANGE_DIRECTION)
+	if (is_button_pressed(BUTTON_4) || get_rxd() == CHANGE_DIRECTION)
 	{
 		if (led_config == left_led_config)
 		{
