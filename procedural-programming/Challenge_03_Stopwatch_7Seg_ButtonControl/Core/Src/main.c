@@ -107,13 +107,21 @@ int main(void)
   while (1)
   {
 	  update_button(BUTTON_1);
+	  update_button(BUTTON_2);
+	  update_button(BUTTON_3);
+	  update_button(BUTTON_4);
 
 	  operate_left_led(BUTTON_1, LEFT_RED);
-	  operate_right_led(BUTTON_1, RIGHT_RED);
+	  operate_left_led(BUTTON_2, LEFT_GREEN);
+	  operate_left_led(BUTTON_3, LEFT_BLUE);
+	  operate_right_led(BUTTON_4, RIGHT_RED);
+	  operate_clock();
 
 	  update_last_button(BUTTON_1);
+	  update_last_button(BUTTON_2);
+	  update_last_button(BUTTON_3);
+	  update_last_button(BUTTON_4);
 
-	  operate_clock();
 
     /* USER CODE END WHILE */
 
@@ -291,9 +299,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
 	if (htim->Instance == TIM6)
 	{
-//		if (is_button_on(BUTTON_1)) count_up();count_up();
-
-		if (get_state() == STATE_RUNNING) count_up();
+		if (is_running()) count_up();
 	}
 }
 

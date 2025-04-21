@@ -23,3 +23,8 @@ void count_up(void)
 {
 	count++;
 }
+
+void set_count_zero(void)
+{
+	count = 0;
+}

@@ -18,5 +18,6 @@ typedef enum {
 
 uint32_t get_time(TimeIndex);
 void count_up(void);
+void set_count_zero(void);
 
 #endif /* INC_TIMER_H_ */
