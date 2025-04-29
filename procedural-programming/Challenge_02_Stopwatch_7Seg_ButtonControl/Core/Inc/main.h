@@ -59,12 +59,15 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define BUTTON_1_Pin GPIO_PIN_3
 #define BUTTON_1_GPIO_Port GPIOE
+#define BUTTON_1_EXTI_IRQn EXTI3_IRQn
 #define BUTTON_2_Pin GPIO_PIN_15
 #define BUTTON_2_GPIO_Port GPIOC
+#define BUTTON_2_EXTI_IRQn EXTI15_10_IRQn
 #define RIGHT_BLUE_Pin GPIO_PIN_0
 #define RIGHT_BLUE_GPIO_Port GPIOB
 #define BUTTON_4_Pin GPIO_PIN_10
 #define BUTTON_4_GPIO_Port GPIOD
+#define BUTTON_4_EXTI_IRQn EXTI15_10_IRQn
 #define LEFT_RED_Pin GPIO_PIN_12
 #define LEFT_RED_GPIO_Port GPIOD
 #define LEFT_GREEN_Pin GPIO_PIN_13
@@ -75,6 +78,7 @@ void Error_Handler(void);
 #define RIGHT_RED_GPIO_Port GPIOC
 #define BUTTON_3_Pin GPIO_PIN_4
 #define BUTTON_3_GPIO_Port GPIOD
+#define BUTTON_3_EXTI_IRQn EXTI4_IRQn
 #define RIGHT_GREEN_Pin GPIO_PIN_5
 #define RIGHT_GREEN_GPIO_Port GPIOB
 

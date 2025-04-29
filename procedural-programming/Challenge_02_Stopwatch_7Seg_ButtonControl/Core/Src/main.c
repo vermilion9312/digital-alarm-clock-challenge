@@ -106,21 +106,21 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  update_button(BUTTON_1);
-	  update_button(BUTTON_2);
-	  update_button(BUTTON_3);
-	  update_button(BUTTON_4);
-
-	  operate_left_led(BUTTON_1, LEFT_RED);
-	  operate_left_led(BUTTON_2, LEFT_GREEN);
-	  operate_left_led(BUTTON_3, LEFT_BLUE);
-	  operate_right_led(BUTTON_4, RIGHT_RED);
-	  operate_clock();
-
-	  update_last_button(BUTTON_1);
-	  update_last_button(BUTTON_2);
-	  update_last_button(BUTTON_3);
-	  update_last_button(BUTTON_4);
+//	  update_button(BUTTON_1);
+//	  update_button(BUTTON_2);
+//	  update_button(BUTTON_3);
+//	  update_button(BUTTON_4);
+//
+//	  operate_left_led(BUTTON_1, LEFT_RED);
+//	  operate_left_led(BUTTON_2, LEFT_GREEN);
+//	  operate_left_led(BUTTON_3, LEFT_BLUE);
+//	  operate_right_led(BUTTON_4, RIGHT_RED);
+//	  operate_clock();
+//
+//	  update_last_button(BUTTON_1);
+//	  update_last_button(BUTTON_2);
+//	  update_last_button(BUTTON_3);
+//	  update_last_button(BUTTON_4);
 
 
     /* USER CODE END WHILE */
@@ -184,6 +184,15 @@ static void MX_NVIC_Init(void)
   /* TIM6_DAC_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
+  /* EXTI3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI3_IRQn);
+  /* EXTI4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+  /* EXTI15_10_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
 /**
@@ -232,8 +241,8 @@ static void MX_TIM6_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
@@ -253,13 +262,13 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : BUTTON_1_Pin */
   GPIO_InitStruct.Pin = BUTTON_1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BUTTON_1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BUTTON_2_Pin */
   GPIO_InitStruct.Pin = BUTTON_2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BUTTON_2_GPIO_Port, &GPIO_InitStruct);
 
@@ -272,7 +281,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : BUTTON_4_Pin BUTTON_3_Pin */
   GPIO_InitStruct.Pin = BUTTON_4_Pin|BUTTON_3_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
@@ -290,8 +299,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(RIGHT_RED_GPIO_Port, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -303,52 +312,30 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 	}
 }
 
-//void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-//{
-////	if (GPIO_Pin == BUTTON_1_Pin)
-////	{
-////		HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
-////		return;
-////	}
-////
-////	if (GPIO_Pin == BUTTON_2_Pin)
-////	{
-////		HAL_GPIO_TogglePin(LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin);
-////		return;
-////	}
-////
-////	if (GPIO_Pin == BUTTON_3_Pin)
-////	{
-////		HAL_GPIO_TogglePin(LEFT_BLUE_GPIO_Port, LEFT_BLUE_Pin);
-////		return;
-////	}
-////
-////	if (GPIO_Pin == BUTTON_4_Pin)
-////	{
-////		HAL_GPIO_TogglePin(RIGHT_RED_GPIO_Port, RIGHT_RED_Pin);
-////	}
-//
-//	if (GPIO_Pin == GPIO_PIN_3)
-//	{
-//	    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
-//	}
-//
-//	if (GPIO_Pin == GPIO_PIN_15)
-//	{
-//	    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
-//	}
-//
-//	if (GPIO_Pin == GPIO_PIN_4)
-//	{
-//	    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
-//	}
-//
-//	if (GPIO_Pin == GPIO_PIN_10)
-//	{
-//	    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
-//	}
-//
-//}
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	static bool is_button_pressed;
+
+	if (GPIO_Pin == BUTTON_1_Pin)
+	{
+		if (HAL_GPIO_ReadPin(BUTTON_1_GPIO_Port, BUTTON_1_Pin))
+		{
+			if (!is_button_pressed)
+			{
+				is_button_pressed = !is_button_pressed;
+				HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
+			}
+		}
+		else
+		{
+			if (is_button_pressed)
+			{
+				is_button_pressed = !is_button_pressed;
+			}
+		}
+	}
+}
+
 /* USER CODE END 4 */
 
 /**
