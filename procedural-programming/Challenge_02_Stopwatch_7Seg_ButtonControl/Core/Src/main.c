@@ -22,7 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "led.h"
-#include "button.h"
+//#include "button.h"
 #include "clock.h"
 #include "segment.h"
 #include "timer.h"
@@ -106,21 +106,21 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//	  update_button(BUTTON_1);
-//	  update_button(BUTTON_2);
-//	  update_button(BUTTON_3);
-//	  update_button(BUTTON_4);
-//
-//	  operate_left_led(BUTTON_1, LEFT_RED);
-//	  operate_left_led(BUTTON_2, LEFT_GREEN);
-//	  operate_left_led(BUTTON_3, LEFT_BLUE);
-//	  operate_right_led(BUTTON_4, RIGHT_RED);
-//	  operate_clock();
-//
-//	  update_last_button(BUTTON_1);
-//	  update_last_button(BUTTON_2);
-//	  update_last_button(BUTTON_3);
-//	  update_last_button(BUTTON_4);
+	  update_button(BUTTON_1);
+	  update_button(BUTTON_2);
+	  update_button(BUTTON_3);
+	  update_button(BUTTON_4);
+
+	  operate_left_led(BUTTON_1, LEFT_RED);
+	  operate_left_led(BUTTON_2, LEFT_GREEN);
+	  operate_left_led(BUTTON_3, LEFT_BLUE);
+	  operate_right_led(BUTTON_4, RIGHT_RED);
+	  operate_clock();
+
+	  update_last_button(BUTTON_1);
+	  update_last_button(BUTTON_2);
+	  update_last_button(BUTTON_3);
+	  update_last_button(BUTTON_4);
 
 
     /* USER CODE END WHILE */
@@ -312,29 +312,29 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 	}
 }
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	static bool is_button_pressed;
-
-	if (GPIO_Pin == BUTTON_1_Pin)
-	{
-		if (HAL_GPIO_ReadPin(BUTTON_1_GPIO_Port, BUTTON_1_Pin))
-		{
-			if (!is_button_pressed)
-			{
-				is_button_pressed = !is_button_pressed;
-				HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
-			}
-		}
-		else
-		{
-			if (is_button_pressed)
-			{
-				is_button_pressed = !is_button_pressed;
-			}
-		}
-	}
-}
+//void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+//{
+//	static bool is_button_pressed;
+//
+//	if (GPIO_Pin == BUTTON_1_Pin)
+//	{
+//		if (HAL_GPIO_ReadPin(BUTTON_1_GPIO_Port, BUTTON_1_Pin))
+//		{
+//			if (!is_button_pressed)
+//			{
+//				is_button_pressed = !is_button_pressed;
+//				HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
+//			}
+//		}
+//		else
+//		{
+//			if (is_button_pressed)
+//			{
+//				is_button_pressed = !is_button_pressed;
+//			}
+//		}
+//	}
+//}
 
 /* USER CODE END 4 */
 

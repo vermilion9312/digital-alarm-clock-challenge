@@ -18,15 +18,61 @@ static GPIO_Config button_config[BUTTON_COUNT] = {
 };
 
 static bool button_state[BUTTON_COUNT];
+static bool last_button_state[BUTTON_COUNT];
 
 void update_button(ButtonIndex button_index)
 {
-	button_state[button_index];
+	button_state[button_index] = HAL_GPIO_ReadPin(button_config[button_index].GPIOx, button_config[button_index].GPIO_Pin);
+}
+
+void update_last_button(ButtonIndex button_index)
+{
+	last_button_state[button_index] = button_state[button_index];
+}
+
+bool is_button_pressed(ButtonIndex button_index)
+{
+	if (last_button_state[button_index]) return false;
+	if (!button_state[button_index]    ) return false;
+
+	return true;
+}
+
+bool is_button_released(ButtonIndex button_index)
+{
+	if (!last_button_state[button_index]) return false;
+	if (button_state[button_index]      ) return false;
+
+	return true;
 }
 
 bool is_button_on(ButtonIndex button_index)
 {
 	return button_state[button_index];
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	static bool is_button_pressed;
+
+	if (GPIO_Pin == BUTTON_1_Pin)
+	{
+		if (HAL_GPIO_ReadPin(BUTTON_1_GPIO_Port, BUTTON_1_Pin))
+		{
+			if (!is_button_pressed)
+			{
+				is_button_pressed = !is_button_pressed;
+				HAL_GPIO_TogglePin(LEFT_RED_GPIO_Port, LEFT_RED_Pin);
+			}
+		}
+		else
+		{
+			if (is_button_pressed)
+			{
+				is_button_pressed = !is_button_pressed;
+			}
+		}
+	}
 }
 
 #endif /* SRC_BUTTON_C_ */

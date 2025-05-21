@@ -8,7 +8,7 @@
 
 #include "uart.h"
 
-uint8_t data = MAGIC_NUMBER;
+static uint8_t data = MAGIC_NUMBER;
 
 void receive_data(void)
 {
