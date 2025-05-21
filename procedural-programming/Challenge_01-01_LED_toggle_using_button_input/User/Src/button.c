@@ -32,18 +32,22 @@ void update_last_button(ButtonIndex button_index)
 
 bool is_button_pressed(ButtonIndex button_index)
 {
-	if (last_button_state[button_index]) return false;
-	if (!button_state[button_index]    ) return false;
+	if (!last_button_state[button_index] && button_state[button_index])
+	{
+		return true;
+	}
 
-	return true;
+	return false;
 }
 
 bool is_button_released(ButtonIndex button_index)
 {
-	if (!last_button_state[button_index]) return false;
-	if (button_state[button_index]      ) return false;
+	if (last_button_state[button_index] && !button_state[button_index])
+	{
+		return true;
+	}
 
-	return true;
+	return false;
 }
 
 #endif /* SRC_BUTTON_C_ */
