@@ -23,6 +23,11 @@ typedef enum {
 	LED_COUNT
 } LED_Index;
 
+typedef struct {
+	GPIO_Config gpio_config;
+
+};
+
 bool is_led_on(LED_Index led_index);
 void turn_on_led(LED_Index led_index);
 void turn_off_led(LED_Index led_index);
