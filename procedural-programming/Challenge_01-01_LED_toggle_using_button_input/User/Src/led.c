@@ -26,13 +26,12 @@ bool is_led_on(LED_Index led_index)
 void turn_on_led(LED_Index led_index)
 {
 	HAL_GPIO_WritePin(led_config[led_index].GPIOx, led_config[led_index].GPIO_Pin, GPIO_PIN_RESET);
-	led_state[led_index] = !led_state[led_index];
+	led_state[led_index] = true;
 }
 
 void turn_off_led(LED_Index led_index)
 {
 	HAL_GPIO_WritePin(led_config[led_index].GPIOx, led_config[led_index].GPIO_Pin, GPIO_PIN_SET);
-	led_state[led_index] = !led_state[led_index];
+	led_state[led_index] = false;
 }
-
 

@@ -96,17 +96,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
 	  update_button(BUTTON_1);
 	  update_button(BUTTON_2);
 	  update_button(BUTTON_3);
 
-	  operate_left_led(BUTTON_1, LEFT_RED);
+	  operate_left_led(BUTTON_1, LEFT_RED  );
 	  operate_left_led(BUTTON_2, LEFT_GREEN);
-	  operate_left_led(BUTTON_3, LEFT_BLUE);
+	  operate_left_led(BUTTON_3, LEFT_BLUE );
 
-	  operate_right_led(BUTTON_1, RIGHT_RED);
+	  operate_right_led(BUTTON_1, RIGHT_RED  );
 	  operate_right_led(BUTTON_2, RIGHT_GREEN);
-	  operate_right_led(BUTTON_3, RIGHT_BLUE);
+	  operate_right_led(BUTTON_3, RIGHT_BLUE );
 
 	  update_last_button(BUTTON_1);
 	  update_last_button(BUTTON_2);
