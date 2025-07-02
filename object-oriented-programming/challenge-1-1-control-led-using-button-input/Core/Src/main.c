@@ -21,8 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "common.h"
-#include "root.h"
+#include "input.h"
+#include "device.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,12 +93,40 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  Output* left_red   = new_Device(LEFT_RED_GPIO_Port,   LEFT_RED_Pin  );
+  Output* left_green = new_Device(LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin);
+  Output* left_blue  = new_Device(LEFT_BLUE_GPIO_Port,  LEFT_BLUE_Pin );
 
-  CompositeNode* root = GET_INSTANCE(root);
+  Output* right_red    = new_Device(RIGHT_RED_GPIO_Port,    RIGHT_RED_Pin   );
+  Output* right_green  = new_Device(RIGHT_GREEN_GPIO_Port,  RIGHT_GREEN_Pin );
+  Output* right_blue   = new_Device(RIGHT_BLUE_GPIO_Port,   RIGHT_BLUE_Pin  );
+
+  Input* left_button_1 = new_Input(BUTTON_1_GPIO_Port, BUTTON_1_Pin, left_red  );
+  Input* left_button_2 = new_Input(BUTTON_2_GPIO_Port, BUTTON_2_Pin, left_green);
+  Input* left_button_3 = new_Input(BUTTON_3_GPIO_Port, BUTTON_3_Pin, left_blue );
+
+  Input* right_button_1 = new_Input(BUTTON_1_GPIO_Port, BUTTON_1_Pin, right_red  );
+  Input* right_button_2 = new_Input(BUTTON_2_GPIO_Port, BUTTON_2_Pin, right_green);
+  Input* right_button_3 = new_Input(BUTTON_3_GPIO_Port, BUTTON_3_Pin, right_blue );
 
   while (1)
   {
-	  root->tick(root);
+	  left_button_1->update(left_button_1, NOMAL_CLOSE);
+	  left_button_2->update(left_button_2, NOMAL_CLOSE);
+	  left_button_3->update(left_button_3, NOMAL_CLOSE);
+
+	  right_button_1->update(right_button_1, NOMAL_CLOSE);
+	  right_button_2->update(right_button_2, NOMAL_CLOSE);
+	  right_button_3->update(right_button_3, NOMAL_CLOSE);
+
+	  left_button_1->on_rising_edge(left_button_1);
+	  left_button_2->on_rising_edge(left_button_2);
+	  left_button_3->on_rising_edge(left_button_3);
+
+	  right_button_1->on_falling_edge(right_button_1);
+	  right_button_2->on_falling_edge(right_button_2);
+	  right_button_3->on_falling_edge(right_button_3);
+
 
     /* USER CODE END WHILE */
 
