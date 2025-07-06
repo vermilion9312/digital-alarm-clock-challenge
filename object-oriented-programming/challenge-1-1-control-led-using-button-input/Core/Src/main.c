@@ -21,8 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "input.h"
-#include "device.h"
+#include "general_input_class.h"
+#include "general_output_class.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,6 +41,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 
@@ -49,6 +50,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_USART3_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -87,37 +89,38 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  Output* left_red   = new_Device(LEFT_RED_GPIO_Port,   LEFT_RED_Pin  );
-  Output* left_green = new_Device(LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin);
-  Output* left_blue  = new_Device(LEFT_BLUE_GPIO_Port,  LEFT_BLUE_Pin );
+  IOutput* left_red   = new_GeneralOutput(LEFT_RED_GPIO_Port,   LEFT_RED_Pin  );
+  IOutput* left_green = new_GeneralOutput(LEFT_GREEN_GPIO_Port, LEFT_GREEN_Pin);
+  IOutput* left_blue  = new_GeneralOutput(LEFT_BLUE_GPIO_Port,  LEFT_BLUE_Pin );
 
-  Output* right_red    = new_Device(RIGHT_RED_GPIO_Port,    RIGHT_RED_Pin   );
-  Output* right_green  = new_Device(RIGHT_GREEN_GPIO_Port,  RIGHT_GREEN_Pin );
-  Output* right_blue   = new_Device(RIGHT_BLUE_GPIO_Port,   RIGHT_BLUE_Pin  );
+  IOutput* right_red    = new_GeneralOutput(RIGHT_RED_GPIO_Port,    RIGHT_RED_Pin   );
+  IOutput* right_green  = new_GeneralOutput(RIGHT_GREEN_GPIO_Port,  RIGHT_GREEN_Pin );
+  IOutput* right_blue   = new_GeneralOutput(RIGHT_BLUE_GPIO_Port,   RIGHT_BLUE_Pin  );
 
-  Input* left_button_1 = new_Input(BUTTON_1_GPIO_Port, BUTTON_1_Pin, left_red  );
-  Input* left_button_2 = new_Input(BUTTON_2_GPIO_Port, BUTTON_2_Pin, left_green);
-  Input* left_button_3 = new_Input(BUTTON_3_GPIO_Port, BUTTON_3_Pin, left_blue );
+  IInput* left_button_1 = new_GeneralInput(BUTTON_1_GPIO_Port, BUTTON_1_Pin, NOMAL_CLOSE, left_red  );
+  IInput* left_button_2 = new_GeneralInput(BUTTON_2_GPIO_Port, BUTTON_2_Pin, NOMAL_CLOSE, left_green);
+  IInput* left_button_3 = new_GeneralInput(BUTTON_3_GPIO_Port, BUTTON_3_Pin, NOMAL_CLOSE, left_blue );
 
-  Input* right_button_1 = new_Input(BUTTON_1_GPIO_Port, BUTTON_1_Pin, right_red  );
-  Input* right_button_2 = new_Input(BUTTON_2_GPIO_Port, BUTTON_2_Pin, right_green);
-  Input* right_button_3 = new_Input(BUTTON_3_GPIO_Port, BUTTON_3_Pin, right_blue );
+  IInput* right_button_1 = new_GeneralInput(BUTTON_1_GPIO_Port, BUTTON_1_Pin, NOMAL_CLOSE, right_red  );
+  IInput* right_button_2 = new_GeneralInput(BUTTON_2_GPIO_Port, BUTTON_2_Pin, NOMAL_CLOSE, right_green);
+  IInput* right_button_3 = new_GeneralInput(BUTTON_3_GPIO_Port, BUTTON_3_Pin, NOMAL_CLOSE, right_blue );
 
   while (1)
   {
-	  left_button_1->update(left_button_1, NOMAL_CLOSE);
-	  left_button_2->update(left_button_2, NOMAL_CLOSE);
-	  left_button_3->update(left_button_3, NOMAL_CLOSE);
+	  left_button_1->update(left_button_1);
+	  left_button_2->update(left_button_2);
+	  left_button_3->update(left_button_3);
 
-	  right_button_1->update(right_button_1, NOMAL_CLOSE);
-	  right_button_2->update(right_button_2, NOMAL_CLOSE);
-	  right_button_3->update(right_button_3, NOMAL_CLOSE);
+	  right_button_1->update(right_button_1);
+	  right_button_2->update(right_button_2);
+	  right_button_3->update(right_button_3);
 
 	  left_button_1->on_rising_edge(left_button_1);
 	  left_button_2->on_rising_edge(left_button_2);
@@ -126,6 +129,7 @@ int main(void)
 	  right_button_1->on_falling_edge(right_button_1);
 	  right_button_2->on_falling_edge(right_button_2);
 	  right_button_3->on_falling_edge(right_button_3);
+
 
 
     /* USER CODE END WHILE */
@@ -177,6 +181,39 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief USART3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART3_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART3_Init 0 */
+
+  /* USER CODE END USART3_Init 0 */
+
+  /* USER CODE BEGIN USART3_Init 1 */
+
+  /* USER CODE END USART3_Init 1 */
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART3_Init 2 */
+
+  /* USER CODE END USART3_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -184,8 +221,8 @@ void SystemClock_Config(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
@@ -241,8 +278,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(RIGHT_RED_GPIO_Port, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
